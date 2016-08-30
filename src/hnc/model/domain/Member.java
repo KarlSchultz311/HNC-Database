@@ -14,7 +14,7 @@ import java.io.*;
  * data stored as strings for:
  * First Name, Last Name, Email1, Email2, Street Address, City, Zip Code, State,
  * County,Home Phone Number, Cell Phone Number, Bleeding Disorder, Date of Birth, 
- * Join Date, Date of Update, Organization, and date of returned mail.
+ * Join Date, Date of Update, Organization, and date of returned mail(badAdd).
  * Int data for: MemID, Region
  * Boolean data for: Industry, hope, teens, blood brotherhood, latin union, soar,
  * inhibitors, and advocacy programs.

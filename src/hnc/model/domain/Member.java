@@ -12,24 +12,33 @@ import java.io.*;
  * class, you can find a constructor for a new empty Member object, a new Member
  * object with a provided memID number, as well as getters/setters for member 
  * data stored as strings for:
- * First Name, Last Name, Street Address, City, Zip Code, State, County, Region,
- * Home Phone Number, Cell Phone Number, Bleeding Disorder, Date of Birth, 
- * Join Date, Date of Last Renewal, and a MemberID.
+ * First Name, Last Name, Email1, Email2, Street Address, City, Zip Code, State,
+ * County,Home Phone Number, Cell Phone Number, Bleeding Disorder, Date of Birth, 
+ * Join Date, Date of Update, Organization, and date of returned mail.
+ * Int data for: MemID, Region
+ * Boolean data for: Industry, hope, teens, blood brotherhood, latin union, soar,
+ * inhibitors, and advocacy programs.
  * @author Karl Schultz
  * version 1.0 8/24/16
+ * version 2.0 2/29/16
+ * Modified streetAdd to streetAdd1,changed badAdd to String, changed Region to int.
+ * Added: Address2,Email1, Email2, program booleans, 
  */
 public class Member {
     
     //members
     private int memId;
+    private int region;
     private String lName;
     private String fName;
-    private String streetAdd;
+    private String email1;
+    private String email2;
+    private String streetAdd1;
+    private String streetAdd2;
     private String city;
     private String zip;
     private String state;
     private String county;
-    private String region;
     private String homePhone;
     private String cellPhone;
     private String bleedDisorder;
@@ -37,9 +46,9 @@ public class Member {
     private String joinDate;
     private String updatedDate;;
     private String comments;
-    private Boolean badAdd;
-    private Boolean industry;
+    private String badAdd;
     private String organization;
+    private Boolean industry;
     private Boolean hope;
     private Boolean teens;
     private Boolean latinUnion;
@@ -53,12 +62,15 @@ public class Member {
         memId = 0;
         lName = null;
         fName = null;
-        streetAdd = null;
+        email1 = null;
+        email2 = null;
+        streetAdd1 = null;
+        streetAdd2 = null;
         city = null;
         zip = null;
         state = null;
         county = null;
-        region = null;
+        region = 0;
         homePhone = null;
         cellPhone = null;
         bleedDisorder = null;
@@ -66,7 +78,7 @@ public class Member {
         joinDate = null;
         updatedDate = null;
         comments = null;
-        badAdd = false;
+        badAdd = null;
         industry = false;
         organization = null;
         hope = false;
@@ -82,12 +94,15 @@ public class Member {
         this.memId = memId;
         lName = null;
         fName = null;
-        streetAdd = null;
+        email1 = null;
+        email2 = null;
+        streetAdd1 = null;
+        streetAdd2 = null;
         city = null;
         zip = null;
         state = null;
         county = null;
-        region = null;
+        region = 0;
         homePhone = null;
         cellPhone = null;
         bleedDisorder = null;
@@ -95,7 +110,7 @@ public class Member {
         joinDate = null;
         updatedDate = null;
         comments = null;
-        badAdd = false;
+        badAdd = null;
         industry = false;
         organization = null;
         hope = false;
@@ -123,15 +138,37 @@ public class Member {
     public void setFName(String fName){
         this.fName = fName;
     }
-           
-    public String getStreetAdd(){
-        return streetAdd;
+    
+    public String getEmail1(){
+        return email1;
     }
     
-    public void setlName(String streetAdd){
-        this.streetAdd = streetAdd;
+    public void setEmail1(String email1){
+        this.email1 = email1;
     }
     
+    public String getEmail2(){
+        return email2;
+    }
+    
+    public void setEmail2(String email2){
+        this.email2 = email2;
+    }
+    public String getStreetAdd1(){
+        return streetAdd1;
+    }
+    
+    public void setStreetAdd1(String streetAdd1){
+        this.streetAdd1 = streetAdd1;
+    }
+    
+    public String getStreetAdd2(){
+        return streetAdd2;
+    }
+    
+    public void setStreetAdd2(String streetAdd2){
+        this.streetAdd2 = streetAdd2;
+    }
     public String getCity(){
         return city;
     }
@@ -164,11 +201,11 @@ public class Member {
         this.county = county;
     }
     
-    public String getRegion(){
+    public int getRegion(){
         return region;
     }
     
-    public void setRegion(String region){
+    public void setRegion(int region){
         this.region = region;
     }
     
@@ -236,11 +273,11 @@ public class Member {
         this.comments = comments;
     }
     
-    public boolean getBadAdd(){
+    public String getBadAdd(){
         return badAdd;
     }
     
-    public void setBadAdd(boolean badAdd){
+    public void setBadAdd(String badAdd){
         this.badAdd = badAdd;
     }
     

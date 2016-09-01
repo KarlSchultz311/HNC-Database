@@ -41,7 +41,7 @@
               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" pref="44" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jTabbedPane1" pref="864" max="32767" attributes="0"/>
+              <Component id="jTabbedPane1" max="32767" attributes="0"/>
               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -2859,15 +2859,16 @@
                       </Group>
                       <EmptySpace min="43" pref="43" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jCheckBox37" max="32767" attributes="0"/>
                           <Component id="jCheckBox33" alignment="0" max="32767" attributes="0"/>
                           <Component id="jCheckBox32" alignment="0" max="32767" attributes="0"/>
-                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                              <Component id="jCheckBox36" alignment="3" max="32767" attributes="0"/>
-                              <Component id="jCheckBox35" alignment="3" max="32767" attributes="0"/>
-                              <Component id="jCheckBox37" alignment="3" max="32767" attributes="0"/>
-                              <Component id="jCheckBox38" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jCheckBox38" min="-2" pref="31" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="jCheckBox34" alignment="1" min="-2" pref="32" max="-2" attributes="0"/>
+                          <Component id="jCheckBox34" alignment="0" pref="32" max="32767" attributes="0"/>
+                          <Component id="jCheckBox35" max="32767" attributes="0"/>
+                          <Component id="jCheckBox36" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="339" max="-2" attributes="0"/>
                   </Group>

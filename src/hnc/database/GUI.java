@@ -349,7 +349,7 @@ public class GUI extends javax.swing.JFrame {
         jCheckBox6.setText("Inhibitors");
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButton1.setText("Search");
+        jButton1.setText("Member Search");
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -414,7 +414,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(36, 36, 36)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton1)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1426,7 +1426,7 @@ public class GUI extends javax.swing.JFrame {
         jLabel15.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButton2.setText("Search");
+        jButton2.setText("Family Search");
 
         jCheckBox10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jCheckBox10.setText("Advocacy");
@@ -1517,7 +1517,7 @@ public class GUI extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addGap(30, 30, 30)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(117, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -1733,7 +1733,7 @@ public class GUI extends javax.swing.JFrame {
 
         jLabel107.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel107.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel107.setText("Assigned Member ID Number");
+        jLabel107.setText("Assigned Family ID Number");
         jLabel107.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         jTextField101.setEditable(false);
@@ -2100,7 +2100,7 @@ public class GUI extends javax.swing.JFrame {
         jButton17.setBackground(new java.awt.Color(255, 255, 255));
         jButton17.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton17.setForeground(new java.awt.Color(22, 177, 30));
-        jButton17.setText("Update Member Data");
+        jButton17.setText("Update Family Data");
         jButton17.setActionCommand("Update Family Data");
         jButton17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(22, 177, 30), 3));
 

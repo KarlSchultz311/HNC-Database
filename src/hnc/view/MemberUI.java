@@ -3,19 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hnc.database;
+package hnc.view;
+
+import hnc.controller.MemberController;
+import javax.swing.*;
 
 /**
  *
  * @author Karl
  */
-public class GUI extends javax.swing.JFrame {
+public class MemberUI extends javax.swing.JFrame {
 
     /**
      * Creates new form GUI
      */
-    public GUI() {
+    public MemberUI() {
         initComponents();
+        MemberController memCon = new MemberController(this);
         setVisible(true);
     }
 
@@ -48,7 +52,7 @@ public class GUI extends javax.swing.JFrame {
         jCheckBox4 = new javax.swing.JCheckBox();
         jCheckBox5 = new javax.swing.JCheckBox();
         jCheckBox6 = new javax.swing.JCheckBox();
-        jButton1 = new javax.swing.JButton();
+        MemberSearchButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jCheckBox7 = new javax.swing.JCheckBox();
@@ -101,7 +105,7 @@ public class GUI extends javax.swing.JFrame {
         jTextField48 = new javax.swing.JTextField();
         jTextField49 = new javax.swing.JTextField();
         jTextField50 = new javax.swing.JTextField();
-        jButton4 = new javax.swing.JButton();
+        CreateMemberButton = new javax.swing.JButton();
         jLabel54 = new javax.swing.JLabel();
         jTextField51 = new javax.swing.JTextField();
         jComboBox2 = new javax.swing.JComboBox();
@@ -152,16 +156,16 @@ public class GUI extends javax.swing.JFrame {
         jTextField88 = new javax.swing.JTextField();
         jLabel94 = new javax.swing.JLabel();
         jTextField90 = new javax.swing.JTextField();
-        jButton10 = new javax.swing.JButton();
+        LoadMemberDataButton = new javax.swing.JButton();
         jTextField89 = new javax.swing.JTextField();
         jLabel93 = new javax.swing.JLabel();
         jTextField91 = new javax.swing.JTextField();
         jLabel95 = new javax.swing.JLabel();
         jTextField92 = new javax.swing.JTextField();
-        jButton9 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
+        TodayButton = new javax.swing.JButton();
+        UpdateMemberDataButton = new javax.swing.JButton();
+        DeleteMemberRecordButton = new javax.swing.JButton();
+        ConfirmMemberDeleteButton = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jTextField8 = new javax.swing.JTextField();
@@ -172,7 +176,7 @@ public class GUI extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jTextField12 = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        FamilySearchButton = new javax.swing.JButton();
         jCheckBox10 = new javax.swing.JCheckBox();
         jCheckBox11 = new javax.swing.JCheckBox();
         jCheckBox12 = new javax.swing.JCheckBox();
@@ -188,7 +192,7 @@ public class GUI extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         jLabel96 = new javax.swing.JLabel();
         jTextField93 = new javax.swing.JTextField();
-        jButton14 = new javax.swing.JButton();
+        LoadMemberDataFamilyButton = new javax.swing.JButton();
         jLabel55 = new javax.swing.JLabel();
         jLabel56 = new javax.swing.JLabel();
         jTextField45 = new javax.swing.JTextField();
@@ -224,14 +228,14 @@ public class GUI extends javax.swing.JFrame {
         jCheckBox37 = new javax.swing.JCheckBox();
         jCheckBox38 = new javax.swing.JCheckBox();
         jTextField63 = new javax.swing.JTextField();
-        jButton5 = new javax.swing.JButton();
+        CreateFamilyButton = new javax.swing.JButton();
         jLabel107 = new javax.swing.JLabel();
         jTextField101 = new javax.swing.JTextField();
         jPanel6 = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
         jLabel97 = new javax.swing.JLabel();
         jTextField94 = new javax.swing.JTextField();
-        jButton15 = new javax.swing.JButton();
+        LoadFamilyDataButton = new javax.swing.JButton();
         jLabel69 = new javax.swing.JLabel();
         jLabel70 = new javax.swing.JLabel();
         jTextField64 = new javax.swing.JTextField();
@@ -269,10 +273,10 @@ public class GUI extends javax.swing.JFrame {
         jTextField99 = new javax.swing.JTextField();
         jLabel106 = new javax.swing.JLabel();
         jTextField100 = new javax.swing.JTextField();
-        jButton16 = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
-        jButton18 = new javax.swing.JButton();
-        jButton19 = new javax.swing.JButton();
+        AddFamilyMemberButton = new javax.swing.JButton();
+        UpdateFamilyDataButton = new javax.swing.JButton();
+        DeleteFamilyRecordButton = new javax.swing.JButton();
+        ConfirmDeleteFamilyButton = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextArea3 = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
@@ -348,8 +352,8 @@ public class GUI extends javax.swing.JFrame {
         jCheckBox6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jCheckBox6.setText("Inhibitors");
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButton1.setText("Member Search");
+        MemberSearchButton.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MemberSearchButton.setText("Member Search");
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -414,7 +418,7 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(36, 36, 36)
-                        .addComponent(jButton1)
+                        .addComponent(MemberSearchButton)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -443,7 +447,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(27, 27, 27)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(MemberSearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(42, 42, 42)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -672,10 +676,10 @@ public class GUI extends javax.swing.JFrame {
         jTextField50.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jTextField50.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        jButton4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(22, 177, 30));
-        jButton4.setText("Create Member");
-        jButton4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(22, 177, 30), 3));
+        CreateMemberButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        CreateMemberButton.setForeground(new java.awt.Color(22, 177, 30));
+        CreateMemberButton.setText("Create Member");
+        CreateMemberButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(22, 177, 30), 3));
 
         jLabel54.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel54.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -727,7 +731,7 @@ public class GUI extends javax.swing.JFrame {
                                 .addComponent(jTextField44, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGroup(jPanel7Layout.createSequentialGroup()
                             .addGap(115, 115, 115)
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(CreateMemberButton, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jCheckBox24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -868,7 +872,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jTextField50, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(66, 66, 66)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CreateMemberButton, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1096,9 +1100,9 @@ public class GUI extends javax.swing.JFrame {
         jTextField90.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jTextField90.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        jButton10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton10.setText("Load Member Data");
-        jButton10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        LoadMemberDataButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        LoadMemberDataButton.setText("Load Member Data");
+        LoadMemberDataButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
         jTextField89.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jTextField89.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1119,27 +1123,27 @@ public class GUI extends javax.swing.JFrame {
         jTextField92.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jTextField92.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        jButton9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton9.setText("Today");
+        TodayButton.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        TodayButton.setText("Today");
 
-        jButton11.setBackground(new java.awt.Color(255, 255, 255));
-        jButton11.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton11.setForeground(new java.awt.Color(22, 177, 30));
-        jButton11.setText("Update Member Data");
-        jButton11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(22, 177, 30), 3));
+        UpdateMemberDataButton.setBackground(new java.awt.Color(255, 255, 255));
+        UpdateMemberDataButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        UpdateMemberDataButton.setForeground(new java.awt.Color(22, 177, 30));
+        UpdateMemberDataButton.setText("Update Member Data");
+        UpdateMemberDataButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(22, 177, 30), 3));
 
-        jButton12.setBackground(new java.awt.Color(255, 255, 255));
-        jButton12.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton12.setForeground(new java.awt.Color(222, 10, 13));
-        jButton12.setText("Delete Member Record");
-        jButton12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(222, 10, 13), 3));
+        DeleteMemberRecordButton.setBackground(new java.awt.Color(255, 255, 255));
+        DeleteMemberRecordButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        DeleteMemberRecordButton.setForeground(new java.awt.Color(222, 10, 13));
+        DeleteMemberRecordButton.setText("Delete Member Record");
+        DeleteMemberRecordButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(222, 10, 13), 3));
 
-        jButton13.setBackground(new java.awt.Color(255, 255, 255));
-        jButton13.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton13.setForeground(new java.awt.Color(222, 10, 13));
-        jButton13.setText("Confirm Deletion");
-        jButton13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(222, 10, 13), 3));
-        jButton13.setEnabled(false);
+        ConfirmMemberDeleteButton.setBackground(new java.awt.Color(255, 255, 255));
+        ConfirmMemberDeleteButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        ConfirmMemberDeleteButton.setForeground(new java.awt.Color(222, 10, 13));
+        ConfirmMemberDeleteButton.setText("Confirm Deletion");
+        ConfirmMemberDeleteButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(222, 10, 13), 3));
+        ConfirmMemberDeleteButton.setEnabled(false);
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -1153,7 +1157,7 @@ public class GUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextField90, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(36, 36, 36)
-                        .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(LoadMemberDataButton, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1242,9 +1246,9 @@ public class GUI extends javax.swing.JFrame {
                                     .addComponent(jTextField91, javax.swing.GroupLayout.Alignment.TRAILING))
                                 .addContainerGap())))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                        .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(DeleteMemberRecordButton, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(71, 71, 71)
-                        .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ConfirmMemberDeleteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(174, 174, 174))
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1253,11 +1257,11 @@ public class GUI extends javax.swing.JFrame {
                                 .addComponent(jLabel95, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(TodayButton, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jTextField92, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel9Layout.createSequentialGroup()
                                 .addGap(98, 98, 98)
-                                .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(UpdateMemberDataButton, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap())))
         );
         jPanel9Layout.setVerticalGroup(
@@ -1265,7 +1269,7 @@ public class GUI extends javax.swing.JFrame {
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addGap(13, 13, 13)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LoadMemberDataButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jTextField90, javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jLabel94, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)))
@@ -1355,12 +1359,12 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jLabel95, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField92, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(TodayButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton11, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
-                    .addComponent(jButton12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(UpdateMemberDataButton, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
+                    .addComponent(DeleteMemberRecordButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ConfirmMemberDeleteButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(43, 43, Short.MAX_VALUE))
         );
 
@@ -1425,8 +1429,8 @@ public class GUI extends javax.swing.JFrame {
         jLabel15.setText("State");
         jLabel15.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButton2.setText("Family Search");
+        FamilySearchButton.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        FamilySearchButton.setText("Family Search");
 
         jCheckBox10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jCheckBox10.setText("Advocacy");
@@ -1517,7 +1521,7 @@ public class GUI extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addGap(30, 30, 30)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(FamilySearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(117, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -1526,7 +1530,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(FamilySearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(34, 34, 34)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1568,9 +1572,9 @@ public class GUI extends javax.swing.JFrame {
         jTextField93.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jTextField93.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        jButton14.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton14.setText("Load Member Data");
-        jButton14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        LoadMemberDataFamilyButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        LoadMemberDataFamilyButton.setText("Load Member Data");
+        LoadMemberDataFamilyButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
         jLabel55.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel55.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1726,10 +1730,10 @@ public class GUI extends javax.swing.JFrame {
         jTextField63.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jTextField63.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        jButton5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(22, 177, 30));
-        jButton5.setText("Create Family");
-        jButton5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(22, 177, 30), 3));
+        CreateFamilyButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        CreateFamilyButton.setForeground(new java.awt.Color(22, 177, 30));
+        CreateFamilyButton.setText("Create Family");
+        CreateFamilyButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(22, 177, 30), 3));
 
         jLabel107.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel107.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1787,7 +1791,7 @@ public class GUI extends javax.swing.JFrame {
                                 .addComponent(jCheckBox32, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(CreateFamilyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(jPanel5Layout.createSequentialGroup()
                                         .addComponent(jCheckBox33, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1832,7 +1836,7 @@ public class GUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextField93, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(LoadMemberDataFamilyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -1843,7 +1847,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jTextField93)
-                        .addComponent(jButton14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(LoadMemberDataFamilyButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jLabel96, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
                 .addGap(49, 49, 49)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1908,7 +1912,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jCheckBox36, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(51, 51, 51)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CreateFamilyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addComponent(jLabel107, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1926,9 +1930,9 @@ public class GUI extends javax.swing.JFrame {
         jTextField94.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jTextField94.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        jButton15.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton15.setText("Load Family Data");
-        jButton15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        LoadFamilyDataButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        LoadFamilyDataButton.setText("Load Family Data");
+        LoadFamilyDataButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
         jLabel69.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel69.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -2092,30 +2096,29 @@ public class GUI extends javax.swing.JFrame {
         jTextField100.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jTextField100.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        jButton16.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton16.setForeground(new java.awt.Color(22, 177, 30));
-        jButton16.setText("Add Family Member");
-        jButton16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(22, 177, 30), 3));
+        AddFamilyMemberButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        AddFamilyMemberButton.setForeground(new java.awt.Color(22, 177, 30));
+        AddFamilyMemberButton.setText("Add Family Member");
+        AddFamilyMemberButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(22, 177, 30), 3));
 
-        jButton17.setBackground(new java.awt.Color(255, 255, 255));
-        jButton17.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton17.setForeground(new java.awt.Color(22, 177, 30));
-        jButton17.setText("Update Family Data");
-        jButton17.setActionCommand("Update Family Data");
-        jButton17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(22, 177, 30), 3));
+        UpdateFamilyDataButton.setBackground(new java.awt.Color(255, 255, 255));
+        UpdateFamilyDataButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        UpdateFamilyDataButton.setForeground(new java.awt.Color(22, 177, 30));
+        UpdateFamilyDataButton.setText("Update Family Data");
+        UpdateFamilyDataButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(22, 177, 30), 3));
 
-        jButton18.setBackground(new java.awt.Color(255, 255, 255));
-        jButton18.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton18.setForeground(new java.awt.Color(222, 10, 13));
-        jButton18.setText("Delete Family Record");
-        jButton18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(222, 10, 13), 3));
+        DeleteFamilyRecordButton.setBackground(new java.awt.Color(255, 255, 255));
+        DeleteFamilyRecordButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        DeleteFamilyRecordButton.setForeground(new java.awt.Color(222, 10, 13));
+        DeleteFamilyRecordButton.setText("Delete Family Record");
+        DeleteFamilyRecordButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(222, 10, 13), 3));
 
-        jButton19.setBackground(new java.awt.Color(255, 255, 255));
-        jButton19.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton19.setForeground(new java.awt.Color(222, 10, 13));
-        jButton19.setText("Confirm Deletion");
-        jButton19.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(222, 10, 13), 3, true));
-        jButton19.setEnabled(false);
+        ConfirmDeleteFamilyButton.setBackground(new java.awt.Color(255, 255, 255));
+        ConfirmDeleteFamilyButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        ConfirmDeleteFamilyButton.setForeground(new java.awt.Color(222, 10, 13));
+        ConfirmDeleteFamilyButton.setText("Confirm Deletion");
+        ConfirmDeleteFamilyButton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(222, 10, 13), 3, true));
+        ConfirmDeleteFamilyButton.setEnabled(false);
 
         jTextArea3.setColumns(20);
         jTextArea3.setRows(5);
@@ -2202,24 +2205,24 @@ public class GUI extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jTextField94, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(LoadFamilyDataButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(jPanel10Layout.createSequentialGroup()
                                 .addComponent(jLabel106, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jTextField100, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(AddFamilyMemberButton, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(31, 31, 31)
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
                 .addGap(116, 116, 116)
-                .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(UpdateFamilyDataButton, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(DeleteFamilyRecordButton, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(71, 71, 71)
-                .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ConfirmDeleteFamilyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(299, 299, 299))
         );
         jPanel10Layout.setVerticalGroup(
@@ -2229,14 +2232,14 @@ public class GUI extends javax.swing.JFrame {
                     .addGroup(jPanel10Layout.createSequentialGroup()
                         .addGap(46, 46, 46)
                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton15, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(LoadFamilyDataButton, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel97, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
                             .addComponent(jTextField94, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jTextField100, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
-                                .addComponent(jButton16))
+                                .addComponent(AddFamilyMemberButton))
                             .addComponent(jLabel106, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)))
                     .addGroup(jPanel10Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -2304,9 +2307,9 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jCheckBox51, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(88, 88, 88)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton17, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
-                    .addComponent(jButton18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(UpdateFamilyDataButton, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
+                    .addComponent(DeleteFamilyRecordButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ConfirmDeleteFamilyButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(168, 168, 168))
         );
 
@@ -2369,6 +2372,67 @@ public class GUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField101ActionPerformed
 
+    
+    
+    public JButton getAddFamilyMemberButton() {
+        return AddFamilyMemberButton;
+    }
+    
+    public JButton getConfirmDeleteFamilyButton() {
+        return ConfirmDeleteFamilyButton;
+    }
+    
+    public JButton getConfirmMemberDeleteButton () {
+        return ConfirmMemberDeleteButton;
+    }
+    
+    public JButton getCreateFamilyButton () {
+        return CreateFamilyButton;
+    }
+    
+    public JButton getCreateMemberButton() {
+        return CreateMemberButton;
+    }
+    
+    public JButton getDeleteFamilyRecordButton () {
+        return DeleteFamilyRecordButton; 
+    }
+    
+    public JButton getDeleteMemberRecordButton() {
+        return DeleteMemberRecordButton;
+    }
+    
+    public JButton getFamilySearchButton() {
+        return FamilySearchButton;
+    }
+    
+    public JButton getLoadFamilyDataButton() {
+        return LoadFamilyDataButton;
+    }
+    
+    public JButton getLoadMemberDataButton() {
+        return LoadMemberDataButton;
+    }
+    
+    public JButton getLoadMemberDataFamilyButton() {
+        return LoadMemberDataFamilyButton;
+    }
+    
+    public JButton getMemberSearchButton() {
+        return MemberSearchButton;
+    }
+    public JButton getTodayButton() {
+        return TodayButton;
+    }
+    
+    public JButton getUpdateFamilyDataButton() {
+        return UpdateFamilyDataButton;
+    }
+    
+    public JButton getUpdateMemberDataButton() {
+        return UpdateMemberDataButton;
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -2386,40 +2450,41 @@ public class GUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MemberUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MemberUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MemberUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MemberUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new GUI().setVisible(true);
+                new MemberUI().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton9;
+    private javax.swing.JButton AddFamilyMemberButton;
+    private javax.swing.JButton ConfirmDeleteFamilyButton;
+    private javax.swing.JButton ConfirmMemberDeleteButton;
+    private javax.swing.JButton CreateFamilyButton;
+    private javax.swing.JButton CreateMemberButton;
+    private javax.swing.JButton DeleteFamilyRecordButton;
+    private javax.swing.JButton DeleteMemberRecordButton;
+    private javax.swing.JButton FamilySearchButton;
+    private javax.swing.JButton LoadFamilyDataButton;
+    private javax.swing.JButton LoadMemberDataButton;
+    private javax.swing.JButton LoadMemberDataFamilyButton;
+    private javax.swing.JButton MemberSearchButton;
+    private javax.swing.JButton TodayButton;
+    private javax.swing.JButton UpdateFamilyDataButton;
+    private javax.swing.JButton UpdateMemberDataButton;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox10;
     private javax.swing.JCheckBox jCheckBox11;

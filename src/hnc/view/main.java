@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hnc.database;
+package hnc.view;
 
 import hnc.model.domain.Member;
 import java.io.*;
@@ -23,7 +23,7 @@ public class main {
         member.setFName("Jenny");
         member.setLName("Jones");
         System.out.print(member.toString());
-        GUI view = new GUI();
+        MemberUI view = new MemberUI();
     }
  
     

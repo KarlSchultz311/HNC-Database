@@ -3,15 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hnc.model.business.manager;
+package hnc.business.service;
 
 /**
  *
  * @author Karl
  */
-public class FamilyManager {
-    
-    //constructor
-    public FamilyManager(){}
+public class MemberSvcLocalJDBCImpl implements IMemberSvc {
     
 }

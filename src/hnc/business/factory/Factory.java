@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hnc.model.business.factory;
+package hnc.business.factory;
 
-import hnc.model.business.service.*;
+import hnc.business.service.IService;
 import java.io.*;
 import java.util.*;
 

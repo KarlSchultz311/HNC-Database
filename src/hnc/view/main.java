@@ -5,7 +5,7 @@
  */
 package hnc.view;
 
-import hnc.model.domain.Member;
+import hnc.domain.Member;
 import java.io.*;
 
 /**

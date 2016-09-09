@@ -6,8 +6,6 @@
 package hnc.controller;
 
 import java.awt.event.*;
-import hnc.model.domain.*;
-import hnc.model.business.manager.*;
 import hnc.view.*;
 import java.io.*;
 

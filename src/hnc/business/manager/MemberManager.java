@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hnc.model.business.service;
+package hnc.business.manager;
 
 /**
  *
  * @author Karl
  */
-public interface IService {
+public class MemberManager {
     
 }

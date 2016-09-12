@@ -28,7 +28,7 @@ public class Member {
     
     //members
     private int memId;
-    private int region;
+    private String region;
     private String lName;
     private String fName;
     private String email1;
@@ -70,7 +70,7 @@ public class Member {
         zip = null;
         state = null;
         county = null;
-        region = 0;
+        region = null;
         homePhone = null;
         cellPhone = null;
         bleedDisorder = null;
@@ -102,7 +102,7 @@ public class Member {
         zip = null;
         state = null;
         county = null;
-        region = 0;
+        region = null;
         homePhone = null;
         cellPhone = null;
         bleedDisorder = null;
@@ -201,11 +201,11 @@ public class Member {
         this.county = county;
     }
     
-    public int getRegion(){
+    public String getRegion(){
         return region;
     }
     
-    public void setRegion(int region){
+    public void setRegion(String region){
         this.region = region;
     }
     
@@ -297,6 +297,13 @@ public class Member {
         this.organization = organization;
     }
     
+    public boolean getHope(){
+        return hope;
+    }
+    
+    public void setHope(boolean hope){
+        this.hope = hope;
+    }
     public boolean getSoar(){
         return soar;
     }
@@ -325,7 +332,7 @@ public class Member {
         return bloodBrotherhood;
     }
     
-    public void setBloodBlotherhood(boolean bloodBrotherhood){
+    public void setBloodBrotherhood(boolean bloodBrotherhood){
         this.bloodBrotherhood = bloodBrotherhood;
     }
     
@@ -348,7 +355,7 @@ public class Member {
    
     @Override
     public String toString(){
-        return "Member ID " + memId + " " + fName + " " + lName;
+        return "Member ID " + memId + " " + fName + " " + lName + " " + region;
     }
     
 }

@@ -101,7 +101,7 @@ public class MemberController implements ActionListener {
     }
     
     private void createMemberActionPerformed(ActionEvent event, MemberUI memberUI){
-        //stub
+        memberUI.getMember();
     }
     
     private void deleteFamilyRecordActionPerformed(ActionEvent event, MemberUI memberUI){

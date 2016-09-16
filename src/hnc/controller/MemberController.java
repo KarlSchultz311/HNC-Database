@@ -6,8 +6,10 @@
 package hnc.controller;
 
 import java.awt.event.*;
-import hnc.view.*;
+import hnc.business.manager.MemberManager;
+import hnc.view.MemberUI;
 import java.io.*;
+import hnc.domain.Member;
 
 /**MemberController
  This class is a controller class for the MemberUI. It assigns ActionListeners to
@@ -101,7 +103,14 @@ public class MemberController implements ActionListener {
     }
     
     private void createMemberActionPerformed(ActionEvent event, MemberUI memberUI){
-        memberUI.getMember();
+        MemberManager memMan = new MemberManager();
+        Member member = memberUI.getMember();
+        try{
+            memMan.createMember(member);
+            System.out.print(member.getLName());
+        }catch (Exception e){
+            System.out.print(e);
+        }
     }
     
     private void deleteFamilyRecordActionPerformed(ActionEvent event, MemberUI memberUI){

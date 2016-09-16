@@ -5,10 +5,18 @@
  */
 package hnc.business.service;
 
+import hnc.domain.Member;
+
 /**
  *
  * @author Karl
  */
-public interface IMemberSvc {
+public interface IMemberSvc extends IService{
+    
+    //abstract methods
+    public void createMember(Member member) throws Exception;
+    
+    
+    
     
 }

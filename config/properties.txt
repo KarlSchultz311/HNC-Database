@@ -1,2 +1,2 @@
-IMemberSvc = hnc.model.business.service.MemberSvcLocalJDBCImpl
-IFamilySvc = hnc.model.business.service.FamilySvcLocalJDBCImpl
+IMemberSvc = hnc.business.service.MemberSvcLocalJDBCImpl
+IFamilySvc = hnc.business.service.FamilySvcLocalJDBCImpl

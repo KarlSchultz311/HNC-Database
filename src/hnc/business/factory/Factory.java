@@ -22,8 +22,8 @@ public class Factory {
     
      
     public IService getService(String serviceName) throws Exception {
-        Class c = Class.forName(getImplName (serviceName));
-        return (IService) c.newInstance();
+        Class c = Class.forName(getImplName(serviceName));
+        return (IService)c.newInstance();
     }
     
     //this method loads the config text file and returns the implementation FQN

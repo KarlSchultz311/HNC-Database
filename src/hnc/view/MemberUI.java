@@ -676,7 +676,6 @@ public class MemberUI extends javax.swing.JFrame {
 
         tf_org2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         tf_org2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf_org2.setEnabled(false);
 
         CreateMemberButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         CreateMemberButton.setForeground(new java.awt.Color(22, 177, 30));
@@ -2454,6 +2453,7 @@ public class MemberUI extends javax.swing.JFrame {
         member.setBleedDisorder(tf_bleed2.getText());
         member.setComments(tf_comments2.getText());
         member.setJoinDate(tf_joinDate2.getText());
+        member.setOrganization(tf_org2.getText());
         //checkbox values are false by default per constructor
         if(chbx_hope2.isSelected()){
             member.setHope(true);
@@ -2477,10 +2477,8 @@ public class MemberUI extends javax.swing.JFrame {
             member.setAdvocacy(true);
         }
         if(chbx_rep2.isSelected()){
-            member.setIndustry(true);
-            member.setOrganization(tf_org2.getText());
+            member.setIndustry(true);           
         }
-        
         ta_1.setText(member.toString());
         return member;
     }

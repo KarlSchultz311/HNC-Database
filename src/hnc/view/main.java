@@ -18,11 +18,7 @@ public class main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Member member = new Member();
-        member.setMemId(0001);
-        member.setFName("Jenny");
-        member.setLName("Jones");
-        System.out.print(member.toString());
+        
         MemberUI view = new MemberUI();
     }
  

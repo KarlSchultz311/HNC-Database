@@ -9,6 +9,5 @@ package hnc.business.service;
  *
  * @author Karl
  */
-public interface IService {
-    
-}
+public interface IService {}
+

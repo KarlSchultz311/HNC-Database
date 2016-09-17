@@ -21,11 +21,11 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
     }
     
     @Override
-    public void createMember(Member member) throws Exception{
+    public String createMember(Member member) throws Exception{
         Connection conn = getConnection();  //establishes connection to DB
         try {
             Statement stmt = conn.createStatement();
-            System.out.print(member.getIndustry());
+        
             String sql = "INSERT INTO members (lName, fName, email1, email2, streetAdd1," +
                     "streetAdd2, city, zip, state, county, region, homePhone, cellPhone," +
                     "bleedDisorder, dob, joinDate, comments," +
@@ -41,13 +41,31 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                     member.getOrganization()+"', '"+member.getIndustry()+"', '"+
                     member.getHope()+"', '"+member.getTeens()+"', '"+member.getLatinUnion()
                     +"', '"+member.getSoar()+"', '"+member.getBloodBrotherhood()+"', '"+
-                    member.getInhibitors()+"', '"+member.getAdvocacy()+"')";
+                    member.getInhibitors()+"', '"+member.getAdvocacy()+"'),";
                     
             stmt.executeUpdate(sql);
+            
+           int autoIncKeyFromFunc = -1;
+           
+            
+            String get = "SELECT memId FROM member WHERE lName ='"+ member.getLName()+"'";
+            System.out.println(get);
+            ResultSet rs = stmt.executeQuery(get);
+            
+            if (rs.next()){
+                autoIncKeyFromFunc = rs.getInt(1);
+            }
+            
+            System.out.println(rs);
+            int memId = rs.getInt(1);
+            String ID = Integer.toString(memId);
+            System.out.println(ID);
+            return ID;
            /*
             */
         } catch (Exception e) {
-            System.out.println(e);
+            System.out.println("Unable to find MemID");
+            return "Unable to find MemID";
         } finally {
             if (conn != null) 
                 conn.close();

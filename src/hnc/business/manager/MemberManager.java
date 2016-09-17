@@ -19,14 +19,16 @@ public class MemberManager {
     public MemberManager(){}
     
     //methods
-    public void createMember(Member member) throws Exception {
+    public String createMember(Member member) throws Exception {
         Factory factory = new Factory();
         try{
             IMemberSvc memberSvc = (IMemberSvc)factory.getService("IMemberSvc");
-            memberSvc.createMember(member);
+            return memberSvc.createMember(member);
         } catch (Exception e) {
-            System.out.print(e);
+            System.out.println(e);
+            return "Unable to find MemID";
         }
+        
     }
     
            

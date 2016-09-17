@@ -106,7 +106,7 @@ public class MemberController implements ActionListener {
         MemberManager memMan = new MemberManager();
         Member member = memberUI.getMember();
         try{
-            memMan.createMember(member);
+            memberUI.tf_memID2.setText(memMan.createMember(member));
             System.out.print(member.getLName());
         }catch (Exception e){
             System.out.print(e);

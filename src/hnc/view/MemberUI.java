@@ -687,8 +687,6 @@ public class MemberUI extends javax.swing.JFrame {
         jLabel54.setText("Assigned Member ID Number");
         jLabel54.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
-        tf_memID2.setEditable(false);
-
         cb_region2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         cb_region2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select Region From List", "Region 1", "Region 2", "Region 3", "Region 4", "Region 5", "Region 6", "Region 7", "Region 8", "Region 9", "Region 10", "Region 11", "Region 12", "Region 13", "Region 14" }));
 
@@ -2794,7 +2792,7 @@ public class MemberUI extends javax.swing.JFrame {
     private javax.swing.JTextField tf_lName1;
     private javax.swing.JTextField tf_lName2;
     private javax.swing.JTextField tf_memID1;
-    private javax.swing.JTextField tf_memID2;
+    public javax.swing.JTextField tf_memID2;
     private javax.swing.JTextField tf_org2;
     private javax.swing.JTextField tf_sA12;
     private javax.swing.JTextField tf_sA22;

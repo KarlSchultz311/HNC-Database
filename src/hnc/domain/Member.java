@@ -48,14 +48,14 @@ public class Member {
     private String comments;
     private String badAdd;
     private String organization;
-    private Boolean industry;
-    private Boolean hope;
-    private Boolean teens;
-    private Boolean latinUnion;
-    private Boolean soar;
-    private Boolean bloodBrotherhood;
-    private Boolean inhibitors;
-    private Boolean advocacy;
+    private int industry;
+    private int hope;
+    private int teens;
+    private int latinUnion;
+    private int soar;
+    private int bloodBrotherhood;
+    private int inhibitors;
+    private int advocacy;
     
     //constructor
     public Member(){
@@ -79,15 +79,15 @@ public class Member {
         updatedDate = null;
         comments = null;
         badAdd = null;
-        industry = false;
+        industry = 0;
         organization = null;
-        hope = false;
-        teens = false;
-        latinUnion = false;
-        soar = false;
-        bloodBrotherhood = false;
-        inhibitors = false;
-        advocacy = false;
+        hope = 0;
+        teens = 0;
+        latinUnion = 0;
+        soar = 0;
+        bloodBrotherhood = 0;
+        inhibitors = 0;
+        advocacy = 0;
     }
     
      public Member(int memId){
@@ -111,15 +111,15 @@ public class Member {
         updatedDate = null;
         comments = null;
         badAdd = null;
-        industry = false;
+        industry = 0;
         organization = null;
-        hope = false;
-        teens = false;
-        latinUnion = false;
-        soar = false;
-        bloodBrotherhood = false;
-        inhibitors = false;
-        advocacy = false;
+        hope = 0;
+        teens = 0;
+        latinUnion = 0;
+        soar = 0;
+        bloodBrotherhood = 0;
+        inhibitors = 0;
+        advocacy = 0;
     }
     
     //methods
@@ -281,11 +281,11 @@ public class Member {
         this.badAdd = badAdd;
     }
     
-    public boolean getIndustry(){
+    public int getIndustry(){
         return industry;
     }
     
-    public void setIndustry(boolean industry){
+    public void setIndustry(int industry){
         this.industry = industry;
     }
     
@@ -297,58 +297,58 @@ public class Member {
         this.organization = organization;
     }
     
-    public boolean getHope(){
+    public int getHope(){
         return hope;
     }
     
-    public void setHope(boolean hope){
+    public void setHope(int hope){
         this.hope = hope;
     }
-    public boolean getSoar(){
+    public int getSoar(){
         return soar;
     }
     
-    public void setSoar(boolean soar){
+    public void setSoar(int soar){
         this.soar = soar;
     }
     
-    public boolean getTeens(){
+    public int getTeens(){
         return teens;
     }
     
-    public void setTeens(boolean teens){
+    public void setTeens(int teens){
         this.teens = teens;
     }
     
-    public boolean getLatinUnion(){
+    public int getLatinUnion(){
         return latinUnion;
     }
     
-    public void setLatinUnion(boolean latinUnion){
+    public void setLatinUnion(int latinUnion){
         this.latinUnion = latinUnion;
     }
     
-    public boolean getBloodBrotherhood(){
+    public int getBloodBrotherhood(){
         return bloodBrotherhood;
     }
     
-    public void setBloodBrotherhood(boolean bloodBrotherhood){
+    public void setBloodBrotherhood(int bloodBrotherhood){
         this.bloodBrotherhood = bloodBrotherhood;
     }
     
-    public boolean getInhibitors(){
+    public int getInhibitors(){
         return inhibitors;
     }
     
-    public void setInhibitors(boolean inhibitors){
+    public void setInhibitors(int inhibitors){
         this.inhibitors = inhibitors;
     }
     
-    public boolean getAdvocacy(){
+    public int getAdvocacy(){
         return advocacy;
     }
     
-    public void setAdvocacy(boolean advocacy){
+    public void setAdvocacy(int advocacy){
         this.advocacy = advocacy;
     }
     

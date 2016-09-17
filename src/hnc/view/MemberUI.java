@@ -2456,28 +2456,28 @@ public class MemberUI extends javax.swing.JFrame {
         member.setOrganization(tf_org2.getText());
         //checkbox values are false by default per constructor
         if(chbx_hope2.isSelected()){
-            member.setHope(true);
+            member.setHope(1);
         }
         if(chbx_teens2.isSelected()){
-            member.setTeens(true);
+            member.setTeens(1);
         }
         if(chbx_soar2.isSelected()){
-            member.setSoar(true);
+            member.setSoar(1);
         }
         if(chbx_blood2.isSelected()){
-            member.setBloodBrotherhood(true);
+            member.setBloodBrotherhood(1);
         }
         if(chbx_latin2.isSelected()){
-            member.setLatinUnion(true);
+            member.setLatinUnion(1);
         }
         if(chbx_inhib2.isSelected()){
-            member.setInhibitors(true);
+            member.setInhibitors(1);
         }
         if(chbx_advocacy2.isSelected()){
-            member.setAdvocacy(true);
+            member.setAdvocacy(1);
         }
         if(chbx_rep2.isSelected()){
-            member.setIndustry(true);           
+            member.setIndustry(1);           
         }
         ta_1.setText(member.toString());
         return member;

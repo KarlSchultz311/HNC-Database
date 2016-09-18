@@ -24,7 +24,10 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
     public String createMember(Member member) throws Exception{
         Connection conn = getConnection();  //establishes connection to DB
         try {
-            Statement stmt = conn.createStatement();
+            Statement stmt = null;
+            ResultSet rs = null;
+            
+            stmt = conn.createStatement();
         
             String sql = "INSERT INTO members (lName, fName, email1, email2, streetAdd1," +
                     "streetAdd2, city, zip, state, county, region, homePhone, cellPhone," +
@@ -41,31 +44,30 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                     member.getOrganization()+"', '"+member.getIndustry()+"', '"+
                     member.getHope()+"', '"+member.getTeens()+"', '"+member.getLatinUnion()
                     +"', '"+member.getSoar()+"', '"+member.getBloodBrotherhood()+"', '"+
-                    member.getInhibitors()+"', '"+member.getAdvocacy()+"'),";
-                    
+                    member.getInhibitors()+"', '"+member.getAdvocacy()+"')";
+                  
+            
             stmt.executeUpdate(sql);
             
-           int autoIncKeyFromFunc = -1;
-           
+            //String sql2 = "SELECT memId FROM member WHERE lName ='"+ member.getLName()+ "'";
             
-            String get = "SELECT memId FROM member WHERE lName ='"+ member.getLName()+"'";
-            System.out.println(get);
-            ResultSet rs = stmt.executeQuery(get);
-            
-            if (rs.next()){
-                autoIncKeyFromFunc = rs.getInt(1);
-            }
-            
-            System.out.println(rs);
+            rs = stmt.executeQuery("SELECT LAST_INSERT_ID()");
+            rs.next();
             int memId = rs.getInt(1);
             String ID = Integer.toString(memId);
-            System.out.println(ID);
+            
+            System.out.printf(ID);
             return ID;
            /*
             */
         } catch (Exception e) {
-            System.out.println("Unable to find MemID");
-            return "Unable to find MemID";
+            System.out.println(e);
+            return "JDBC Exception: Unable to find MemID";
+            
+           
+            
+            
+            
         } finally {
             if (conn != null) 
                 conn.close();

@@ -106,7 +106,7 @@ public class MemberController implements ActionListener {
         MemberManager memMan = new MemberManager();
         Member member = memberUI.getMember();
         try{
-            memberUI.tf_memID2.setText(memMan.createMember(member));
+            memberUI.tf_memID2.setText(memMan.saveMember(member));
             System.out.print(member.getLName());
         }catch (Exception e){
             System.out.print(e);
@@ -130,7 +130,17 @@ public class MemberController implements ActionListener {
     }
     
     private void loadMemberDataActionPerformed(ActionEvent event, MemberUI memberUI){
-        //stub
+        //this method gets the MemberID from input and searched DB for a match
+        //if found, it populates all the avalible text fields on the member edit/delete UI
+        MemberManager memMan = new MemberManager();
+        String memId = memberUI.tf_memID3.getText();
+        try{
+        Member member = memMan.findMember(memId);
+        memberUI.loadMember(member);
+        
+        }catch (Exception e){
+            System.out.println(e);
+        }
     }
     
     private void loadMemberDataFamilyActionPerformed(ActionEvent event, MemberUI memberUI){

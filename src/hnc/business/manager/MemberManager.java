@@ -19,11 +19,11 @@ public class MemberManager {
     public MemberManager(){}
     
     //methods
-    public String createMember(Member member) throws Exception {
+    public String saveMember(Member member) throws Exception {
         Factory factory = new Factory();
         try{
             IMemberSvc memberSvc = (IMemberSvc)factory.getService("IMemberSvc");
-            return memberSvc.createMember(member);
+            return memberSvc.saveMember(member);
         } catch (Exception e) {
             System.out.println(e);
             return "Unable to find MemID";
@@ -31,7 +31,17 @@ public class MemberManager {
         
     }
     
+    public Member findMember(String memId) throws Exception {
+        Factory factory = new Factory();
+        try{
+            IMemberSvc memberSvc = (IMemberSvc)factory.getService("IMemberSvc");
+            return memberSvc.findMember(memId);
+        }catch (Exception e){
+            System.out.println(e);
+            Member member = new Member();
+            return member;
+        }
            
     }
     
-
+}

@@ -28,6 +28,7 @@ public class Member {
     
     //members
     private int memId;
+    private int familyId;
     private String region;
     private String lName;
     private String fName;
@@ -70,6 +71,7 @@ public class Member {
         zip = null;
         state = null;
         county = null;
+        familyId = 0;
         region = null;
         homePhone = null;
         cellPhone = null;
@@ -102,6 +104,7 @@ public class Member {
         zip = null;
         state = null;
         county = null;
+        familyId = 0;
         region = null;
         homePhone = null;
         cellPhone = null;
@@ -199,6 +202,14 @@ public class Member {
     
     public void setCounty(String county){
         this.county = county;
+    }
+    
+    public int getFamilyId(){
+        return familyId;        
+    }
+    
+    public void setFamilyId(int familyId){
+        this.familyId = familyId;
     }
     
     public String getRegion(){

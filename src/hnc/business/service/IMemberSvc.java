@@ -14,8 +14,8 @@ import hnc.domain.Member;
 public interface IMemberSvc extends IService{
     
     //abstract methods
-    public String createMember(Member member) throws Exception;
-    
+    public String saveMember(Member member) throws Exception;
+    public Member findMember (String memId) throws Exception;
     
     
     

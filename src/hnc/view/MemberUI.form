@@ -1381,7 +1381,7 @@
                               <Group type="102" attributes="0">
                                   <Component id="jLabel94" min="-2" pref="191" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jTextField90" min="-2" pref="176" max="-2" attributes="0"/>
+                                  <Component id="tf_memID3" min="-2" pref="176" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                                   <Component id="LoadMemberDataButton" min="-2" pref="179" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -1391,27 +1391,27 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="jLabel75" min="-2" pref="111" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jTextField72" min="-2" pref="254" max="-2" attributes="0"/>
+                                          <Component id="tf_lName3" min="-2" pref="254" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="jLabel77" min="-2" pref="111" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jTextField73" min="-2" pref="254" max="-2" attributes="0"/>
+                                          <Component id="tf_sA13" min="-2" pref="254" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="jLabel79" min="-2" pref="111" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jTextField74" min="-2" pref="254" max="-2" attributes="0"/>
+                                          <Component id="tf_city3" min="-2" pref="254" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="jLabel81" min="-2" pref="111" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jTextField75" min="-2" pref="254" max="-2" attributes="0"/>
+                                          <Component id="tf_zip3" min="-2" pref="254" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="jLabel83" min="-2" pref="111" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jTextField89" min="-2" pref="254" max="-2" attributes="0"/>
+                                          <Component id="tf_region3" min="-2" pref="254" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
@@ -1421,32 +1421,32 @@
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jTextField77" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
-                                              <Component id="jTextField78" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
-                                              <Component id="jTextField83" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
+                                              <Component id="tf_homePhone3" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
+                                              <Component id="tf_email13" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
+                                              <Component id="tf_bleed3" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="jCheckBox40" alignment="1" max="32767" attributes="0"/>
+                                              <Component id="chbx_hope3" alignment="1" max="32767" attributes="0"/>
                                               <Component id="jLabel90" alignment="1" pref="111" max="32767" attributes="0"/>
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="jCheckBox42" min="-2" pref="111" max="-2" attributes="0"/>
+                                                  <Component id="chbx_teens3" min="-2" pref="111" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jCheckBox41" min="-2" pref="115" max="-2" attributes="0"/>
+                                                  <Component id="chbx_soar3" min="-2" pref="115" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jCheckBox44" min="-2" pref="157" max="-2" attributes="0"/>
+                                                  <Component id="chbx_bloodBro3" min="-2" pref="157" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="jTextField84" max="32767" attributes="0"/>
+                                                  <Component id="tf_joinDate3" max="32767" attributes="0"/>
                                                   <EmptySpace min="-2" pref="143" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
-                                      <Component id="jCheckBox47" alignment="1" min="-2" pref="157" max="-2" attributes="0"/>
+                                      <Component id="chbx_rep3" alignment="1" min="-2" pref="157" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
@@ -1460,7 +1460,7 @@
                                           <Component id="jLabel80" alignment="0" max="32767" attributes="0"/>
                                           <Component id="jLabel87" alignment="1" max="32767" attributes="0"/>
                                           <Component id="jLabel91" alignment="1" min="-2" pref="179" max="-2" attributes="0"/>
-                                          <Component id="jCheckBox43" alignment="1" min="-2" pref="179" max="-2" attributes="0"/>
+                                          <Component id="chbx_latinUnion3" alignment="1" min="-2" pref="179" max="-2" attributes="0"/>
                                       </Group>
                                       <Component id="jLabel93" min="-2" pref="179" max="-2" attributes="0"/>
                                   </Group>
@@ -1468,29 +1468,29 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jTextField86" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
-                                              <Component id="jTextField87" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
-                                              <Component id="jTextField85" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
-                                              <Component id="jTextField76" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
-                                              <Component id="jTextField80" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
-                                              <Component id="jTextField79" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
+                                              <Component id="tf_sA23" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
+                                              <Component id="tf_state3" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
+                                              <Component id="tf_fName3" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
+                                              <Component id="tf_county3" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
+                                              <Component id="tf_dob3" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
+                                              <Component id="tf_cellPhone3" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="jCheckBox46" min="-2" pref="179" max="-2" attributes="0"/>
+                                                  <Component id="chbx_inhib3" min="-2" pref="179" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jCheckBox45" min="-2" pref="179" max="-2" attributes="0"/>
+                                                  <Component id="chbx_advocacy3" min="-2" pref="179" max="-2" attributes="0"/>
                                               </Group>
-                                              <Component id="jTextField88" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
+                                              <Component id="tf_org3" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="0" pref="110" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="jTextField81" min="-2" pref="254" max="-2" attributes="0"/>
+                                                  <Component id="tf_email23" min="-2" pref="254" max="-2" attributes="0"/>
                                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                               </Group>
-                                              <Component id="jTextField82" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jTextField91" alignment="1" max="32767" attributes="0"/>
+                                              <Component id="tf_comments3" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="tf_returnMail3" alignment="1" max="32767" attributes="0"/>
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
                                       </Group>
@@ -1510,7 +1510,7 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="TodayButton" min="-2" pref="133" max="-2" attributes="0"/>
-                                              <Component id="jTextField92" min="-2" pref="254" max="-2" attributes="0"/>
+                                              <Component id="tf_update3" min="-2" pref="254" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
@@ -1531,7 +1531,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="LoadMemberDataButton" alignment="1" min="-2" pref="51" max="-2" attributes="0"/>
                               <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jTextField90" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="tf_memID3" alignment="1" max="32767" attributes="0"/>
                                   <Component id="jLabel94" alignment="1" pref="30" max="32767" attributes="0"/>
                               </Group>
                           </Group>
@@ -1540,21 +1540,21 @@
                               <Group type="102" alignment="1" attributes="0">
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel75" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                      <Component id="jTextField72" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                      <Component id="jTextField85" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <Component id="tf_lName3" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <Component id="tf_fName3" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                       <Component id="jLabel76" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                          <Component id="jTextField73" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                          <Component id="tf_sA13" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                           <Component id="jLabel77" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                       </Group>
-                                      <Component id="jTextField86" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <Component id="tf_sA23" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jTextField74" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <Component id="tf_city3" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                       <Component id="jLabel79" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -1562,23 +1562,23 @@
                                   <Component id="jLabel78" min="-2" pref="30" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jTextField87" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <Component id="tf_state3" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                       <Component id="jLabel80" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextField75" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="tf_zip3" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                               <Component id="jLabel81" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                               <Component id="jLabel82" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                              <Component id="jTextField76" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="tf_county3" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jTextField89" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="tf_region3" alignment="1" max="32767" attributes="0"/>
                                       <Component id="jLabel83" alignment="1" pref="30" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -1587,60 +1587,60 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel88" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                      <Component id="jTextField80" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <Component id="tf_dob3" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextField77" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="tf_homePhone3" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                               <Component id="jLabel84" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                               <Component id="jLabel85" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                              <Component id="jTextField79" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="tf_cellPhone3" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextField78" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="tf_email13" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                               <Component id="jLabel86" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                               <Component id="jLabel87" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                              <Component id="jTextField81" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="tf_email23" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel89" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                               <Component id="jLabel91" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                              <Component id="jTextField82" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                              <Component id="jTextField83" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="tf_comments3" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="tf_bleed3" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel90" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                              <Component id="jTextField84" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="tf_joinDate3" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                               <Component id="jLabel93" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                              <Component id="jTextField91" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="tf_returnMail3" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jCheckBox42" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jCheckBox40" alignment="0" max="32767" attributes="0"/>
+                              <Component id="chbx_teens3" alignment="0" max="32767" attributes="0"/>
+                              <Component id="chbx_hope3" alignment="0" max="32767" attributes="0"/>
                               <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                  <Component id="jCheckBox46" alignment="3" pref="31" max="32767" attributes="0"/>
-                                  <Component id="jCheckBox44" alignment="3" pref="31" max="32767" attributes="0"/>
-                                  <Component id="jCheckBox43" alignment="3" pref="32" max="32767" attributes="0"/>
-                                  <Component id="jCheckBox45" alignment="3" pref="31" max="32767" attributes="0"/>
+                                  <Component id="chbx_inhib3" alignment="3" pref="31" max="32767" attributes="0"/>
+                                  <Component id="chbx_bloodBro3" alignment="3" pref="31" max="32767" attributes="0"/>
+                                  <Component id="chbx_latinUnion3" alignment="3" pref="32" max="32767" attributes="0"/>
+                                  <Component id="chbx_advocacy3" alignment="3" pref="31" max="32767" attributes="0"/>
                               </Group>
-                              <Component id="jCheckBox41" alignment="1" max="32767" attributes="0"/>
+                              <Component id="chbx_soar3" alignment="1" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jCheckBox47" alignment="3" pref="31" max="32767" attributes="0"/>
+                              <Component id="chbx_rep3" alignment="3" pref="31" max="32767" attributes="0"/>
                               <Component id="jLabel92" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                              <Component id="jTextField88" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="tf_org3" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel95" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                              <Component id="jTextField92" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="tf_update3" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="TodayButton" min="-2" pref="31" max="-2" attributes="0"/>
@@ -1852,7 +1852,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField72">
+                <Component class="javax.swing.JTextField" name="tf_lName3">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -1860,7 +1860,7 @@
                     <Property name="horizontalAlignment" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField73">
+                <Component class="javax.swing.JTextField" name="tf_sA13">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -1868,7 +1868,7 @@
                     <Property name="horizontalAlignment" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField74">
+                <Component class="javax.swing.JTextField" name="tf_city3">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -1876,7 +1876,7 @@
                     <Property name="horizontalAlignment" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField75">
+                <Component class="javax.swing.JTextField" name="tf_zip3">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -1884,7 +1884,7 @@
                     <Property name="horizontalAlignment" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField76">
+                <Component class="javax.swing.JTextField" name="tf_county3">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -1892,7 +1892,7 @@
                     <Property name="horizontalAlignment" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField77">
+                <Component class="javax.swing.JTextField" name="tf_homePhone3">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -1900,7 +1900,7 @@
                     <Property name="horizontalAlignment" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField78">
+                <Component class="javax.swing.JTextField" name="tf_email13">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -1908,7 +1908,7 @@
                     <Property name="horizontalAlignment" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField79">
+                <Component class="javax.swing.JTextField" name="tf_cellPhone3">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -1916,7 +1916,7 @@
                     <Property name="horizontalAlignment" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField80">
+                <Component class="javax.swing.JTextField" name="tf_dob3">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -1924,7 +1924,7 @@
                     <Property name="horizontalAlignment" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField81">
+                <Component class="javax.swing.JTextField" name="tf_email23">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -1932,7 +1932,7 @@
                     <Property name="horizontalAlignment" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField82">
+                <Component class="javax.swing.JTextField" name="tf_comments3">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -1940,7 +1940,7 @@
                     <Property name="horizontalAlignment" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField83">
+                <Component class="javax.swing.JTextField" name="tf_bleed3">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -1948,7 +1948,7 @@
                     <Property name="horizontalAlignment" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField84">
+                <Component class="javax.swing.JTextField" name="tf_joinDate3">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -1998,7 +1998,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="jCheckBox40">
+                <Component class="javax.swing.JCheckBox" name="chbx_hope3">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="1"/>
@@ -2027,7 +2027,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="jCheckBox41">
+                <Component class="javax.swing.JCheckBox" name="chbx_soar3">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="1"/>
@@ -2042,7 +2042,7 @@
                     <Property name="horizontalAlignment" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="jCheckBox42">
+                <Component class="javax.swing.JCheckBox" name="chbx_teens3">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="1"/>
@@ -2057,7 +2057,7 @@
                     <Property name="horizontalAlignment" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="jCheckBox43">
+                <Component class="javax.swing.JCheckBox" name="chbx_latinUnion3">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="1"/>
@@ -2072,7 +2072,7 @@
                     <Property name="horizontalAlignment" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="jCheckBox44">
+                <Component class="javax.swing.JCheckBox" name="chbx_bloodBro3">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="1"/>
@@ -2087,7 +2087,7 @@
                     <Property name="horizontalAlignment" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="jCheckBox45">
+                <Component class="javax.swing.JCheckBox" name="chbx_advocacy3">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="1"/>
@@ -2102,7 +2102,7 @@
                     <Property name="horizontalAlignment" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="jCheckBox46">
+                <Component class="javax.swing.JCheckBox" name="chbx_inhib3">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="1"/>
@@ -2117,7 +2117,7 @@
                     <Property name="horizontalAlignment" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="jCheckBox47">
+                <Component class="javax.swing.JCheckBox" name="chbx_rep3">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="1"/>
@@ -2132,7 +2132,7 @@
                     <Property name="horizontalAlignment" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField85">
+                <Component class="javax.swing.JTextField" name="tf_fName3">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -2140,7 +2140,7 @@
                     <Property name="horizontalAlignment" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField86">
+                <Component class="javax.swing.JTextField" name="tf_sA23">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -2148,7 +2148,7 @@
                     <Property name="horizontalAlignment" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField87">
+                <Component class="javax.swing.JTextField" name="tf_state3">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -2156,7 +2156,7 @@
                     <Property name="horizontalAlignment" type="int" value="0"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField88">
+                <Component class="javax.swing.JTextField" name="tf_org3">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -2178,13 +2178,16 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField90">
+                <Component class="javax.swing.JTextField" name="tf_memID3">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JButton" name="LoadMemberDataButton">
                   <Properties>
@@ -2199,7 +2202,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField89">
+                <Component class="javax.swing.JTextField" name="tf_region3">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -2221,7 +2224,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField91">
+                <Component class="javax.swing.JTextField" name="tf_returnMail3">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -2243,7 +2246,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField92">
+                <Component class="javax.swing.JTextField" name="tf_update3">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>

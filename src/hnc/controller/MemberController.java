@@ -10,6 +10,9 @@ import hnc.business.manager.MemberManager;
 import hnc.view.MemberUI;
 import java.io.*;
 import hnc.domain.Member;
+import java.util.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 /**MemberController
  This class is a controller class for the MemberUI. It assigns ActionListeners to
@@ -96,6 +99,7 @@ public class MemberController implements ActionListener {
     
     private void confirmMemberDeleteActionPerformed(ActionEvent event, MemberUI memberUI) {
         //stub
+        memberUI.ConfirmMemberDeleteButton.setEnabled(false);
     }
     
     private void createFamilyActionPerformed(ActionEvent event, MemberUI memberUI){
@@ -118,7 +122,7 @@ public class MemberController implements ActionListener {
     }
     
     private void deleteMemberRecordActionPerformed(ActionEvent event, MemberUI memberUI){
-        //stub
+        memberUI.ConfirmMemberDeleteButton.setEnabled(true);        
     }
     
     private void familySearchActionPerformed(ActionEvent event, MemberUI memberUI){
@@ -152,7 +156,9 @@ public class MemberController implements ActionListener {
     }
     
     private void todayActionPerformed(ActionEvent event, MemberUI memberUI){
-        //stub
+        DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+        Date date = new Date();
+        memberUI.tf_update3.setText(dateFormat.format(date));
     }
     
     private void updateFamilyDataActionPerformed(ActionEvent event, MemberUI memberUI){

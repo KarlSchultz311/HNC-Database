@@ -2598,7 +2598,7 @@ public class MemberUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AddFamilyMemberButton;
     private javax.swing.JButton ConfirmDeleteFamilyButton;
-    private javax.swing.JButton ConfirmMemberDeleteButton;
+    public javax.swing.JButton ConfirmMemberDeleteButton;
     private javax.swing.JButton CreateFamilyButton;
     private javax.swing.JButton CreateMemberButton;
     private javax.swing.JButton DeleteFamilyRecordButton;
@@ -2841,7 +2841,7 @@ public class MemberUI extends javax.swing.JFrame {
     private javax.swing.JTextField tf_sA23;
     private javax.swing.JTextField tf_state2;
     private javax.swing.JTextField tf_state3;
-    private javax.swing.JTextField tf_update3;
+    public javax.swing.JTextField tf_update3;
     private javax.swing.JTextField tf_zip2;
     private javax.swing.JTextField tf_zip3;
     // End of variables declaration//GEN-END:variables

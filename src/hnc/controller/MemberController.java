@@ -107,6 +107,8 @@ public class MemberController implements ActionListener {
         //this method will delete the current member row that attatched to the member
         // which has the memId displayed on the member edit screen. It will then 
         // disable the confirm button, resetting this safety.
+        MemberManager memMan = new MemberManager();
+        
         memberUI.ConfirmMemberDeleteButton.setEnabled(false);
     }
     

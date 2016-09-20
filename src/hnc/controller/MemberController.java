@@ -89,50 +89,6 @@ public class MemberController implements ActionListener {
          
     }
     
-    private void addFamilyMemberActionPerformed(ActionEvent event, MemberUI memberUI){
-        System.out.print("pushed add family button");
-    }
-    
-    private void confirmDeleteFamilyActionPerformed(ActionEvent event, MemberUI memberUI) {
-        System.out.print("pushed confirm delete family button");
-    }
-    
-    private void confirmMemberDeleteActionPerformed(ActionEvent event, MemberUI memberUI) {
-        //stub
-        memberUI.ConfirmMemberDeleteButton.setEnabled(false);
-    }
-    
-    private void createFamilyActionPerformed(ActionEvent event, MemberUI memberUI){
-        //stub
-    }
-    
-    private void createMemberActionPerformed(ActionEvent event, MemberUI memberUI){
-        MemberManager memMan = new MemberManager();
-        Member member = memberUI.getMember();
-        try{
-            memberUI.tf_memID2.setText(memMan.saveMember(member));
-            System.out.print(member.getLName());
-        }catch (Exception e){
-            System.out.print(e);
-        }
-    }
-    
-    private void deleteFamilyRecordActionPerformed(ActionEvent event, MemberUI memberUI){
-        //stub
-    }
-    
-    private void deleteMemberRecordActionPerformed(ActionEvent event, MemberUI memberUI){
-        memberUI.ConfirmMemberDeleteButton.setEnabled(true);        
-    }
-    
-    private void familySearchActionPerformed(ActionEvent event, MemberUI memberUI){
-        //stub
-    }
-    
-    private void loadFamilyDataActionPerformed(ActionEvent event, MemberUI memberUI){
-        //stub
-    }
-    
     private void loadMemberDataActionPerformed(ActionEvent event, MemberUI memberUI){
         //this method gets the MemberID from input and searched DB for a match
         //if found, it populates all the avalible text fields on the member edit/delete UI
@@ -147,6 +103,75 @@ public class MemberController implements ActionListener {
         }
     }
     
+    private void confirmMemberDeleteActionPerformed(ActionEvent event, MemberUI memberUI) {
+        //this method will delete the current member row that attatched to the member
+        // which has the memId displayed on the member edit screen. It will then 
+        // disable the confirm button, resetting this safety.
+        memberUI.ConfirmMemberDeleteButton.setEnabled(false);
+    }
+    
+    private void createMemberActionPerformed(ActionEvent event, MemberUI memberUI){
+        /*This method will get the data from the text fields and checkboxes of the
+        add new member screen and create a member object. This object will then be 
+        sent to be stored. The assigned member ID will be displayed in the text
+        field at the bottom.
+        */
+        MemberManager memMan = new MemberManager();
+        Member member = memberUI.getMember();
+        try{
+            memberUI.tf_memID2.setText(memMan.saveMember(member));
+            System.out.print(member.getLName());
+        }catch (Exception e){
+            System.out.print(e);
+        }
+    }
+    
+    private void deleteMemberRecordActionPerformed(ActionEvent event, MemberUI memberUI){
+        //This method will activate the deletion confirm button to allow deletion of member row.
+        memberUI.ConfirmMemberDeleteButton.setEnabled(true);        
+    }
+    
+    private void todayActionPerformed(ActionEvent event, MemberUI memberUI){
+        //This method will display the current date in MM/dd//yyyy format in the 
+        // updatedDate text field.
+        DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+        Date date = new Date();
+        memberUI.tf_update3.setText(dateFormat.format(date));
+    }
+    
+    
+    private void addFamilyMemberActionPerformed(ActionEvent event, MemberUI memberUI){
+        //stub
+    }
+    
+    private void confirmDeleteFamilyActionPerformed(ActionEvent event, MemberUI memberUI) {
+        //stub
+    }
+    
+    
+    
+    private void createFamilyActionPerformed(ActionEvent event, MemberUI memberUI){
+        //stub
+    }
+    
+    
+    
+    private void deleteFamilyRecordActionPerformed(ActionEvent event, MemberUI memberUI){
+        //stub
+    }
+    
+    
+    
+    private void familySearchActionPerformed(ActionEvent event, MemberUI memberUI){
+        //stub
+    }
+    
+    private void loadFamilyDataActionPerformed(ActionEvent event, MemberUI memberUI){
+        //stub
+    }
+    
+    
+    
     private void loadMemberDataFamilyActionPerformed(ActionEvent event, MemberUI memberUI){
         //stub
     }
@@ -155,11 +180,7 @@ public class MemberController implements ActionListener {
         //stub
     }
     
-    private void todayActionPerformed(ActionEvent event, MemberUI memberUI){
-        DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
-        Date date = new Date();
-        memberUI.tf_update3.setText(dateFormat.format(date));
-    }
+    
     
     private void updateFamilyDataActionPerformed(ActionEvent event, MemberUI memberUI){
         //stub

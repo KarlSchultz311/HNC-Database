@@ -2432,7 +2432,19 @@ public class MemberUI extends javax.swing.JFrame {
         return UpdateMemberDataButton;
     }
     
-    public Member getMember(){
+    public String getMemberID3(){
+        return tf_memID3.getText();
+    }
+    
+    public void setMemberID2(String memId2){
+        tf_memID2.setText(memId2);
+    }
+    
+    public void setMemberID3(String memId3){
+        tf_memID3.setText(memId3);
+    }
+    
+    public Member getMember2(){
         Member member = new Member();
         member.setLName(tf_lName2.getText());
         member.setFName(tf_fName2.getText());
@@ -2477,7 +2489,58 @@ public class MemberUI extends javax.swing.JFrame {
         if(chbx_rep2.isSelected()){
             member.setIndustry(1);           
         }
-        ta_1.setText(member.toString());
+        
+        return member;
+    }
+    
+    public Member getMember3(){
+        Member member = new Member();
+        member.setMemId((String)tf_memID3.getText());
+        member.setLName(tf_lName3.getText());
+        member.setFName(tf_fName3.getText());
+        member.setStreetAdd1(tf_sA13.getText());
+        member.setStreetAdd2(tf_sA23.getText());
+        member.setCity(tf_city3.getText());
+        member.setState(tf_state3.getText());
+        member.setZip(tf_zip3.getText());
+        member.setCounty(tf_county3.getText());
+        member.setRegion(tf_region3.getText());
+        member.setDob(tf_dob3.getText());
+        member.setHomePhone(tf_homePhone3.getText());
+        member.setCellPhone(tf_cellPhone3.getText());
+        member.setEmail1(tf_email13.getText());
+        member.setEmail2(tf_email23.getText());
+        member.setBleedDisorder(tf_bleed3.getText());
+        member.setComments(tf_comments3.getText());
+        member.setJoinDate(tf_joinDate3.getText());
+        member.setBadAdd(tf_returnMail3.getText());
+        
+        member.setOrganization(tf_org3.getText());
+        //checkbox values are false by default per constructor
+        if(chbx_hope3.isSelected()){
+            member.setHope(1);
+        }
+        if(chbx_teens3.isSelected()){
+            member.setTeens(1);
+        }
+        if(chbx_soar3.isSelected()){
+            member.setSoar(1);
+        }
+        if(chbx_bloodBro3.isSelected()){
+            member.setBloodBrotherhood(1);
+        }
+        if(chbx_latinUnion3.isSelected()){
+            member.setLatinUnion(1);
+        }
+        if(chbx_inhib3.isSelected()){
+            member.setInhibitors(1);
+        }
+        if(chbx_advocacy3.isSelected()){
+            member.setAdvocacy(1);
+        }
+        if(chbx_rep3.isSelected()){
+            member.setIndustry(1);           
+        }        
         return member;
     }
     
@@ -2829,8 +2892,8 @@ public class MemberUI extends javax.swing.JFrame {
     private javax.swing.JTextField tf_lName2;
     private javax.swing.JTextField tf_lName3;
     private javax.swing.JTextField tf_memID1;
-    public javax.swing.JTextField tf_memID2;
-    public javax.swing.JTextField tf_memID3;
+    private javax.swing.JTextField tf_memID2;
+    private javax.swing.JTextField tf_memID3;
     private javax.swing.JTextField tf_org2;
     private javax.swing.JTextField tf_org3;
     private javax.swing.JTextField tf_region3;

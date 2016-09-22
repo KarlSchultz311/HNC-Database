@@ -54,9 +54,8 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
             rs.next();
             int memId = rs.getInt(1);
             //change data type to String for UI display in text field
-            String ID = Integer.toString(memId);
+            String ID = Integer.toString(memId);           
             
-            System.out.printf(ID);
             return ID;
            
         } catch (Exception e) {
@@ -80,12 +79,12 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
             
             stmt = conn2.createStatement();
             
-            String sql2 = "select * from members WHERE memId = '"+memId+"'";
+            String sql2 = "SELECT * FROM members WHERE memId = '"+memId+"'";
             ResultSet rs = stmt.executeQuery(sql2);
             
             while(rs.next()){                
-                member.setMemId(rs.getInt(1));
-                member.setFamilyId(rs.getInt(2));
+                member.setMemId(rs.getString(1));
+                member.setFamilyId(rs.getString(2));
                 member.setLName(rs.getString(3));
                 member.setFName(rs.getString(4));
                 member.setEmail1(rs.getString(5));
@@ -125,5 +124,53 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                 conn2.close();
         }
         
+    }
+    
+    @Override
+    public Boolean deleteMember(String memId) throws Exception {
+        Connection conn3 = getConnection();
+        Statement stmt = null;
+        Boolean success = false;
+        try{
+            stmt = conn3.createStatement();
+            String sql3 = "DELETE FROM members WHERE memId = '"+ memId+"'";
+            stmt.executeUpdate(sql3);
+            success = true;
+            return success;
+        } catch (Exception e){
+            System.out.println(e);
+            return success;
+        } finally {
+            if (conn3 != null)
+                conn3.close();
+        }
+                
+    }
+    
+    @Override
+    public void updateMember(Member member) throws Exception {
+        Connection conn4 = getConnection();
+        Statement stmt = null;
+        try{
+            stmt = conn4.createStatement();
+            String sql4 = "UPDATE members SET lName= '"+ member.getLName()+"', fName= '"+
+                    member.getFName()+"', email1= '"+member.getEmail1()+"', email2= '"+member.getEmail2()
+                    +"', streetAdd1= '"+member.getStreetAdd1()+"', streetAdd2= '"+member.getStreetAdd2()
+                    +"', city= '"+member.getCity()+"', zip= '"+member.getZip()+"', state= '"+
+                    member.getState()+"', county= '"+member.getCounty()+"', region= '"+member.getRegion()
+                    +"', homePhone= '"+member.getHomePhone()+"', cellPhone= '"+member.getCellPhone()
+                    +"', bleedDisorder= '"+member.getBleedDisorder()+"', dob= '"+member.getDob()+"', joinDate= '"+
+                    member.getJoinDate()+"', comments= '"+member.getComments()+"', organization= '"+
+                    member.getOrganization()+"', industry= '"+member.getIndustry()+"', hope= '"+
+                    member.getHope()+"', teens= '"+member.getTeens()+"', latinUnion= '"+member.getLatinUnion()
+                    +"', soar= '"+member.getSoar()+"', bloodBrotherhood= '"+member.getBloodBrotherhood()+"', inhibitors='"+
+                    member.getInhibitors()+"', advocacy= '"+member.getAdvocacy()+"' WHERE memId='"+ Integer.parseInt(member.getMemId())+"'";
+            stmt.executeUpdate(sql4);
+        } catch (Exception e){
+            System.out.println(e);
+        } finally {
+            if (conn4 != null)
+                conn4.close();
+        }
     }
 }

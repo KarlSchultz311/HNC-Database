@@ -8,6 +8,9 @@ package hnc.view;
 import hnc.domain.Member;
 import hnc.controller.MemberController;
 import javax.swing.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+
 
 /**
  *
@@ -57,7 +60,7 @@ public class MemberUI extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         ta_1 = new javax.swing.JTextArea();
         chbx_advocacy1 = new javax.swing.JCheckBox();
-        chbx_noIndustry = new javax.swing.JCheckBox();
+        chbx_noIndustry1 = new javax.swing.JCheckBox();
         jLabel12 = new javax.swing.JLabel();
         tf_memID1 = new javax.swing.JTextField();
         cb_region1 = new javax.swing.JComboBox();
@@ -363,8 +366,8 @@ public class MemberUI extends javax.swing.JFrame {
         chbx_advocacy1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         chbx_advocacy1.setText("Advocacy");
 
-        chbx_noIndustry.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        chbx_noIndustry.setText("Exclude Industry Reps");
+        chbx_noIndustry1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        chbx_noIndustry1.setText("Exclude Industry Reps");
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -438,7 +441,7 @@ public class MemberUI extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(chbx_advocacy1)
                                 .addGap(150, 150, 150)
-                                .addComponent(chbx_noIndustry))
+                                .addComponent(chbx_noIndustry1))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1048, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 185, Short.MAX_VALUE))))
         );
@@ -481,7 +484,7 @@ public class MemberUI extends javax.swing.JFrame {
                     .addComponent(chbx_teen1)
                     .addComponent(chbx_inhib1)
                     .addComponent(chbx_advocacy1)
-                    .addComponent(chbx_noIndustry))
+                    .addComponent(chbx_noIndustry1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 691, Short.MAX_VALUE))
         );
@@ -2444,6 +2447,43 @@ public class MemberUI extends javax.swing.JFrame {
         tf_memID3.setText(memId3);
     }
     
+    public Member getSearchParams1(){
+        Member member = new Member();
+        member.setMemId((String)tf_memID1.getText());
+        member.setLName(tf_lName1.getText());
+        member.setFName(tf_fName1.getText());
+        member.setCity(tf_city1.getText());
+        member.setCounty(tf_county1.getText());
+        member.setRegion((String)cb_region1.getSelectedItem());
+        member.setBleedDisorder(tf_bleed1.getText());
+        //checkbox values are false by default per constructor
+        if(chbx_hope1.isSelected()){
+            member.setHope(1);
+        }
+        if(chbx_teen1.isSelected()){
+            member.setTeens(1);
+        }
+        if(chbx_soar1.isSelected()){
+            member.setSoar(1);
+        }
+        if(chbx_blood1.isSelected()){
+            member.setBloodBrotherhood(1);
+        }
+        if(chbx_latin1.isSelected()){
+            member.setLatinUnion(1);
+        }
+        if(chbx_inhib1.isSelected()){
+            member.setInhibitors(1);
+        }
+        if(chbx_advocacy1.isSelected()){
+            member.setAdvocacy(1);
+        }
+        if(chbx_noIndustry1.isSelected()){
+            member.setIndustry(1);           
+        }        
+        return member;
+    }
+    
     public Member getMember2(){
         Member member = new Member();
         member.setLName(tf_lName2.getText());
@@ -2514,7 +2554,7 @@ public class MemberUI extends javax.swing.JFrame {
         member.setComments(tf_comments3.getText());
         member.setJoinDate(tf_joinDate3.getText());
         member.setBadAdd(tf_returnMail3.getText());
-        
+        member.setUpdatedDate(tf_update3.getText());
         member.setOrganization(tf_org3.getText());
         //checkbox values are false by default per constructor
         if(chbx_hope3.isSelected()){
@@ -2592,6 +2632,29 @@ public class MemberUI extends javax.swing.JFrame {
         
     }
     
+    public void displayMemberSearch(ArrayList<Member> memberList){
+        Iterator it = memberList.iterator();
+        Member member = new Member();
+        //int n = memberList.size();
+        
+        /*
+        for (int i = 0; i<= (n-1); i++){
+            String result = memberList[i].getLName()+ " " + memberList[i].getFName() + "\n";
+            display += result;
+            
+        }*/
+        ta_1.setText(null);
+        
+        while ( it.hasNext()) {
+            
+            member = (Member)it.next();
+            
+            ta_1.append(member.getLName()+ " "+member.getFName()+ "\n");
+            
+            //System.out.println(member.getLName());
+        }  
+        
+    }
     /**
      * @param args the command line arguments
      */
@@ -2691,7 +2754,7 @@ public class MemberUI extends javax.swing.JFrame {
     private javax.swing.JCheckBox chbx_latin1;
     private javax.swing.JCheckBox chbx_latin2;
     private javax.swing.JCheckBox chbx_latinUnion3;
-    private javax.swing.JCheckBox chbx_noIndustry;
+    private javax.swing.JCheckBox chbx_noIndustry1;
     private javax.swing.JCheckBox chbx_rep2;
     private javax.swing.JCheckBox chbx_rep3;
     private javax.swing.JCheckBox chbx_soar1;

@@ -139,7 +139,7 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="chbx_advocacy1" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="150" max="-2" attributes="0"/>
-                                      <Component id="chbx_noIndustry" min="-2" max="-2" attributes="0"/>
+                                      <Component id="chbx_noIndustry1" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="jScrollPane1" min="-2" pref="1048" max="-2" attributes="0"/>
                               </Group>
@@ -195,7 +195,7 @@
                           <Component id="chbx_teen1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="chbx_inhib1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="chbx_advocacy1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="chbx_noIndustry" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="chbx_noIndustry1" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jScrollPane1" pref="691" max="32767" attributes="0"/>
@@ -415,7 +415,7 @@
                 <Property name="text" type="java.lang.String" value="Advocacy"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="chbx_noIndustry">
+            <Component class="javax.swing.JCheckBox" name="chbx_noIndustry1">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="12" style="1"/>
@@ -1270,13 +1270,6 @@
                       <Color blue="1e" green="b1" red="16" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Create Member"/>
-                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder thickness="3">
-                          <Color PropertyName="color" blue="1e" green="b1" red="16" type="rgb"/>
-                        </LineBorder>
-                      </Border>
-                    </Property>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel54">
@@ -2191,11 +2184,6 @@
                       <Font name="Tahoma" size="18" style="1"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Load Member Data"/>
-                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder thickness="3"/>
-                      </Border>
-                    </Property>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tf_region3">
@@ -2273,13 +2261,6 @@
                       <Color blue="1e" green="b1" red="16" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Update Member Data"/>
-                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder thickness="3">
-                          <Color PropertyName="color" blue="1e" green="b1" red="16" type="rgb"/>
-                        </LineBorder>
-                      </Border>
-                    </Property>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JButton" name="DeleteMemberRecordButton">
@@ -2294,13 +2275,6 @@
                       <Color blue="d" green="a" red="de" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Delete Member Record"/>
-                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder thickness="3">
-                          <Color PropertyName="color" blue="d" green="a" red="de" type="rgb"/>
-                        </LineBorder>
-                      </Border>
-                    </Property>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JButton" name="ConfirmMemberDeleteButton">
@@ -2315,13 +2289,6 @@
                       <Color blue="d" green="a" red="de" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Confirm Deletion"/>
-                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder thickness="3">
-                          <Color PropertyName="color" blue="d" green="a" red="de" type="rgb"/>
-                        </LineBorder>
-                      </Border>
-                    </Property>
                     <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
                   <AuxValues>
@@ -2825,7 +2792,7 @@
                               <Component id="jTextField93" alignment="3" max="32767" attributes="0"/>
                               <Component id="LoadMemberDataFamilyButton" alignment="3" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="jLabel96" alignment="1" pref="30" max="32767" attributes="0"/>
+                          <Component id="jLabel96" alignment="1" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
@@ -2946,11 +2913,6 @@
                   <Font name="Tahoma" size="18" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Load Member Data"/>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder thickness="3"/>
-                  </Border>
-                </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel55">
@@ -3393,13 +3355,6 @@
                   <Color blue="1e" green="b1" red="16" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Create Family"/>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder thickness="3">
-                      <Color PropertyName="color" blue="1e" green="b1" red="16" type="rgb"/>
-                    </LineBorder>
-                  </Border>
-                </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel107">
@@ -3598,7 +3553,7 @@
                                   <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="LoadFamilyDataButton" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel97" alignment="1" pref="30" max="32767" attributes="0"/>
+                                      <Component id="jLabel97" alignment="1" max="32767" attributes="0"/>
                                       <Component id="jTextField94" alignment="1" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -3731,11 +3686,6 @@
                       <Font name="Tahoma" size="18" style="1"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Load Family Data"/>
-                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder thickness="3"/>
-                      </Border>
-                    </Property>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel69">
@@ -4200,13 +4150,6 @@
                       <Color blue="1e" green="b1" red="16" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Add Family Member"/>
-                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder thickness="3">
-                          <Color PropertyName="color" blue="1e" green="b1" red="16" type="rgb"/>
-                        </LineBorder>
-                      </Border>
-                    </Property>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JButton" name="UpdateFamilyDataButton">
@@ -4221,13 +4164,6 @@
                       <Color blue="1e" green="b1" red="16" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Update Family Data"/>
-                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder thickness="3">
-                          <Color PropertyName="color" blue="1e" green="b1" red="16" type="rgb"/>
-                        </LineBorder>
-                      </Border>
-                    </Property>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JButton" name="DeleteFamilyRecordButton">
@@ -4242,13 +4178,6 @@
                       <Color blue="d" green="a" red="de" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Delete Family Record"/>
-                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder thickness="3">
-                          <Color PropertyName="color" blue="d" green="a" red="de" type="rgb"/>
-                        </LineBorder>
-                      </Border>
-                    </Property>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JButton" name="ConfirmDeleteFamilyButton">
@@ -4263,13 +4192,6 @@
                       <Color blue="d" green="a" red="de" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Confirm Deletion"/>
-                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder roundedCorners="true" thickness="3">
-                          <Color PropertyName="color" blue="d" green="a" red="de" type="rgb"/>
-                        </LineBorder>
-                      </Border>
-                    </Property>
                     <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
                 </Component>

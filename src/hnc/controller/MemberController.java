@@ -14,7 +14,7 @@ import hnc.domain.Member;
 import java.util.Date;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-
+import hnc.domain.Family;
 
 /**MemberController
  This class is a controller class for the MemberUI. It assigns ActionListeners to
@@ -188,7 +188,7 @@ public class MemberController implements ActionListener {
         //this method will fetch the apporpriate data from a member by the member ID number
         //it will then load the data into the textfields for a new family object.
         
-        String memId = memberUI.getMemberID5();
+        String memId = memberUI.getMemberID6();
         FamilyManager famMan = new FamilyManager();
         try{
             memberUI.loadPrimaryMember(famMan.getPrimaryMember(memId));
@@ -196,6 +196,25 @@ public class MemberController implements ActionListener {
             System.out.println(e);
         }
     }
+    
+    private void createFamilyActionPerformed(ActionEvent event, MemberUI memberUI){
+        /*This method will take the data loaded into the text fields on tab 6 and 
+        create a Family object. This Family object will then be saved to the database.
+        */
+        Family family = new Family();
+        family = memberUI.memberToFamily();
+        String memId = memberUI.getMemberID6();
+        FamilyManager famMan = new FamilyManager();
+        try{
+            String famId = famMan.createFamily(family);
+            memberUI.setFamilyID6(famId);
+            famMan.updateFamilyId(famId, memId);
+        }catch (Exception e){
+            System.out.println(e);
+        }
+        
+    }
+    
     
     private void addFamilyMemberActionPerformed(ActionEvent event, MemberUI memberUI){
         //stub
@@ -207,9 +226,7 @@ public class MemberController implements ActionListener {
     
     
     
-    private void createFamilyActionPerformed(ActionEvent event, MemberUI memberUI){
-        //stub
-    }
+    
     
     
     

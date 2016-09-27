@@ -27,8 +27,8 @@ import java.io.*;
 public class Member {
     
     //members
-    private int memId;
-    private int familyId;
+    private String memId;
+    private String familyId;
     private String region;
     private String lName;
     private String fName;
@@ -60,7 +60,7 @@ public class Member {
     
     //constructor
     public Member(){
-        memId = 0;
+        memId = null;
         lName = null;
         fName = null;
         email1 = null;
@@ -71,7 +71,7 @@ public class Member {
         zip = null;
         state = null;
         county = null;
-        familyId = 0;
+        familyId = null;
         region = null;
         homePhone = null;
         cellPhone = null;
@@ -92,7 +92,7 @@ public class Member {
         advocacy = 0;
     }
     
-     public Member(int memId){
+     public Member(String memId){
         this.memId = memId;
         lName = null;
         fName = null;
@@ -104,7 +104,7 @@ public class Member {
         zip = null;
         state = null;
         county = null;
-        familyId = 0;
+        familyId = null;
         region = null;
         homePhone = null;
         cellPhone = null;
@@ -126,6 +126,7 @@ public class Member {
     }
     
     //methods
+     
     public String getLName(){
         return lName;
     }
@@ -204,11 +205,11 @@ public class Member {
         this.county = county;
     }
     
-    public int getFamilyId(){
+    public String getFamilyId(){
         return familyId;        
     }
     
-    public void setFamilyId(int familyId){
+    public void setFamilyId(String familyId){
         this.familyId = familyId;
     }
     
@@ -268,11 +269,11 @@ public class Member {
         this.updatedDate = updatedDate;
     }
     
-    public int getMemId(){
+    public String getMemId(){
         return memId;
     }
     
-    public void setMemId(int memId){
+    public void setMemId(String memId){
         this.memId = memId;
     }
      

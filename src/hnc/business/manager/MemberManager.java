@@ -8,6 +8,7 @@ package hnc.business.manager;
 import hnc.domain.Member;
 import hnc.business.factory.Factory;
 import hnc.business.service.IMemberSvc;
+import java.util.ArrayList;
 
 /**
  *
@@ -44,4 +45,38 @@ public class MemberManager {
            
     }
     
+    public Boolean deleteMember(String memId) throws Exception {
+        Factory factory = new Factory();
+        Boolean success = false;
+        try{
+            IMemberSvc memberSvc = (IMemberSvc)factory.getService("IMemberSvc");
+            return memberSvc.deleteMember(memId);
+        } catch (Exception e){
+            System.out.println(e);
+            return success;
+        }
+    }
+    
+    public void updateMember(Member member) throws Exception {
+        Factory factory = new Factory();
+        try{
+            IMemberSvc memberSvc = (IMemberSvc)factory.getService("IMemberSvc");
+            memberSvc.updateMember(member);
+        } catch (Exception e){
+            System.out.println(e);
+        }
+        
+    }
+    
+    public ArrayList<Member> searchMember (Member member) throws Exception {
+        Factory factory = new Factory();
+        try{
+            IMemberSvc memberSvc = (IMemberSvc)factory.getService("IMemberSvc");
+            return memberSvc.displayMemberSearch(member);
+        } catch (Exception e){
+            System.out.println(e);
+            ArrayList<Member> list = new ArrayList();
+            return list;
+        }
+    }
 }

@@ -5,10 +5,13 @@
  */
 package hnc.business.service;
 
+import hnc.domain.Member;
 /**
  *
  * @author Karl
  */
-public interface IFamilySvc {
+public interface IFamilySvc extends IService{
+    //abstract methods
+    public Member findPrimaryMember(String memId) throws Exception;
     
 }

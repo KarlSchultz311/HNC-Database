@@ -7,13 +7,14 @@ package hnc.controller;
 
 import java.awt.event.*;
 import hnc.business.manager.MemberManager;
+import hnc.business.manager.FamilyManager;
 import hnc.view.MemberUI;
 import java.io.*;
 import hnc.domain.Member;
 import java.util.Date;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
+
 
 /**MemberController
  This class is a controller class for the MemberUI. It assigns ActionListeners to
@@ -183,6 +184,19 @@ public class MemberController implements ActionListener {
         
     }
     
+    private void loadMemberDataFamilyActionPerformed(ActionEvent event, MemberUI memberUI){
+        //this method will fetch the apporpriate data from a member by the member ID number
+        //it will then load the data into the textfields for a new family object.
+        
+        String memId = memberUI.getMemberID5();
+        FamilyManager famMan = new FamilyManager();
+        try{
+            memberUI.loadPrimaryMember(famMan.getPrimaryMember(memId));
+        }catch (Exception e){
+            System.out.println(e);
+        }
+    }
+    
     private void addFamilyMemberActionPerformed(ActionEvent event, MemberUI memberUI){
         //stub
     }
@@ -215,9 +229,6 @@ public class MemberController implements ActionListener {
     
     
     
-    private void loadMemberDataFamilyActionPerformed(ActionEvent event, MemberUI memberUI){
-        //stub
-    }
     
     
     

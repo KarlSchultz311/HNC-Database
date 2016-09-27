@@ -5,6 +5,8 @@ package hnc.business.service;
 
 import hnc.domain.Member;
 import java.sql.*;
+import java.util.ArrayList;
+
 /**
  *
  * @author Karl
@@ -17,6 +19,116 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
     private Connection getConnection() throws Exception {
         return DriverManager.getConnection(connString);
     }
+    
+    @Override
+    public ArrayList<Member> displayMemberSearch(Member parameters) throws Exception {
+        Connection conn = getConnection();  //establishes connection to DB
+        try {
+            Statement stmt = null;
+            ResultSet rs = null;            
+            stmt = conn.createStatement();
+            Boolean first = true;
+            //test check
+            //System.out.print(member.getLName());
+            
+            
+            String sql = "SELECT * FROM members WHERE ";
+            //PreparedStatement statement = conn.prepareStatement(sql);
+            if (! parameters.getLName().isEmpty()){
+                //check to see if this is the first paramater
+                if(first==true){
+                    sql += "lName = '"+parameters.getLName()+"'";
+                    first=false;
+                }else{
+                    sql += ", lName = '"+parameters.getLName()+"'";                   
+                }                
+            }
+            
+            if (! parameters.getFName().isEmpty()){
+                //check to see if this is the first paramater
+                if(first==true){
+                    sql += "fName = '"+parameters.getFName()+"'";
+                    first=false;
+                }else{
+                    sql += ", fName = '"+parameters.getFName()+"'";                   
+                }                
+            }
+            if (! parameters.getCity().isEmpty()){
+                //check to see if this is the first paramater
+                if(first==true){
+                    sql += "city = '"+parameters.getCity()+"'";
+                    first=false;
+                }else{
+                    sql += ", city = '"+parameters.getCity()+"'";                   
+                }                
+            }
+            if ( ! parameters.getCounty().isEmpty()){
+                //check to see if this is the first paramater
+                if(first==true){
+                    sql += "county = '"+parameters.getCounty()+"'";
+                    first=false;
+                }else{
+                    sql += ", county = '"+parameters.getCounty()+"'";                   
+                }                
+            }
+            if (! parameters.getRegion().matches("All")){
+                //check to see if this is the first paramater
+                if(first==true){
+                    sql += "region = '"+parameters.getRegion()+"'";
+                    first=false;
+                }else{
+                    sql += ", region = '"+parameters.getRegion()+"'";                   
+                }                
+            }
+            if (! parameters.getBleedDisorder().isEmpty()){
+                //check to see if this is the first paramater
+                if(first==true){
+                    sql += "bleedDisorder = '"+parameters.getBleedDisorder()+"'";
+                    first=false;
+                }else{
+                    sql += ", bleedDisorder = '"+parameters.getBleedDisorder()+"'";                   
+                }                
+            }
+            if (parameters.getHope() == 1){
+                //check to see if this is the first paramater
+                if(first==true){
+                    sql += "hope = 1";
+                    first=false;
+                }else{
+                    sql += ", hope = 1";                   
+                }                
+            }
+                    
+            rs = stmt.executeQuery(sql);
+            
+            ArrayList<Member> memberList = new ArrayList();
+            
+            
+            while(rs.next()){
+                Member row = new Member();
+                row.setLName(rs.getString("lName"));
+                row.setFName(rs.getString("fName"));
+                System.out.print(row.getLName());
+                memberList.add(row);
+                
+            }
+            
+            return memberList;
+            
+        }catch (Exception e) {
+            System.out.println(e);
+            ArrayList<Member> list = new ArrayList();
+            Member errorMember = new Member();
+            errorMember.setLName("Error");
+            list.add(errorMember);
+            return list;            
+        }finally {
+            if (conn != null) 
+                conn.close();
+        }
+    }
+    
+    
     
     @Override
     public String saveMember(Member member) throws Exception{
@@ -164,7 +276,8 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                     member.getOrganization()+"', industry= '"+member.getIndustry()+"', hope= '"+
                     member.getHope()+"', teens= '"+member.getTeens()+"', latinUnion= '"+member.getLatinUnion()
                     +"', soar= '"+member.getSoar()+"', bloodBrotherhood= '"+member.getBloodBrotherhood()+"', inhibitors='"+
-                    member.getInhibitors()+"', advocacy= '"+member.getAdvocacy()+"' WHERE memId='"+ Integer.parseInt(member.getMemId())+"'";
+                    member.getInhibitors()+"', advocacy= '"+member.getAdvocacy()+"', updatedDate= '"+
+                    member.getUpdatedDate()+"' WHERE memId='"+ Integer.parseInt(member.getMemId())+"'";
             stmt.executeUpdate(sql4);
         } catch (Exception e){
             System.out.println(e);

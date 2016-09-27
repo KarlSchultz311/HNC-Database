@@ -6,7 +6,7 @@
 package hnc.business.service;
 
 import java.sql.*;
-import hnc.domain.Member;
+import hnc.domain.*;
 /**
  *
  * @author Karl
@@ -73,5 +73,76 @@ public class FamilySvcLocalJDBCImpl implements IFamilySvc {
             if (conn != null) 
                 conn.close();
         }
+    }
+    
+    @Override
+    public String createFamily(Family family) throws Exception{
+        Connection conn = getConnection();  //establishes connection to DB
+        try {
+            Statement stmt = null;
+            ResultSet rs = null;
+            
+            stmt = conn.createStatement();
+        
+            String sql = "INSERT INTO families (lName, email1, email2, streetAdd1, " +
+                    "streetAdd2, city, zip, state, county, region, homePhone, cellPhone," +
+                    "bleedDisorder, comments," +
+                    "hope, teens, latinUnion, soar, bloodBrotherhood," +
+                    "inhibitors, advocacy) VALUES ('" + family.getLName()+"', '"+
+                    family.getEmail1()+"', '"+family.getEmail2()
+                    +"', '"+family.getStreetAdd1()+"', '"+family.getStreetAdd2()
+                    +"', '"+family.getCity()+"', '"+family.getZip()+"', '"+
+                    family.getState()+"', '"+family.getCounty()+"', '"+family.getRegion()
+                    +"', '"+family.getHomePhone()+"', '"+family.getCellPhone()
+                    +"', '"+family.getBleedDisorder()+"', '"+family.getComments()+"', '"+                   
+                    family.getHope()+"', '"+family.getTeens()+"', '"+family.getLatinUnion()
+                    +"', '"+family.getSoar()+"', '"+family.getBloodBrotherhood()+"', '"+
+                    family.getInhibitors()+"', '"+family.getAdvocacy()+"')";
+                  
+            
+            stmt.executeUpdate(sql);
+            
+          
+            //get this last famID number auto-incremented to return to the UI to display
+            rs = stmt.executeQuery("SELECT LAST_INSERT_ID()");
+            //advance result set cursor to first result
+            rs.next();
+            int famId = rs.getInt(1);
+            //change data type to String for UI display in text field
+            String ID = Integer.toString(famId);           
+            
+                  
+            return ID;
+           
+        } catch (Exception e) {
+            System.out.println(e);
+            return "JDBC Exception: Unable to find FamID";
+               
+        } finally {
+            if (conn != null) 
+                conn.close();
+        }
+    }
+    
+    @Override
+    public void updateFamilyId (String famId, String memId) throws Exception{
+        Connection conn = getConnection();  //establishes connection to DB
+        try {
+            Statement stmt = null;            
+            
+            stmt = conn.createStatement();
+        
+            String sql = "UPDATE members SET familyID = '"+famId+"' WHERE memID = '"+
+                    memId+"'";
+                  
+            stmt.executeUpdate(sql);
+        } catch (Exception e){
+            System.out.println(e);
+        } finally {
+            if (conn != null)
+                conn.close();
+        }
+            
+        
     }
 }

@@ -5,7 +5,7 @@
  */
 package hnc.business.service;
 
-import hnc.domain.Member;
+import hnc.domain.*;
 /**
  *
  * @author Karl
@@ -13,5 +13,7 @@ import hnc.domain.Member;
 public interface IFamilySvc extends IService{
     //abstract methods
     public Member findPrimaryMember(String memId) throws Exception;
+    public String createFamily(Family family) throws Exception;
+    public void updateFamilyId (String famId, String memId) throws Exception;
     
 }

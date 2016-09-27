@@ -28,19 +28,26 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
             ResultSet rs = null;            
             stmt = conn.createStatement();
             Boolean first = true;
-            //test check
-            //System.out.print(member.getLName());
             
             
             String sql = "SELECT * FROM members WHERE ";
-            //PreparedStatement statement = conn.prepareStatement(sql);
-            if (! parameters.getLName().isEmpty()){
+            
+            if (! parameters.getMemId().isEmpty()){
+                //check to see if this is the first paramater
+                if(first==true){
+                    sql += "memId = '"+parameters.getMemId()+"'";
+                    first=false;
+                }else{
+                    sql += "AND memId = '"+parameters.getMemId()+"'";                   
+                }
+                
+            }if (! parameters.getLName().isEmpty()){
                 //check to see if this is the first paramater
                 if(first==true){
                     sql += "lName = '"+parameters.getLName()+"'";
                     first=false;
                 }else{
-                    sql += ", lName = '"+parameters.getLName()+"'";                   
+                    sql += "AND lName = '"+parameters.getLName()+"'";                   
                 }                
             }
             
@@ -50,53 +57,133 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                     sql += "fName = '"+parameters.getFName()+"'";
                     first=false;
                 }else{
-                    sql += ", fName = '"+parameters.getFName()+"'";                   
+                    sql += "AND fName = '"+parameters.getFName()+"'";                   
                 }                
             }
+            
             if (! parameters.getCity().isEmpty()){
                 //check to see if this is the first paramater
                 if(first==true){
                     sql += "city = '"+parameters.getCity()+"'";
                     first=false;
                 }else{
-                    sql += ", city = '"+parameters.getCity()+"'";                   
+                    sql += "AND city = '"+parameters.getCity()+"'";                   
                 }                
             }
+            
             if ( ! parameters.getCounty().isEmpty()){
                 //check to see if this is the first paramater
                 if(first==true){
                     sql += "county = '"+parameters.getCounty()+"'";
                     first=false;
                 }else{
-                    sql += ", county = '"+parameters.getCounty()+"'";                   
+                    sql += "AND county = '"+parameters.getCounty()+"'";                   
                 }                
             }
+            
             if (! parameters.getRegion().matches("All")){
                 //check to see if this is the first paramater
                 if(first==true){
                     sql += "region = '"+parameters.getRegion()+"'";
                     first=false;
                 }else{
-                    sql += ", region = '"+parameters.getRegion()+"'";                   
+                    sql += "AND region = '"+parameters.getRegion()+"'";                   
                 }                
             }
+            
             if (! parameters.getBleedDisorder().isEmpty()){
                 //check to see if this is the first paramater
                 if(first==true){
                     sql += "bleedDisorder = '"+parameters.getBleedDisorder()+"'";
                     first=false;
                 }else{
-                    sql += ", bleedDisorder = '"+parameters.getBleedDisorder()+"'";                   
+                    sql += "AND bleedDisorder = '"+parameters.getBleedDisorder()+"'";                   
                 }                
             }
+            
             if (parameters.getHope() == 1){
                 //check to see if this is the first paramater
                 if(first==true){
                     sql += "hope = 1";
                     first=false;
                 }else{
-                    sql += ", hope = 1";                   
+                    sql += "AND hope = 1";                   
                 }                
+            }
+            
+            if (parameters.getTeens() == 1){
+                //check to see if this is the first paramater
+                if(first==true){
+                    sql += "teens = 1";
+                    first=false;
+                }else{
+                    sql += "AND teens = 1";                   
+                }                
+            }
+            
+            if (parameters.getLatinUnion() == 1){
+                //check to see if this is the first paramater
+                if(first==true){
+                    sql += "latinUnion = 1";
+                    first=false;
+                }else{
+                    sql += "AND latinUnion = 1";                   
+                }                
+            }
+            
+            if (parameters.getSoar() == 1){
+                //check to see if this is the first paramater
+                if(first==true){
+                    sql += "soar = 1";
+                    first=false;
+                }else{
+                    sql += "AND soar = 1";                   
+                }                
+            }
+            
+            if (parameters.getBloodBrotherhood() == 1){
+                //check to see if this is the first paramater
+                if(first==true){
+                    sql += "bloodBrotherhood = 1";
+                    first=false;
+                }else{
+                    sql += "AND bloodBrotherhood = 1";                   
+                }                
+            }
+            
+            if (parameters.getInhibitors() == 1){
+                //check to see if this is the first paramater
+                if(first==true){
+                    sql += "inhibitors = 1";
+                    first=false;
+                }else{
+                    sql += "AND inhibitors = 1";                   
+                }                
+            }
+            
+            if (parameters.getAdvocacy() == 1){
+                //check to see if this is the first paramater
+                if(first==true){
+                    sql += "advocacy = 1";
+                    first=false;
+                }else{
+                    sql += "AND advocacy = 1";                   
+                }                
+            }
+            
+            //if the parameter for industry is checked, the user wants to exclude industry
+            // so we search for industry = 0 not 1
+            if (parameters.getIndustry() == 1){
+                //check to see if this is the first paramater
+                if(first==true){
+                    sql += "industry = 0";
+                    first=false;
+                }else{
+                    sql += "AND industry = 0";                   
+                }                
+            }
+            if(first==true){
+                sql="SELECT * FROM members";
             }
                     
             rs = stmt.executeQuery(sql);
@@ -106,9 +193,36 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
             
             while(rs.next()){
                 Member row = new Member();
+                row.setMemId(rs.getString("memId"));
                 row.setLName(rs.getString("lName"));
                 row.setFName(rs.getString("fName"));
-                System.out.print(row.getLName());
+                row.setEmail1(rs.getString("email1"));
+                row.setEmail2(rs.getString("email2"));
+                row.setStreetAdd1(rs.getString("streetAdd1"));
+                row.setStreetAdd2(rs.getString("streetAdd2"));
+                row.setCity(rs.getString("city"));
+                row.setZip(rs.getString("zip"));
+                row.setState(rs.getString("state"));
+                row.setCounty(rs.getString("county"));
+                row.setRegion(rs.getString("region"));
+                row.setHomePhone(rs.getString("homePhone"));
+                row.setCellPhone(rs.getString("cellPhone"));
+                row.setBleedDisorder(rs.getString("bleedDisorder"));
+                row.setDob(rs.getString("dob"));
+                row.setJoinDate(rs.getString("joinDate"));
+                row.setUpdatedDate(rs.getString("updatedDate"));
+                row.setComments(rs.getString("comments"));
+                row.setBadAdd(rs.getString("badAdd"));
+                row.setOrganization(rs.getString("organization"));
+                row.setIndustry(rs.getInt("industry"));
+                row.setHope(rs.getInt("hope"));
+                row.setTeens(rs.getInt("teens"));
+                row.setLatinUnion(rs.getInt("latinUnion"));
+                row.setSoar(rs.getInt("soar"));
+                row.setBloodBrotherhood(rs.getInt("bloodBrotherhood"));
+                row.setInhibitors(rs.getInt("inhibitors"));
+                row.setAdvocacy(rs.getInt("advocacy"));
+                
                 memberList.add(row);
                 
             }

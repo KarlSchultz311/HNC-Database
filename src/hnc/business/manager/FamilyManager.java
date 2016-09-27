@@ -6,7 +6,7 @@
 package hnc.business.manager;
 
 import hnc.business.factory.Factory;
-import hnc.domain.Member;
+import hnc.domain.*;
 import hnc.business.service.IFamilySvc;
 /**
  *
@@ -28,4 +28,27 @@ public class FamilyManager {
             return errorMember;
         }
     }
+    
+    public String createFamily(Family family) throws Exception{
+        Factory factory = new Factory();
+        try{
+            IFamilySvc familySvc = (IFamilySvc)factory.getService("IFamilySvc");
+            return familySvc.createFamily(family);
+        }catch (Exception e){
+            System.out.println(e);
+            String error = "error";
+            return error;
+        }
+    }
+    
+    public void updateFamilyId (String famId, String memId) throws Exception{
+        Factory factory = new Factory();
+        try{
+            IFamilySvc familySvc = (IFamilySvc)factory.getService("IFamilySvc");
+            familySvc.updateFamilyId(famId, memId);
+        }catch (Exception e){
+            System.out.println(e);            
+        }
+    }
+    
 }

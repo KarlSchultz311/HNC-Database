@@ -1343,9 +1343,9 @@
                   <EmptySpace min="0" pref="1380" max="32767" attributes="0"/>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="89" max="32767" attributes="0"/>
                           <Component id="jPanel9" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="89" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -1377,7 +1377,7 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="tf_memID3" min="-2" pref="176" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                                  <Component id="LoadMemberDataButton" min="-2" pref="179" max="-2" attributes="0"/>
+                                  <Component id="LoadMemberDataButton" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
@@ -1491,10 +1491,11 @@
                                   </Group>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="DeleteMemberRecordButton" min="-2" pref="238" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
-                                  <Component id="ConfirmMemberDeleteButton" min="-2" pref="175" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="174" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="DeleteMemberRecordButton" min="-2" pref="257" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                                  <Component id="ConfirmMemberDeleteButton" min="-2" pref="194" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="155" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -2787,7 +2788,7 @@
                               </Group>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Group type="102" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
                                           <Component id="jLabel97" min="-2" pref="238" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jTextField94" min="-2" pref="176" max="-2" attributes="0"/>
@@ -2799,10 +2800,10 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jTextField100" min="-2" pref="176" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="AddFamilyMemberButton" min="-2" pref="192" max="-2" attributes="0"/>
+                                          <Component id="AddFamilyMemberButton" min="-2" pref="213" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="jScrollPane3" min="-2" pref="265" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
@@ -2815,8 +2816,8 @@
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="DeleteFamilyRecordButton" min="-2" pref="238" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
-                          <Component id="ConfirmDeleteFamilyButton" min="-2" pref="175" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="299" max="-2" attributes="0"/>
+                          <Component id="ConfirmDeleteFamilyButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="289" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2837,7 +2838,7 @@
                                           <Component id="jTextField100" alignment="3" pref="31" max="32767" attributes="0"/>
                                           <Component id="AddFamilyMemberButton" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <Component id="jLabel106" alignment="0" pref="32" max="32767" attributes="0"/>
+                                      <Component id="jLabel106" alignment="0" pref="33" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" attributes="0">

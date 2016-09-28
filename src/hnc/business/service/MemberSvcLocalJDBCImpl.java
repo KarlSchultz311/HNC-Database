@@ -400,4 +400,44 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                 conn4.close();
         }
     }
+    
+    @Override
+    public ArrayList<Member> getFamilyMembers(String famId) throws Exception{
+         Connection conn = getConnection();  //establishes connection to DB
+        try {
+            Statement stmt = null;
+            ResultSet rs = null;            
+            stmt = conn.createStatement();
+           
+            String sql = "SELECT fName, lName FROM members WHERE familyID = '"+
+                    famId+"'";
+            rs = stmt.executeQuery(sql);
+            
+            ArrayList<Member> familyList = new ArrayList();
+            
+            
+            while(rs.next()){
+                Member row = new Member();                
+                row.setLName(rs.getString("lName"));
+                System.out.print(rs.getString("lName"));
+                row.setFName(rs.getString("fName"));
+                System.out.print(rs.getString("fName"));
+                familyList.add(row);
+                
+            }
+            
+            return familyList;
+            
+        }catch (Exception e) {
+            System.out.println(e);
+            ArrayList<Member> list = new ArrayList();
+            Member errorMember = new Member();
+            errorMember.setFName("Error");
+            list.add(errorMember);
+            return list;            
+        }finally {
+            if (conn != null) 
+                conn.close();
+        }
+    }
 }

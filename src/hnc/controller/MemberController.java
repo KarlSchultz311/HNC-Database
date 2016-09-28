@@ -245,7 +245,20 @@ public class MemberController implements ActionListener {
         interest boxes. The added family member will then have their family ID set to
         match the currently displayed family, and the new member's name will appear in
         the text area in the top right of the tab.*/
+        String memId = memberUI.getMemberID5();
+        String famId = memberUI.getFamID5();
+        MemberManager memMan = new MemberManager();
+        try{
+            Member member = memMan.findMember(memId);
+            memberUI.updateFamilyGroups(member);
+            member.setFamilyId(famId);
+            memMan.updateMember(member);        
+            memberUI.displayFamilyMembers(memMan.getFamilyMembers(famId));
+        }catch (Exception e){
+            System.out.println(e);
+        }
     }
+    
     
     private void confirmDeleteFamilyActionPerformed(ActionEvent event, MemberUI memberUI) {
         //stub

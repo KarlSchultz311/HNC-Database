@@ -21,4 +21,5 @@ public interface IMemberSvc extends IService{
     public void updateMember(Member member) throws Exception;
     public ArrayList<Member> displayMemberSearch(Member member) throws Exception;
     public ArrayList<Member> getFamilyMembers(String famId) throws Exception;
+    //public void updateMemberFamily(Member member, String famId) throws Exception;
 }

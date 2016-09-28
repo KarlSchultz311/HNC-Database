@@ -2464,6 +2464,10 @@ public class MemberUI extends javax.swing.JFrame {
         return tf_famId5.getText();
     }
     
+    public String getMemberID5(){
+        return tf_addFamId5.getText();
+    }
+    
     public Member getSearchParams1(){
         Member member = new Member();
         member.setMemId((String)tf_memID1.getText());
@@ -2858,13 +2862,13 @@ public class MemberUI extends javax.swing.JFrame {
         if(family.getInhibitors()== 1){
             chbx_inhib5.setSelected(true);
         }else{
-            chbx_inhib5.setSelected(true);
+            chbx_inhib5.setSelected(false);
         }
         
         if(family.getAdvocacy()== 1){
             chbx_advocacy5.setSelected(true);
         }else{
-            chbx_advocacy5.setSelected(true);
+            chbx_advocacy5.setSelected(false);
         }
     }
     
@@ -2884,6 +2888,38 @@ public class MemberUI extends javax.swing.JFrame {
             
         }  
         
+    }
+    
+    public void updateFamilyGroups(Member member){
+        //updates family checkbox only if new member group is true. Will not
+        // deselect box.
+        if(member.getHope()== 1){
+            chbx_hope5.setSelected(true);
+        }
+        
+        if(member.getTeens()== 1){
+            chbx_teens5.setSelected(true);
+        }
+        
+        if(member.getSoar()== 1){
+            chbx_soar5.setSelected(true);
+        }
+        
+        if(member.getBloodBrotherhood()== 1){
+            chbx_bloodBro5.setSelected(true);
+        }
+        
+        if(member.getLatinUnion()== 1){
+            chbx_latinUnion5.setSelected(true);
+        }
+        
+        if(member.getInhibitors()== 1){
+            chbx_inhib5.setSelected(true);
+        }
+        
+        if(member.getAdvocacy()== 1){
+            chbx_advocacy5.setSelected(true);
+        }
     }
     
     /**

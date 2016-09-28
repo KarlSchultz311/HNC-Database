@@ -391,7 +391,8 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                     member.getHope()+"', teens= '"+member.getTeens()+"', latinUnion= '"+member.getLatinUnion()
                     +"', soar= '"+member.getSoar()+"', bloodBrotherhood= '"+member.getBloodBrotherhood()+"', inhibitors='"+
                     member.getInhibitors()+"', advocacy= '"+member.getAdvocacy()+"', updatedDate= '"+
-                    member.getUpdatedDate()+"' WHERE memId='"+ Integer.parseInt(member.getMemId())+"'";
+                    member.getUpdatedDate()+"', familyID= '"+member.getFamilyId()+
+                    "' WHERE memId='"+ Integer.parseInt(member.getMemId())+"'";
             stmt.executeUpdate(sql4);
         } catch (Exception e){
             System.out.println(e);

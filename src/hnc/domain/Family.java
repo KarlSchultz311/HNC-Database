@@ -24,8 +24,8 @@ package hnc.domain;
 public class Family {
     
     //members
-    private int familyId;
-    private int region;
+    private String familyId;
+    private String region;
     private String lName;
     private String email1;
     private String email2;
@@ -40,18 +40,18 @@ public class Family {
     private String bleedDisorder;
     private String updatedDate;;
     private String comments;
-    private Boolean hope;
-    private Boolean teens;
-    private Boolean latinUnion;
-    private Boolean soar;
-    private Boolean bloodBrotherhood;
-    private Boolean inhibitors;
-    private Boolean advocacy;
+    private int hope;
+    private int teens;
+    private int latinUnion;
+    private int soar;
+    private int bloodBrotherhood;
+    private int inhibitors;
+    private int advocacy;
     
     //constructor
     public Family(){
-        familyId = 0;
-        region = 0;
+        familyId = null;
+        region = null;
         lName = null;
         email1 = null;
         email2 = null;
@@ -66,48 +66,23 @@ public class Family {
         bleedDisorder = null;
         updatedDate = null;
         comments = null;
-        hope = false;
-        teens = false;
-        latinUnion = false;
-        soar = false;
-        bloodBrotherhood = false;
-        inhibitors = false;
-        advocacy = false;
+        hope = 0;
+        teens = 0;
+        latinUnion = 0;
+        soar = 0;
+        bloodBrotherhood = 0;
+        inhibitors = 0;
+        advocacy = 0;
     }
     
-    //constructor with provided family ID
-    public Family(int familyId){
-        this.familyId = familyId;
-        region = 0;
-        lName = null;
-        email1 = null;
-        email2 = null;
-        streetAdd1 = null;
-        streetAdd2 = null;
-        city = null;
-        zip = null;
-        state = null;
-        county = null;
-        homePhone = null;
-        cellPhone = null;
-        bleedDisorder = null;
-        updatedDate = null;
-        comments = null;
-        hope = false;
-        teens = false;
-        latinUnion = false;
-        soar = false;
-        bloodBrotherhood = false;
-        inhibitors = false;
-        advocacy = false;
-    }
+    
     
     //methods
-    public boolean getAdvocacy(){
+    public int getAdvocacy(){
         return advocacy;
     }
     
-    public void setAdvocaccy(boolean advocacy){
+    public void setAdvocacy(int advocacy){
         this.advocacy = advocacy;
     }
     
@@ -119,11 +94,11 @@ public class Family {
         this.bleedDisorder = bleedDisorder;
     }
     
-    public boolean getBloodBrotherhood(){
+    public int getBloodBrotherhood(){
         return bloodBrotherhood;
     }
     
-    public void setBloodBrotherhood(boolean bloodBrotherhood){
+    public void setBloodBrotherhood(int bloodBrotherhood){
         this.bloodBrotherhood = bloodBrotherhood;
     }
     
@@ -175,11 +150,11 @@ public class Family {
         this.email2 = email2;
     }
     
-    public int getFamilyId(){
+    public String getFamilyId(){
         return familyId;
     }
     
-    public void setFamilyId(int familyId){
+    public void setFamilyId(String familyId){
         this.familyId = familyId;        
     }
     
@@ -191,19 +166,19 @@ public class Family {
         this.homePhone = cellHome;
     }
     
-    public boolean getHope(){
+    public int getHope(){
         return hope;
     }
     
-    public void setHope(boolean hope){
+    public void setHope(int hope){
         this.hope = hope;
     }
     
-    public boolean getInhibitors(){
+    public int getInhibitors(){
         return inhibitors;
     }
     
-    public void setInhibitors(boolean inhibitors){
+    public void setInhibitors(int inhibitors){
         this.inhibitors = inhibitors;
     }
     
@@ -215,27 +190,27 @@ public class Family {
         this.lName = lName;
     }
     
-    public boolean getLatinUnion(){
+    public int getLatinUnion(){
         return latinUnion;
     }
     
-    public void setLatinUnion(boolean latinUnion){
+    public void setLatinUnion(int latinUnion){
         this.latinUnion = latinUnion;
     }
     
-    public int getRegion(){
+    public String getRegion(){
         return region;
     }
     
-    public void setRegion(int region){
+    public void setRegion(String region){
         this.region = region;
     }
     
-    public boolean getSoar(){
+    public int getSoar(){
         return soar;
     }
     
-    public void setSoar(boolean soar){
+    public void setSoar(int soar){
         this.soar = soar;
     }
     
@@ -263,11 +238,11 @@ public class Family {
         this.streetAdd2 = streetAdd2;
     }
     
-    public boolean getTeens(){
+    public int getTeens(){
         return teens;
     }
     
-    public void setTeens(boolean teens){
+    public void setTeens(int teens){
         this.teens = teens;
     }
     

@@ -30,7 +30,7 @@
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jTabbedPane1" pref="1389" max="32767" attributes="0"/>
+              <Component id="jTabbedPane1" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -3509,25 +3509,26 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="tf_memID6" min="-2" pref="176" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="LoadMemberDataFamilyButton" min="-2" pref="179" max="-2" attributes="0"/>
+                              <Component id="LoadMemberDataFamilyButton" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="1" attributes="0">
-                                          <Component id="chbx_hope6" max="32767" attributes="0"/>
+                                          <Component id="chbx_hope6" pref="143" max="32767" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="CreateFamilyButton" min="-2" pref="254" max="-2" attributes="0"/>
+                                              <Component id="CreateFamilyButton" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="chbx_teens6" min="-2" pref="111" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Component id="chbx_soar6" min="-2" pref="115" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="chbx_bloodBro6" min="-2" pref="157" max="-2" attributes="0"/>
+                                                  <Component id="chbx_bloodBro6" min="-2" pref="150" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
+                                          <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
@@ -3616,7 +3617,7 @@
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="tf_email26" min="-2" pref="254" max="-2" attributes="0"/>
-                                              <EmptySpace min="0" pref="349" max="32767" attributes="0"/>
+                                              <EmptySpace min="0" pref="368" max="32767" attributes="0"/>
                                           </Group>
                                           <Component id="tf_comments6" alignment="0" max="32767" attributes="0"/>
                                       </Group>
@@ -3639,11 +3640,9 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                              <Component id="tf_memID6" alignment="3" max="32767" attributes="0"/>
-                              <Component id="LoadMemberDataFamilyButton" alignment="3" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="LoadMemberDataFamilyButton" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel96" alignment="1" max="32767" attributes="0"/>
+                          <Component id="tf_memID6" alignment="1" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -3683,7 +3682,6 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel61" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                   <Component id="tf_county6" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
@@ -3717,17 +3715,19 @@
                           <Component id="tf_bleed6" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="43" pref="43" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="chbx_latinUnion6" max="32767" attributes="0"/>
                           <Component id="chbx_teens6" alignment="0" max="32767" attributes="0"/>
                           <Component id="chbx_hope6" alignment="0" max="32767" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="chbx_advocacy6" min="-2" pref="31" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
                           <Component id="chbx_soar6" alignment="0" max="32767" attributes="0"/>
                           <Component id="chbx_bloodBro6" max="32767" attributes="0"/>
-                          <Component id="chbx_inhibs6" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="chbx_advocacy6" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
+                                  <Component id="chbx_inhibs6" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                       <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">

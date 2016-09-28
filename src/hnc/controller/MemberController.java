@@ -238,7 +238,13 @@ public class MemberController implements ActionListener {
     
     
     private void addFamilyMemberActionPerformed(ActionEvent event, MemberUI memberUI){
-        //stub
+        /*This method will grab the memberID from the additional family member ID text field
+        on the family edit/delete tab when the add family member button is pushed.
+        The memberID will be searched for on the database and any interest groups
+        that the member has checked that the family does not will update the family
+        interest boxes. The added family member will then have their family ID set to
+        match the currently displayed family, and the new member's name will appear in
+        the text area in the top right of the tab.*/
     }
     
     private void confirmDeleteFamilyActionPerformed(ActionEvent event, MemberUI memberUI) {

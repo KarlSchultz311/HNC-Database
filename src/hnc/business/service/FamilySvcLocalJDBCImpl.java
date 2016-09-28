@@ -198,6 +198,30 @@ public class FamilySvcLocalJDBCImpl implements IFamilySvc {
         }
     }
     
-    
+    @Override
+    public void updateFamily(Family family) throws Exception{
+        Connection conn = getConnection();
+        Statement stmt = null;
+        try{
+            stmt = conn.createStatement();
+            String sql = "UPDATE families SET lName= '"+ family.getLName()+"', email1= '"+
+                    family.getEmail1()+"', email2= '"+family.getEmail2()
+                    +"', streetAdd1= '"+family.getStreetAdd1()+"', streetAdd2= '"+family.getStreetAdd2()
+                    +"', city= '"+family.getCity()+"', zip= '"+family.getZip()+"', state= '"+
+                    family.getState()+"', county= '"+family.getCounty()+"', region= '"+family.getRegion()
+                    +"', homePhone= '"+family.getHomePhone()+"', cellPhone= '"+family.getCellPhone()
+                    +"', bleedDisorder= '"+family.getBleedDisorder()+"', comments= '"+family.getComments()+"', hope= '"+
+                    family.getHope()+"', teens= '"+family.getTeens()+"', latinUnion= '"+family.getLatinUnion()
+                    +"', soar= '"+family.getSoar()+"', bloodBrotherhood= '"+family.getBloodBrotherhood()+"', inhibitors='"+
+                    family.getInhibitors()+"', advocacy= '"+family.getAdvocacy()+
+                    "' WHERE familyID='"+ Integer.parseInt(family.getFamilyId())+"'";
+            stmt.executeUpdate(sql);
+        } catch (Exception e){
+            System.out.println(e+" @ updateFamily");
+        } finally {
+            if (conn != null)
+                conn.close();
+        }
+    }
     
 }

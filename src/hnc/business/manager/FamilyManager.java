@@ -62,4 +62,15 @@ public class FamilyManager {
             return errFam;
         }
     }
+    
+    public void updateFamily (Family family) throws Exception{
+        Factory factory = new Factory();
+        try{
+            IFamilySvc familySvc = (IFamilySvc)factory.getService("IFamilySvc");
+            familySvc.updateFamily(family);
+        }catch (Exception e){
+            System.out.println(e);            
+        }
+    }
+    
 }

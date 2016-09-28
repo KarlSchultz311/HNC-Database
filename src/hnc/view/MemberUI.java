@@ -2922,6 +2922,51 @@ public class MemberUI extends javax.swing.JFrame {
         }
     }
     
+    public Family getFamily5(){
+        Family family = new Family();
+        family.setLName(tf_lName5.getText());
+        family.setStreetAdd1(tf_sA15.getText());
+        family.setStreetAdd2(tf_sA25.getText());
+        family.setCity(tf_city5.getText());
+        family.setState(tf_state5.getText());
+        family.setZip(tf_zip5.getText());
+        family.setCounty(tf_county5.getText());
+        family.setRegion(tf_region5.getText());
+        family.setHomePhone(tf_homePhone5.getText());
+        family.setCellPhone(tf_cellPhone5.getText());
+        family.setEmail1(tf_email15.getText());
+        family.setEmail2(tf_email25.getText());
+        family.setBleedDisorder(tf_bleed5.getText());
+        family.setComments(tf_comments5.getText());
+        
+        if(chbx_hope5.isSelected()){
+            family.setHope(1);
+        }
+        if(chbx_teens5.isSelected()){
+            family.setTeens(1);
+        }
+        if(chbx_soar5.isSelected()){
+            family.setSoar(1);
+        }
+        if(chbx_bloodBro5.isSelected()){
+            family.setBloodBrotherhood(1);
+        }
+        if(chbx_latinUnion5.isSelected()){
+            family.setLatinUnion(1);
+        }
+        if(chbx_inhib5.isSelected()){
+            family.setInhibitors(1);
+        }
+        if(chbx_advocacy5.isSelected()){
+            family.setAdvocacy(1);
+        }
+        
+        return family;
+    }
+    
+    
+    
+    
     /**
      * @param args the command line arguments
      */

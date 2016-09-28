@@ -259,6 +259,23 @@ public class MemberController implements ActionListener {
         }
     }
     
+    private void updateFamilyDataActionPerformed(ActionEvent event, MemberUI memberUI){
+        /*This method commits the data in the text fields on the family edit/delete tab
+        to the database for the familyID number shown at the top when the Update Family Data
+        button is pushed*/
+        Family family = memberUI.getFamily5();
+        FamilyManager famMan = new FamilyManager();
+        try{
+            famMan.updateFamily(family);
+        }catch (Exception e){
+            System.out.println(e);
+        }
+    }
+    
+    
+    private void deleteFamilyRecordActionPerformed(ActionEvent event, MemberUI memberUI){
+        //stub
+    }
     
     private void confirmDeleteFamilyActionPerformed(ActionEvent event, MemberUI memberUI) {
         //stub
@@ -266,13 +283,6 @@ public class MemberController implements ActionListener {
     
     
     
-    
-    
-    
-    
-    private void deleteFamilyRecordActionPerformed(ActionEvent event, MemberUI memberUI){
-        //stub
-    }
     
     
     
@@ -289,9 +299,7 @@ public class MemberController implements ActionListener {
     
     
     
-    private void updateFamilyDataActionPerformed(ActionEvent event, MemberUI memberUI){
-        //stub
-    }
+    
     
     
 }

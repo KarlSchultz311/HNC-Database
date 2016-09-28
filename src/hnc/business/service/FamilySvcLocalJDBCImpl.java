@@ -151,4 +151,53 @@ public class FamilySvcLocalJDBCImpl implements IFamilySvc {
             
         
     }
+    
+    @Override
+    public Family getFamily (String famId) throws Exception{
+        Connection conn = getConnection();  //establishes connection to DB
+        try {
+            Statement stmt = null;
+            ResultSet rs = null;            
+            stmt = conn.createStatement();
+            String sql = "SELECT * FROM families WHERE familyID = '"+famId+"'";
+            Family family = new Family();
+            
+            rs = stmt.executeQuery(sql);
+            while(rs.next()){
+                family.setFamilyId(rs.getString(1));                
+                family.setLName(rs.getString(2));
+                family.setStreetAdd1(rs.getString(3));
+                family.setStreetAdd2(rs.getString(4));
+                family.setCity(rs.getString(5));
+                family.setState(rs.getString(6));
+                family.setZip(rs.getString(7));
+                family.setCounty(rs.getString(8));
+                family.setRegion(rs.getString(9));
+                family.setHomePhone(rs.getString(10));
+                family.setCellPhone(rs.getString(11));
+                family.setEmail1(rs.getString(12));
+                family.setEmail2(rs.getString(13));
+                family.setBleedDisorder(rs.getString(14));
+                family.setComments(rs.getString(15));
+                family.setHope(rs.getInt(16));
+                family.setTeens(rs.getInt(17));
+                family.setSoar(rs.getInt(18));
+                family.setBloodBrotherhood(rs.getInt(19));
+                family.setLatinUnion(rs.getInt(20));
+                family.setInhibitors(rs.getInt(21));
+                family.setAdvocacy(rs.getInt(22));                              
+            }
+            return family;
+        } catch (Exception e){
+            System.out.println(e);
+            Family errFam = new Family("Family not found");
+            return errFam;
+        } finally {
+            if (conn != null)
+                conn.close();
+        }
+    }
+    
+    
+    
 }

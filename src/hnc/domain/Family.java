@@ -75,6 +75,31 @@ public class Family {
         advocacy = 0;
     }
     
+    public Family(String name){
+        familyId = null;
+        region = null;
+        lName = name;
+        email1 = null;
+        email2 = null;
+        streetAdd1 = null;
+        streetAdd2 = null;
+        city = null;
+        zip = null;
+        state = null;
+        county = null;
+        homePhone = null;
+        cellPhone = null;
+        bleedDisorder = null;
+        updatedDate = null;
+        comments = null;
+        hope = 0;
+        teens = 0;
+        latinUnion = 0;
+        soar = 0;
+        bloodBrotherhood = 0;
+        inhibitors = 0;
+        advocacy = 0;
+    }
     
     
     //methods

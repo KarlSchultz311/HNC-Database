@@ -79,4 +79,16 @@ public class MemberManager {
             return list;
         }
     }
+    
+    public ArrayList<Member> getFamilyMembers(String famId) throws Exception {
+        Factory factory = new Factory();
+        try{
+            IMemberSvc memberSvc = (IMemberSvc)factory.getService("IMemberSvc");
+            return memberSvc.getFamilyMembers(famId);
+        } catch (Exception e){
+            System.out.println(e);
+            ArrayList<Member> list = new ArrayList();
+            return list;
+        }
+    }
 }

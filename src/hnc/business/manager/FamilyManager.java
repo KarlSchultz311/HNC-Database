@@ -51,4 +51,15 @@ public class FamilyManager {
         }
     }
     
+    public Family getFamily (String famId) throws Exception{
+        Factory factory = new Factory();
+        try{
+            IFamilySvc familySvc = (IFamilySvc)factory.getService("IFamilySvc");
+            return familySvc.getFamily(famId);
+        }catch (Exception e){
+            System.out.println(e);
+            Family errFam = new Family("Family not found");
+            return errFam;
+        }
+    }
 }

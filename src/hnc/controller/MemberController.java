@@ -215,6 +215,27 @@ public class MemberController implements ActionListener {
         
     }
     
+    private void loadFamilyDataActionPerformed(ActionEvent event, MemberUI memberUI){
+        /*This method will get the family ID number entered on the family edit/delete tab
+        and search the database for that family. It will then populate the rest of the 
+        data fields with the information. It will then search the member database for 
+        members that have matching family ID numbers and display their firstname, lastname
+        in the text area in the upper right of the tab.
+        */
+        String famId = memberUI.getFamID5();
+        FamilyManager famMan = new FamilyManager();
+        MemberManager memMan = new MemberManager();
+        try{
+            memberUI.loadFamily(famMan.getFamily(famId));
+            memberUI.displayFamilyMembers(memMan.getFamilyMembers(famId));
+            
+        }catch (Exception e){
+            System.out.println(e);
+        }
+        
+    }
+    
+    
     
     private void addFamilyMemberActionPerformed(ActionEvent event, MemberUI memberUI){
         //stub
@@ -240,9 +261,7 @@ public class MemberController implements ActionListener {
         //stub
     }
     
-    private void loadFamilyDataActionPerformed(ActionEvent event, MemberUI memberUI){
-        //stub
-    }
+    
     
     
     

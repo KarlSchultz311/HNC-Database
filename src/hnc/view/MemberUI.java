@@ -2871,7 +2871,7 @@ public class MemberUI extends javax.swing.JFrame {
     public void displayFamilyMembers(ArrayList<Member> familyList){
         Iterator it = familyList.iterator();
         Member member = new Member();
-        System.out.print("got this far");
+        
         
         ta_5.setText(null);
         
@@ -2880,7 +2880,7 @@ public class MemberUI extends javax.swing.JFrame {
             member = (Member)it.next();
             
             ta_5.append(member.getFName()+" "+member.getLName()+"\n");
-            System.out.print(member.getFName());
+           
             
         }  
         

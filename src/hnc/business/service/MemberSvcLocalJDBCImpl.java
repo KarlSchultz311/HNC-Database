@@ -419,9 +419,9 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
             while(rs.next()){
                 Member row = new Member();                
                 row.setLName(rs.getString("lName"));
-                System.out.print(rs.getString("lName"));
+                
                 row.setFName(rs.getString("fName"));
-                System.out.print(rs.getString("fName"));
+                
                 familyList.add(row);
                 
             }

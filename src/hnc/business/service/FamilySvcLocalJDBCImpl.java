@@ -31,7 +31,7 @@ public class FamilySvcLocalJDBCImpl implements IFamilySvc {
             String sql2 = "SELECT * FROM members WHERE memId = '"+memId+"'";
             rs = stmt.executeQuery(sql2);
             
-            while(rs.next()){                
+            while(rs.next()){
                 member.setMemId(rs.getString(1));
                 member.setFamilyId(rs.getString(2));
                 member.setLName(rs.getString(3));
@@ -63,7 +63,13 @@ public class FamilySvcLocalJDBCImpl implements IFamilySvc {
                 member.setInhibitors(rs.getInt(29));
                 member.setAdvocacy(rs.getInt(30));                
             }
-            return member;
+            if (member.getFamilyId() == null){
+                return member;
+            }else{
+                Member hasFam = new Member();
+                hasFam.setLName(member.getFName()+", "+member.getLName()+" already has a Family");
+                return hasFam;
+            }
             
         }catch (Exception e){
             System.out.println(e);

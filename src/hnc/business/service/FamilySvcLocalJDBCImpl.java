@@ -214,7 +214,7 @@ public class FamilySvcLocalJDBCImpl implements IFamilySvc {
                     family.getHope()+"', teens= '"+family.getTeens()+"', latinUnion= '"+family.getLatinUnion()
                     +"', soar= '"+family.getSoar()+"', bloodBrotherhood= '"+family.getBloodBrotherhood()+"', inhibitors='"+
                     family.getInhibitors()+"', advocacy= '"+family.getAdvocacy()+
-                    "' WHERE familyID='"+ Integer.parseInt(family.getFamilyId())+"'";
+                    "' WHERE familyID='"+ family.getFamilyId()+"'";
             stmt.executeUpdate(sql);
         } catch (Exception e){
             System.out.println(e+" @ updateFamily");

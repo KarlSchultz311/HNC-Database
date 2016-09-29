@@ -2924,6 +2924,7 @@ public class MemberUI extends javax.swing.JFrame {
     
     public Family getFamily5(){
         Family family = new Family();
+        family.setFamilyId(tf_famId5.getText());
         family.setLName(tf_lName5.getText());
         family.setStreetAdd1(tf_sA15.getText());
         family.setStreetAdd2(tf_sA25.getText());

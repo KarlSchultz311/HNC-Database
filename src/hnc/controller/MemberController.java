@@ -116,7 +116,7 @@ public class MemberController implements ActionListener {
         //if deleted successfully
         if (deleted){
             //resets the confirmation button
-            memberUI.ConfirmMemberDeleteButton.setEnabled(false);
+            memberUI.disableConfirmMemberDeleteButton();
             Member member = new Member();
             //clears the form by loading a blank member
             memberUI.loadMember(member);
@@ -144,7 +144,7 @@ public class MemberController implements ActionListener {
     
     private void deleteMemberRecordActionPerformed(ActionEvent event, MemberUI memberUI){
         //This method will activate the deletion confirm button to allow deletion of member row.
-        memberUI.ConfirmMemberDeleteButton.setEnabled(true);        
+        memberUI.enableConfirmMemberDeleteButton();        
     }
     
     private void todayActionPerformed(ActionEvent event, MemberUI memberUI){
@@ -274,11 +274,13 @@ public class MemberController implements ActionListener {
     
     
     private void deleteFamilyRecordActionPerformed(ActionEvent event, MemberUI memberUI){
-        //stub
+        //This method will activate the deletion confirm button to allow deletion of member row.
+        memberUI.enableConfirmFamilyDeleteButton(); 
     }
     
     private void confirmDeleteFamilyActionPerformed(ActionEvent event, MemberUI memberUI) {
         //stub
+        memberUI.disableConfirmFamilyDeleteButton();
     }
     
     

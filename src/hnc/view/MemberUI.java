@@ -2389,8 +2389,25 @@ public class MemberUI extends javax.swing.JFrame {
         return ConfirmDeleteFamilyButton;
     }
     
+    public void enableConfirmFamilyDeleteButton() {
+        ConfirmDeleteFamilyButton.setEnabled(true);
+    }
+    
+    public void disableConfirmFamilyDeleteButton(){
+        ConfirmDeleteFamilyButton.setEnabled(false);
+    }
+    
+    
     public JButton getConfirmMemberDeleteButton () {
         return ConfirmMemberDeleteButton;
+    }
+    
+    public void enableConfirmMemberDeleteButton() {
+        ConfirmMemberDeleteButton.setEnabled(true);
+    }
+    
+    public void disableConfirmMemberDeleteButton(){
+        ConfirmMemberDeleteButton.setEnabled(false);
     }
     
     public JButton getCreateFamilyButton () {
@@ -2401,12 +2418,32 @@ public class MemberUI extends javax.swing.JFrame {
         return CreateMemberButton;
     }
     
+    
+    
     public JButton getDeleteFamilyRecordButton () {
         return DeleteFamilyRecordButton; 
     }
     
+    public void enableDeleteFamilyButton(){
+        DeleteFamilyRecordButton.setEnabled(true);
+    }
+    
+    public void disableDeleteFamilyButton(){
+        DeleteFamilyRecordButton.setEnabled(false);
+    }
+     
+    
+    
     public JButton getDeleteMemberRecordButton() {
         return DeleteMemberRecordButton;
+    }
+    
+    public void enableDeleteMemberButton() {
+        DeleteMemberRecordButton.setEnabled(true);
+    }
+    
+    public void disableDeleteMemberButton(){
+        DeleteMemberRecordButton.setEnabled(false);
     }
     
     public JButton getFamilySearchButton() {
@@ -3037,7 +3074,7 @@ public class MemberUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AddFamilyMemberButton;
     private javax.swing.JButton ConfirmDeleteFamilyButton;
-    public javax.swing.JButton ConfirmMemberDeleteButton;
+    private javax.swing.JButton ConfirmMemberDeleteButton;
     private javax.swing.JButton CreateFamilyButton;
     private javax.swing.JButton CreateMemberButton;
     private javax.swing.JButton DeleteFamilyRecordButton;

@@ -274,12 +274,15 @@ public class MemberController implements ActionListener {
     
     
     private void deleteFamilyRecordActionPerformed(ActionEvent event, MemberUI memberUI){
-        //This method will activate the deletion confirm button to allow deletion of member row.
+        //This method will activate the deletion confirm button to allow deletion of a family row.
         memberUI.enableConfirmFamilyDeleteButton(); 
     }
     
     private void confirmDeleteFamilyActionPerformed(ActionEvent event, MemberUI memberUI) {
-        //stub
+        /*This method will grab the family ID from the text field on the edit/delete family
+        tab, and set the familyID entry for all matching members to null. It will
+        then delete the family row from the family database. */
+        
         memberUI.disableConfirmFamilyDeleteButton();
     }
     

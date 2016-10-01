@@ -20,6 +20,6 @@ public interface IMemberSvc extends IService{
     public Boolean deleteMember(String memId) throws Exception;
     public void updateMember(Member member) throws Exception;
     public ArrayList<Member> displayMemberSearch(Member member) throws Exception;
-    public ArrayList<Member> getFamilyMembers(String famId) throws Exception;
+    public ArrayList<Member> getFamilyMembers(String famId) throws Exception;    
     //public void updateMemberFamily(Member member, String famId) throws Exception;
 }

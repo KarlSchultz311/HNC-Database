@@ -122,7 +122,7 @@ public class FamilySvcLocalJDBCImpl implements IFamilySvc {
            
         } catch (Exception e) {
             System.out.println(e);
-            return "JDBC Exception: Unable to find FamID";
+            return "Error at JDBCImp";
                
         } finally {
             if (conn != null) 
@@ -224,4 +224,19 @@ public class FamilySvcLocalJDBCImpl implements IFamilySvc {
         }
     }
     
+    @Override
+    public void deleteFamily(String familyId) throws Exception{
+        Connection conn = getConnection();
+        Statement stmt = null;
+        try{
+            stmt = conn.createStatement();
+            String sql = "DELETE FROM families WHERE familyID = '"+familyId+"'";
+            stmt.executeUpdate(sql);
+        } catch (Exception e){
+            System.out.println(e+" @ deleteFamily");
+        } finally {
+            if (conn != null)
+                conn.close();
+        }
+    }
 }

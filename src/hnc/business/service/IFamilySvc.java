@@ -17,4 +17,5 @@ public interface IFamilySvc extends IService{
     public void updateFamilyId (String famId, String memId) throws Exception;
     public Family getFamily (String famId) throws Exception;
     public void updateFamily(Family family) throws Exception;
+    public void deleteFamily(String famId) throws Exception;
 }

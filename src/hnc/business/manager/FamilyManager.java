@@ -73,4 +73,15 @@ public class FamilyManager {
         }
     }
     
+    public void deleteFamily (String famId) throws Exception{
+        Factory factory = new Factory();
+        try{
+            IFamilySvc familySvc = (IFamilySvc)factory.getService("IFamilySvc");
+            familySvc.deleteFamily(famId);
+        }catch (Exception e){
+            System.out.println(e);
+            Family errFam = new Family("Family not found");            
+        }
+    }
+    
 }

@@ -391,7 +391,7 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                     member.getHope()+"', teens= '"+member.getTeens()+"', latinUnion= '"+member.getLatinUnion()
                     +"', soar= '"+member.getSoar()+"', bloodBrotherhood= '"+member.getBloodBrotherhood()+"', inhibitors='"+
                     member.getInhibitors()+"', advocacy= '"+member.getAdvocacy()+"', updatedDate= '"+
-                    member.getUpdatedDate()+//"', familyID= '"+ Integer.parseInt(member.getFamilyId())+
+                    member.getUpdatedDate()+"', familyID= '"+ Integer.parseInt(member.getFamilyId())+
                     "' WHERE memId='"+ Integer.parseInt(member.getMemId())+"'";
             stmt.executeUpdate(sql4);
         } catch (Exception e){
@@ -414,7 +414,7 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                     famId+"'";
             rs = stmt.executeQuery(sql);
             
-            ArrayList<Member> familyList = new ArrayList();
+            ArrayList<Member> memberList = new ArrayList();
             
             
             while(rs.next()){
@@ -423,17 +423,17 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                 
                 row.setFName(rs.getString("fName"));
                 
-                familyList.add(row);
+                memberList.add(row);
                 
             }
             
-            return familyList;
+            return memberList;
             
         }catch (Exception e) {
             System.out.println(e);
             ArrayList<Member> list = new ArrayList();
             Member errorMember = new Member();
-            errorMember.setFName("Error");
+            errorMember.setFName("Error at JDBC");
             list.add(errorMember);
             return list;            
         }finally {

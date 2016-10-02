@@ -7,6 +7,7 @@ package hnc.business.service;
 
 import java.sql.*;
 import hnc.domain.*;
+import java.util.ArrayList;
 /**
  *
  * @author Karl
@@ -238,5 +239,208 @@ public class FamilySvcLocalJDBCImpl implements IFamilySvc {
             if (conn != null)
                 conn.close();
         }
+    }
+    
+    @Override
+    public ArrayList<Family> searchFamily(Family parameters) throws Exception {
+        Connection conn = getConnection();  //establishes connection to DB
+        try {
+            Statement stmt = null;
+            ResultSet rs = null;            
+            stmt = conn.createStatement();
+            Boolean first = true;
+            
+            
+            String sql = "SELECT * FROM families WHERE ";
+            
+            if (! parameters.getFamilyId().isEmpty()){
+                //check to see if this is the first paramater
+                if(first==true){
+                    sql += "familyID = '"+parameters.getFamilyId()+"'";
+                    first=false;
+                }else{
+                    sql += " AND familyID = '"+parameters.getFamilyId()+"'";                   
+                }
+             
+            }if (! parameters.getLName().isEmpty()){
+                //check to see if this is the first paramater
+                if(first==true){
+                    sql += "lName = '"+parameters.getLName()+"'";
+                    first=false;
+                }else{
+                    sql += " AND lName = '"+parameters.getLName()+"'";                   
+                }                
+            }
+                       
+            
+            if (! parameters.getCity().isEmpty()){
+                //check to see if this is the first paramater
+                if(first==true){
+                    sql += "city = '"+parameters.getCity()+"'";
+                    first=false;
+                }else{
+                    sql += " AND city = '"+parameters.getCity()+"'";                   
+                }                
+            }
+            
+            if ( ! parameters.getCounty().isEmpty()){
+                //check to see if this is the first paramater
+                if(first==true){
+                    sql += "county = '"+parameters.getCounty()+"'";
+                    first=false;
+                }else{
+                    sql += " AND county = '"+parameters.getCounty()+"'";                   
+                }                
+            }
+            
+            if (! parameters.getRegion().matches("All")){
+                //check to see if this is the first paramater
+                if(first==true){
+                    sql += "region = '"+parameters.getRegion()+"'";
+                    first=false;
+                }else{
+                    sql += " AND region = '"+parameters.getRegion()+"'";                   
+                }                
+            }
+            
+            if (! parameters.getBleedDisorder().isEmpty()){
+                //check to see if this is the first paramater
+                if(first==true){
+                    sql += "bleedDisorder = '"+parameters.getBleedDisorder()+"'";
+                    first=false;
+                }else{
+                    sql += " AND bleedDisorder = '"+parameters.getBleedDisorder()+"'";                   
+                }                
+            }
+            
+            if (parameters.getHope() == 1){
+                //check to see if this is the first paramater
+                if(first==true){
+                    sql += "hope = 1";
+                    first=false;
+                }else{
+                    sql += " AND hope = 1";                   
+                }                
+            }
+            
+            if (parameters.getTeens() == 1){
+                //check to see if this is the first paramater
+                if(first==true){
+                    sql += "teens = 1";
+                    first=false;
+                }else{
+                    sql += " AND teens = 1";                   
+                }                
+            }
+            
+            if (parameters.getLatinUnion() == 1){
+                //check to see if this is the first paramater
+                if(first==true){
+                    sql += "latinUnion = 1";
+                    first=false;
+                }else{
+                    sql += " AND latinUnion = 1";                   
+                }                
+            }
+            
+            if (parameters.getSoar() == 1){
+                //check to see if this is the first paramater
+                if(first==true){
+                    sql += "soar = 1";
+                    first=false;
+                }else{
+                    sql += " AND soar = 1";                   
+                }                
+            }
+            
+            if (parameters.getBloodBrotherhood() == 1){
+                //check to see if this is the first paramater
+                if(first==true){
+                    sql += "bloodBrotherhood = 1";
+                    first=false;
+                }else{
+                    sql += " AND bloodBrotherhood = 1";                   
+                }                
+            }
+            
+            if (parameters.getInhibitors() == 1){
+                //check to see if this is the first paramater
+                if(first==true){
+                    sql += "inhibitors = 1";
+                    first=false;
+                }else{
+                    sql += " AND inhibitors = 1";                   
+                }                
+            }
+            
+            if (parameters.getAdvocacy() == 1){
+                //check to see if this is the first paramater
+                if(first==true){
+                    sql += "advocacy = 1";
+                    first=false;
+                }else{
+                    sql += " AND advocacy = 1";                   
+                }                
+            }
+              
+            
+            if(first==true){
+                sql="SELECT * FROM families";
+                
+            }
+            System.out.print(sql);           
+            rs = stmt.executeQuery(sql);
+            
+            ArrayList<Family> familyList = new ArrayList();
+            
+            
+            
+            while(rs.next()){
+                Family row = new Family();
+                row.setFamilyId(rs.getString("familyID"));
+                row.setLName(rs.getString("lName"));
+                row.setStreetAdd1(rs.getString("streetAdd1"));
+                row.setStreetAdd2(rs.getString("streetAdd2"));
+                row.setCity(rs.getString("city"));                
+                row.setState(rs.getString("state"));
+                row.setZip(rs.getString("zip"));
+                row.setCounty(rs.getString("county"));
+                row.setRegion(rs.getString("region"));
+                row.setHomePhone(rs.getString("homePhone"));
+                row.setCellPhone(rs.getString("cellPhone"));
+                row.setEmail1(rs.getString("email1"));
+                row.setEmail2(rs.getString("email2"));
+                row.setBleedDisorder(rs.getString("bleedDisorder"));
+                row.setComments(rs.getString("comments"));
+                row.setHope(rs.getInt("hope"));
+                row.setTeens(rs.getInt("teens"));
+                row.setSoar(rs.getInt("soar"));
+                row.setBloodBrotherhood(rs.getInt("bloodBrotherhood"));
+                row.setLatinUnion(rs.getInt("latinUnion"));
+                row.setInhibitors(rs.getInt("inhibitors"));
+                row.setAdvocacy(rs.getInt("advocacy"));
+                
+                
+                System.out.print("got here 2");
+                
+                
+                familyList.add(row);
+                
+            }
+            
+            return familyList;
+            
+        }catch (Exception e) {
+            System.out.println(e);
+            ArrayList<Family> list = new ArrayList();
+            Family  errFam = new Family();
+            errFam.setLName("Error @ JDBC Implement");
+            list.add(errFam);
+            return list;            
+        }finally {
+            if (conn != null) 
+                conn.close();
+        }
+    
     }
 }

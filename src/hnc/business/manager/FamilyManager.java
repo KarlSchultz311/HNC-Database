@@ -8,6 +8,7 @@ package hnc.business.manager;
 import hnc.business.factory.Factory;
 import hnc.domain.*;
 import hnc.business.service.IFamilySvc;
+import java.util.ArrayList;
 /**
  *
  * @author Karl
@@ -84,4 +85,18 @@ public class FamilyManager {
         }
     }
     
+    public ArrayList<Family> searchFamily (Family family) throws Exception{
+        Factory factory = new Factory();
+        try{
+            IFamilySvc familySvc = (IFamilySvc)factory.getService("IFamilySvc");
+            return familySvc.searchFamily(family);
+        }catch (Exception e) {
+            System.out.println(e);
+            ArrayList<Family> list = new ArrayList();
+            Family  errFam = new Family();
+            errFam.setLName("Error @ Fam Manager");
+            list.add(errFam);
+            return list;            
+        }
+    }
 }

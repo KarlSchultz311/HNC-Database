@@ -185,15 +185,17 @@ public class MemberUI extends javax.swing.JFrame {
         chbx_advocacy4 = new javax.swing.JCheckBox();
         chbx_inhibs4 = new javax.swing.JCheckBox();
         chbx_teens4 = new javax.swing.JCheckBox();
-        chbx_BloodBro4 = new javax.swing.JCheckBox();
+        chbx_bloodBro4 = new javax.swing.JCheckBox();
         chbx_soar4 = new javax.swing.JCheckBox();
-        chbx_Latin4 = new javax.swing.JCheckBox();
+        chbx_latinUnion4 = new javax.swing.JCheckBox();
         chbx_hope4 = new javax.swing.JCheckBox();
         jScrollPane2 = new javax.swing.JScrollPane();
         ta_4 = new javax.swing.JTextArea();
         jLabel16 = new javax.swing.JLabel();
         tf_bleed4 = new javax.swing.JTextField();
-        jComboBox3 = new javax.swing.JComboBox();
+        cb_region4 = new javax.swing.JComboBox();
+        jLabel17 = new javax.swing.JLabel();
+        tf_famId4 = new javax.swing.JTextField();
         jPanel6 = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
         jLabel97 = new javax.swing.JLabel();
@@ -1442,14 +1444,14 @@ public class MemberUI extends javax.swing.JFrame {
         chbx_teens4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         chbx_teens4.setText("Teens");
 
-        chbx_BloodBro4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        chbx_BloodBro4.setText("Blood Brotherhood(Men's)");
+        chbx_bloodBro4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        chbx_bloodBro4.setText("Blood Brotherhood(Men's)");
 
         chbx_soar4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         chbx_soar4.setText("SOAR(Women's)");
 
-        chbx_Latin4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        chbx_Latin4.setText("Latin Union");
+        chbx_latinUnion4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        chbx_latinUnion4.setText("Latin Union");
 
         chbx_hope4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         chbx_hope4.setText("HOPE");
@@ -1466,8 +1468,16 @@ public class MemberUI extends javax.swing.JFrame {
         tf_bleed4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         tf_bleed4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        jComboBox3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "All", "Region 1", "Region 2", "Region 3", "Region 4", "Region 5", "Region 6", "Region 7", "Region 8", "Region 9", "Region 10", "Region 11", "Region 12", "Region 13", "Region 14" }));
+        cb_region4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cb_region4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "All", "Region 1", "Region 2", "Region 3", "Region 4", "Region 5", "Region 6", "Region 7", "Region 8", "Region 9", "Region 10", "Region 11", "Region 12", "Region 13", "Region 14" }));
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel17.setText("Family ID");
+        jLabel17.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        tf_famId4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        tf_famId4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -1482,11 +1492,11 @@ public class MemberUI extends javax.swing.JFrame {
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(chbx_hope4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(chbx_Latin4)
+                                .addComponent(chbx_latinUnion4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(chbx_soar4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(chbx_BloodBro4)
+                                .addComponent(chbx_bloodBro4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(chbx_teens4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1502,7 +1512,7 @@ public class MemberUI extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(tf_county4, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addComponent(cb_region4, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
                                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1514,14 +1524,18 @@ public class MemberUI extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
                                         .addComponent(tf_state4, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(tf_bleed4, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(30, 30, 30)
+                                        .addComponent(tf_bleed4, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(tf_famId4, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(18, 18, 18)
                         .addComponent(FamilySearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(225, Short.MAX_VALUE))
         );
@@ -1530,9 +1544,6 @@ public class MemberUI extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(FamilySearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(34, 34, 34)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1540,7 +1551,8 @@ public class MemberUI extends javax.swing.JFrame {
                             .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(tf_lName4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1548,17 +1560,22 @@ public class MemberUI extends javax.swing.JFrame {
                             .addComponent(tf_county4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(tf_state4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(tf_bleed4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox3, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
+                            .addComponent(cb_region4, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                            .addComponent(tf_famId4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(chbx_hope4)
-                            .addComponent(chbx_Latin4)
+                            .addComponent(chbx_latinUnion4)
                             .addComponent(chbx_soar4)
-                            .addComponent(chbx_BloodBro4)
+                            .addComponent(chbx_bloodBro4)
                             .addComponent(chbx_teens4)
                             .addComponent(chbx_inhibs4)
-                            .addComponent(chbx_advocacy4))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(chbx_advocacy4))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(FamilySearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 620, Short.MAX_VALUE)
                 .addContainerGap())
         );
@@ -2513,6 +2530,10 @@ public class MemberUI extends javax.swing.JFrame {
         ta_4.append(text);
     }
     
+    public void setTA4(String text){
+        ta_4.setText(text);
+    }
+    
     public Member getMemberSearchParams(){
         Member member = new Member();
         member.setMemId((String)tf_memID1.getText());
@@ -2729,12 +2750,7 @@ public class MemberUI extends javax.swing.JFrame {
         Member member = new Member();
         int n = memberList.size();
         
-        /*
-        for (int i = 0; i<= (n-1); i++){
-            String result = memberList[i].getLName()+ " " + memberList[i].getFName() + "\n";
-            display += result;
-            
-        }*/
+        
         ta_1.setText(null);
         
         while ( it.hasNext()) {
@@ -3010,8 +3026,67 @@ public class MemberUI extends javax.swing.JFrame {
         return family;
     }
     
+    public Family getFamilySearchParams(){
+        Family family = new Family();
+        family.setFamilyId(tf_famId4.getText());
+        family.setLName(tf_lName4.getText());
+        family.setCity(tf_city4.getText());
+        family.setState(tf_state4.getText());
+        family.setCounty(tf_county4.getText());
+        family.setRegion((String)cb_region4.getSelectedItem());
+        family.setBleedDisorder(tf_bleed4.getText());
+        //constructor builds the following groups with default value of 0
+        if(chbx_hope4.isSelected()){
+            family.setHope(1);
+        }
+        if(chbx_teens4.isSelected()){
+            family.setTeens(1);
+        }
+        if(chbx_soar4.isSelected()){
+            family.setSoar(1);
+        }
+        if(chbx_bloodBro4.isSelected()){
+            family.setBloodBrotherhood(1);
+        }
+        if(chbx_latinUnion4.isSelected()){
+            family.setLatinUnion(1);
+        }
+        if(chbx_inhibs4.isSelected()){
+            family.setInhibitors(1);
+        }
+        if(chbx_advocacy4.isSelected()){
+            family.setAdvocacy(1);
+        }
+        
+        return family;
+    }
     
-    
+    public void displayFamilySearch (ArrayList<Family> familyList){
+        Iterator it = familyList.iterator();
+        Family family = new Family();
+        int n = familyList.size();
+        
+        
+        setTA4(""); //clears text area
+        
+        while ( it.hasNext()) {
+            
+            family = (Family)it.next();
+            System.out.print(family.getFamilyId());
+            appendTA4(family.getFamilyId()+" | "+family.getLName()+
+                    " | "+family.getStreetAdd1()+" "+family.getStreetAdd2()+" "+
+                    family.getCity()+ ", " + family.getState()+ " " + family.getZip()+
+                    " " + family.getCounty()+ " County " + family.getRegion()+
+                     " | Home Phone "+
+                    family.getHomePhone()+ " Cell Phone " + family.getCellPhone()+
+                    " | "+ family.getEmail1()+ " " + family.getEmail2()+
+                    " | Bleed Disorder: "+ family.getBleedDisorder()+" | Comments: "+
+                    family.getComments()+"\n");
+            
+            
+        }  
+        appendTA4("Found "+n+ " matching members");
+    }
     
     /**
      * @param args the command line arguments
@@ -3098,8 +3173,7 @@ public class MemberUI extends javax.swing.JFrame {
     private javax.swing.JButton UpdateMemberDataButton;
     private javax.swing.JComboBox cb_region1;
     private javax.swing.JComboBox cb_region2;
-    private javax.swing.JCheckBox chbx_BloodBro4;
-    private javax.swing.JCheckBox chbx_Latin4;
+    private javax.swing.JComboBox cb_region4;
     private javax.swing.JCheckBox chbx_advocacy1;
     private javax.swing.JCheckBox chbx_advocacy2;
     private javax.swing.JCheckBox chbx_advocacy3;
@@ -3109,6 +3183,7 @@ public class MemberUI extends javax.swing.JFrame {
     private javax.swing.JCheckBox chbx_blood1;
     private javax.swing.JCheckBox chbx_blood2;
     private javax.swing.JCheckBox chbx_bloodBro3;
+    private javax.swing.JCheckBox chbx_bloodBro4;
     private javax.swing.JCheckBox chbx_bloodBro5;
     private javax.swing.JCheckBox chbx_bloodBro6;
     private javax.swing.JCheckBox chbx_hope1;
@@ -3126,6 +3201,7 @@ public class MemberUI extends javax.swing.JFrame {
     private javax.swing.JCheckBox chbx_latin1;
     private javax.swing.JCheckBox chbx_latin2;
     private javax.swing.JCheckBox chbx_latinUnion3;
+    private javax.swing.JCheckBox chbx_latinUnion4;
     private javax.swing.JCheckBox chbx_latinUnion5;
     private javax.swing.JCheckBox chbx_latinUnion6;
     private javax.swing.JCheckBox chbx_noIndustry1;
@@ -3143,7 +3219,6 @@ public class MemberUI extends javax.swing.JFrame {
     private javax.swing.JCheckBox chbx_teens4;
     private javax.swing.JCheckBox chbx_teens5;
     private javax.swing.JCheckBox chbx_teens6;
-    private javax.swing.JComboBox jComboBox3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;
@@ -3160,6 +3235,7 @@ public class MemberUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel36;
@@ -3286,6 +3362,7 @@ public class MemberUI extends javax.swing.JFrame {
     private javax.swing.JTextField tf_fName1;
     private javax.swing.JTextField tf_fName2;
     private javax.swing.JTextField tf_fName3;
+    private javax.swing.JTextField tf_famId4;
     private javax.swing.JTextField tf_famId5;
     private javax.swing.JTextField tf_famId6;
     private javax.swing.JTextField tf_homePhone2;

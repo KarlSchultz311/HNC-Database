@@ -38,7 +38,7 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                     sql += "memId = '"+parameters.getMemId()+"'";
                     first=false;
                 }else{
-                    sql += "AND memId = '"+parameters.getMemId()+"'";                   
+                    sql += " AND memId = '"+parameters.getMemId()+"'";                   
                 }
                 
             }if (! parameters.getLName().isEmpty()){
@@ -47,7 +47,7 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                     sql += "lName = '"+parameters.getLName()+"'";
                     first=false;
                 }else{
-                    sql += "AND lName = '"+parameters.getLName()+"'";                   
+                    sql += " AND lName = '"+parameters.getLName()+"'";                   
                 }                
             }
             
@@ -57,7 +57,7 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                     sql += "fName = '"+parameters.getFName()+"'";
                     first=false;
                 }else{
-                    sql += "AND fName = '"+parameters.getFName()+"'";                   
+                    sql += " AND fName = '"+parameters.getFName()+"'";                   
                 }                
             }
             
@@ -67,7 +67,7 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                     sql += "city = '"+parameters.getCity()+"'";
                     first=false;
                 }else{
-                    sql += "AND city = '"+parameters.getCity()+"'";                   
+                    sql += " AND city = '"+parameters.getCity()+"'";                   
                 }                
             }
             
@@ -77,7 +77,7 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                     sql += "county = '"+parameters.getCounty()+"'";
                     first=false;
                 }else{
-                    sql += "AND county = '"+parameters.getCounty()+"'";                   
+                    sql += " AND county = '"+parameters.getCounty()+"'";                   
                 }                
             }
             
@@ -87,7 +87,7 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                     sql += "region = '"+parameters.getRegion()+"'";
                     first=false;
                 }else{
-                    sql += "AND region = '"+parameters.getRegion()+"'";                   
+                    sql += " AND region = '"+parameters.getRegion()+"'";                   
                 }                
             }
             
@@ -97,7 +97,7 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                     sql += "bleedDisorder = '"+parameters.getBleedDisorder()+"'";
                     first=false;
                 }else{
-                    sql += "AND bleedDisorder = '"+parameters.getBleedDisorder()+"'";                   
+                    sql += " AND bleedDisorder = '"+parameters.getBleedDisorder()+"'";                   
                 }                
             }
             
@@ -107,7 +107,7 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                     sql += "hope = 1";
                     first=false;
                 }else{
-                    sql += "AND hope = 1";                   
+                    sql += " AND hope = 1";                   
                 }                
             }
             
@@ -117,7 +117,7 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                     sql += "teens = 1";
                     first=false;
                 }else{
-                    sql += "AND teens = 1";                   
+                    sql += " AND teens = 1";                   
                 }                
             }
             
@@ -127,7 +127,7 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                     sql += "latinUnion = 1";
                     first=false;
                 }else{
-                    sql += "AND latinUnion = 1";                   
+                    sql += " AND latinUnion = 1";                   
                 }                
             }
             
@@ -137,7 +137,7 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                     sql += "soar = 1";
                     first=false;
                 }else{
-                    sql += "AND soar = 1";                   
+                    sql += " AND soar = 1";                   
                 }                
             }
             
@@ -147,7 +147,7 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                     sql += "bloodBrotherhood = 1";
                     first=false;
                 }else{
-                    sql += "AND bloodBrotherhood = 1";                   
+                    sql += " AND bloodBrotherhood = 1";                   
                 }                
             }
             
@@ -157,7 +157,7 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                     sql += "inhibitors = 1";
                     first=false;
                 }else{
-                    sql += "AND inhibitors = 1";                   
+                    sql += " AND inhibitors = 1";                   
                 }                
             }
             
@@ -167,7 +167,7 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                     sql += "advocacy = 1";
                     first=false;
                 }else{
-                    sql += "AND advocacy = 1";                   
+                    sql += " AND advocacy = 1";                   
                 }                
             }
             
@@ -179,7 +179,7 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                     sql += "industry = 0";
                     first=false;
                 }else{
-                    sql += "AND industry = 0";                   
+                    sql += " AND industry = 0";                   
                 }                
             }
             if(first==true){
@@ -391,11 +391,11 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                     member.getHope()+"', teens= '"+member.getTeens()+"', latinUnion= '"+member.getLatinUnion()
                     +"', soar= '"+member.getSoar()+"', bloodBrotherhood= '"+member.getBloodBrotherhood()+"', inhibitors='"+
                     member.getInhibitors()+"', advocacy= '"+member.getAdvocacy()+"', updatedDate= '"+
-                    member.getUpdatedDate()+"', familyID= '"+member.getFamilyId()+
+                    member.getUpdatedDate()+//"', familyID= '"+ Integer.parseInt(member.getFamilyId())+
                     "' WHERE memId='"+ Integer.parseInt(member.getMemId())+"'";
             stmt.executeUpdate(sql4);
         } catch (Exception e){
-            System.out.println(e);
+            System.out.println(e+ " @ updateMember");
         } finally {
             if (conn4 != null)
                 conn4.close();

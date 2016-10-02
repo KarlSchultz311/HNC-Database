@@ -61,6 +61,7 @@ public class Member {
     //constructor
     public Member(){
         memId = null;
+        familyId = null;
         lName = null;
         fName = null;
         email1 = null;
@@ -94,6 +95,7 @@ public class Member {
     
      public Member(String memId){
         this.memId = memId;
+        familyId = null;
         lName = null;
         fName = null;
         email1 = null;

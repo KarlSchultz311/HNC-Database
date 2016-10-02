@@ -6,6 +6,7 @@
 package hnc.business.service;
 
 import hnc.domain.*;
+import java.util.ArrayList;
 /**
  *
  * @author Karl
@@ -18,4 +19,5 @@ public interface IFamilySvc extends IService{
     public Family getFamily (String famId) throws Exception;
     public void updateFamily(Family family) throws Exception;
     public void deleteFamily(String famId) throws Exception;
+    public ArrayList<Family> searchFamily (Family family) throws Exception;
 }

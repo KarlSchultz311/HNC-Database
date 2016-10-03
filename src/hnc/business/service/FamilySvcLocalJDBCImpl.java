@@ -265,10 +265,10 @@ public class FamilySvcLocalJDBCImpl implements IFamilySvc {
             }if (! parameters.getLName().isEmpty()){
                 //check to see if this is the first paramater
                 if(first==true){
-                    sql += "lName = '"+parameters.getLName()+"'";
+                    sql += "lName LIKE '"+parameters.getLName()+"%'";
                     first=false;
                 }else{
-                    sql += " AND lName = '"+parameters.getLName()+"'";                   
+                    sql += " AND lName LIKE '"+parameters.getLName()+"%'";                   
                 }                
             }
                        
@@ -276,30 +276,30 @@ public class FamilySvcLocalJDBCImpl implements IFamilySvc {
             if (! parameters.getCity().isEmpty()){
                 //check to see if this is the first paramater
                 if(first==true){
-                    sql += "city = '"+parameters.getCity()+"'";
+                    sql += "city LIKE '"+parameters.getCity()+"%'";
                     first=false;
                 }else{
-                    sql += " AND city = '"+parameters.getCity()+"'";                   
+                    sql += " AND city LIKE '"+parameters.getCity()+"%'";                   
                 }                
             }
             
             if ( ! parameters.getCounty().isEmpty()){
                 //check to see if this is the first paramater
                 if(first==true){
-                    sql += "county = '"+parameters.getCounty()+"'";
+                    sql += "county LIKE '"+parameters.getCounty()+"%'";
                     first=false;
                 }else{
-                    sql += " AND county = '"+parameters.getCounty()+"'";                   
+                    sql += " AND county LIKE '"+parameters.getCounty()+"%'";                   
                 }                
             }
             
             if (! parameters.getRegion().matches("All")){
                 //check to see if this is the first paramater
                 if(first==true){
-                    sql += "region = '"+parameters.getRegion()+"'";
+                    sql += "region LIKE '"+parameters.getRegion()+"%'";
                     first=false;
                 }else{
-                    sql += " AND region = '"+parameters.getRegion()+"'";                   
+                    sql += " AND region LIKE '"+parameters.getRegion()+"%'";                   
                 }                
             }
             

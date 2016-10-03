@@ -391,7 +391,7 @@ public class FamilySvcLocalJDBCImpl implements IFamilySvc {
                        
             rs = stmt.executeQuery(sql);
             
-            ArrayList<Family> familyList = new ArrayList();
+            ArrayList<Family> familyList = new ArrayList<Family>();
             
             
             
@@ -429,7 +429,7 @@ public class FamilySvcLocalJDBCImpl implements IFamilySvc {
             
         }catch (Exception e) {
             System.out.println(e);
-            ArrayList<Family> list = new ArrayList();
+            ArrayList<Family> list = new ArrayList<Family>();
             Family  errFam = new Family();
             errFam.setLName("Error @ JDBC Implement");
             list.add(errFam);

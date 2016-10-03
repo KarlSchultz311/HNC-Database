@@ -91,7 +91,7 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                 }                
             }
             
-            if (! parameters.getBleedDisorder().isEmpty()){
+            if (! parameters.getBleedDisorder().matches("All")){
                 //check to see if this is the first paramater
                 if(first==true){
                     sql += "bleedDisorder = '"+parameters.getBleedDisorder()+"'";
@@ -231,7 +231,7 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
             
         }catch (Exception e) {
             System.out.println(e);
-            ArrayList<Member> list = new ArrayList();
+            ArrayList<Member> list = new ArrayList<Member>();
             Member errorMember = new Member();
             errorMember.setLName("Error");
             list.add(errorMember);
@@ -379,7 +379,8 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
         Statement stmt = null;
         try{
             stmt = conn4.createStatement();
-            String sql4 = "UPDATE members SET lName= '"+ member.getLName()+"', fName= '"+
+            String sql4 = "UPDATE members SET familyID= '"+ Integer.parseInt(member.getFamilyId())+
+                    "' lName= '"+ member.getLName()+"', fName= '"+
                     member.getFName()+"', email1= '"+member.getEmail1()+"', email2= '"+member.getEmail2()
                     +"', streetAdd1= '"+member.getStreetAdd1()+"', streetAdd2= '"+member.getStreetAdd2()
                     +"', city= '"+member.getCity()+"', zip= '"+member.getZip()+"', state= '"+
@@ -390,9 +391,9 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                     member.getOrganization()+"', industry= '"+member.getIndustry()+"', hope= '"+
                     member.getHope()+"', teens= '"+member.getTeens()+"', latinUnion= '"+member.getLatinUnion()
                     +"', soar= '"+member.getSoar()+"', bloodBrotherhood= '"+member.getBloodBrotherhood()+"', inhibitors='"+
-                    member.getInhibitors()+"', advocacy= '"+member.getAdvocacy()+"', updatedDate= '"+
-                    member.getUpdatedDate()+"', familyID= '"+ Integer.parseInt(member.getFamilyId())+
-                    "' WHERE memId='"+ Integer.parseInt(member.getMemId())+"'";
+                    member.getInhibitors()+"', advocacy= '"+member.getAdvocacy()+"', updatedDate= '"
+                    +member.getUpdatedDate()+"'WHERE memId='"+ Integer.parseInt(member.getMemId())+"'";
+            System.out.println(sql4);
             stmt.executeUpdate(sql4);
         } catch (Exception e){
             System.out.println(e+ " @ updateMember");
@@ -414,7 +415,7 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                     famId+"'";
             rs = stmt.executeQuery(sql);
             
-            ArrayList<Member> memberList = new ArrayList();
+            ArrayList<Member> memberList = new ArrayList<Member>();
             
             
             while(rs.next()){
@@ -431,7 +432,7 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
             
         }catch (Exception e) {
             System.out.println(e);
-            ArrayList<Member> list = new ArrayList();
+            ArrayList<Member> list = new ArrayList<Member>();
             Member errorMember = new Member();
             errorMember.setFName("Error at JDBC");
             list.add(errorMember);

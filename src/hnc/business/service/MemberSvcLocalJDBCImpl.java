@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class MemberSvcLocalJDBCImpl implements IMemberSvc {
     
-    private String connString = 
+    final private String connString = 
             "jdbc:mysql://localhost:3306/hnc?user=root&password=73bLood?";
     
     private Connection getConnection() throws Exception {
@@ -188,7 +188,7 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                     
             rs = stmt.executeQuery(sql);
             
-            ArrayList<Member> memberList = new ArrayList();
+            ArrayList<Member> memberList = new ArrayList<Member>();
             
             
             while(rs.next()){

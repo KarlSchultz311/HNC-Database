@@ -388,7 +388,7 @@ public class FamilySvcLocalJDBCImpl implements IFamilySvc {
                 sql="SELECT * FROM families";
                 
             }
-            System.out.print(sql);           
+                       
             rs = stmt.executeQuery(sql);
             
             ArrayList<Family> familyList = new ArrayList();
@@ -419,9 +419,6 @@ public class FamilySvcLocalJDBCImpl implements IFamilySvc {
                 row.setLatinUnion(rs.getInt("latinUnion"));
                 row.setInhibitors(rs.getInt("inhibitors"));
                 row.setAdvocacy(rs.getInt("advocacy"));
-                
-                
-                System.out.print("got here 2");
                 
                 
                 familyList.add(row);

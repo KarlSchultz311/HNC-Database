@@ -373,14 +373,20 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                 
     }
     
+    
+    //"', familyID= '"+ (Integer.parseInt(member.getFamilyId())+0)+ "' 
+                    
     @Override
     public void updateMember(Member member) throws Exception {
         Connection conn4 = getConnection();
         Statement stmt = null;
+        
+                
         try{
+            
             stmt = conn4.createStatement();
-            String sql4 = "UPDATE members SET familyID= '"+ Integer.parseInt(member.getFamilyId())+
-                    "' lName= '"+ member.getLName()+"', fName= '"+
+            String sql4 = "UPDATE members SET familyID= '"+ member.getInteger(member.getFamilyId())+
+                    "', lName= '"+ member.getLName()+"', fName= '"+
                     member.getFName()+"', email1= '"+member.getEmail1()+"', email2= '"+member.getEmail2()
                     +"', streetAdd1= '"+member.getStreetAdd1()+"', streetAdd2= '"+member.getStreetAdd2()
                     +"', city= '"+member.getCity()+"', zip= '"+member.getZip()+"', state= '"+

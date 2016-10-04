@@ -366,7 +366,13 @@ public class Member {
         this.advocacy = advocacy;
     }
     
-   
+        public int getInteger(String num) {
+    if (num != null) {
+        return Integer.parseInt(num); //convert your string into integer 
+    } else {
+        return 0; // or what you want to return if string is Null
+    }
+}
     @Override
     public String toString(){
         return "Member ID " + memId + " " + fName + " " + lName + " " + region;

@@ -64,7 +64,7 @@ public class FamilySvcLocalJDBCImpl implements IFamilySvc {
                 member.setInhibitors(rs.getInt(29));
                 member.setAdvocacy(rs.getInt(30));                
             }
-            if (member.getFamilyId() == null){
+            if (member.getInteger(member.getFamilyId()) == 0){
                 return member;
             }else{
                 Member hasFam = new Member();
@@ -231,8 +231,10 @@ public class FamilySvcLocalJDBCImpl implements IFamilySvc {
         Statement stmt = null;
         try{
             stmt = conn.createStatement();
-            String sql = "DELETE FROM families WHERE familyID = '"+familyId+"'";
+            String sql = "UPDATE members SET familyID = '0' WHERE familyID ='"+familyId+"'";
             stmt.executeUpdate(sql);
+            String sql2 = "DELETE FROM families WHERE familyID = '"+familyId+"'";
+            stmt.executeUpdate(sql2);
         } catch (Exception e){
             System.out.println(e+" @ deleteFamily");
         } finally {
@@ -303,7 +305,7 @@ public class FamilySvcLocalJDBCImpl implements IFamilySvc {
                 }                
             }
             
-            if (! parameters.getBleedDisorder().isEmpty()){
+            if (! parameters.getBleedDisorder().matches("All")){
                 //check to see if this is the first paramater
                 if(first==true){
                     sql += "bleedDisorder = '"+parameters.getBleedDisorder()+"'";
@@ -385,10 +387,11 @@ public class FamilySvcLocalJDBCImpl implements IFamilySvc {
               
             
             if(first==true){
-                sql="SELECT * FROM families";
-                
+                sql="SELECT * FROM families WHERE familyId != 0";                
+            }else{
+                sql=sql+" AND familyID != 0";
             }
-                       
+                     
             rs = stmt.executeQuery(sql);
             
             ArrayList<Family> familyList = new ArrayList<Family>();

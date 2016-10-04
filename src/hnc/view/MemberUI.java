@@ -141,7 +141,6 @@ public class MemberUI extends javax.swing.JFrame {
         tf_dob3 = new javax.swing.JTextField();
         tf_email23 = new javax.swing.JTextField();
         tf_comments3 = new javax.swing.JTextField();
-        tf_bleed3 = new javax.swing.JTextField();
         tf_joinDate3 = new javax.swing.JTextField();
         jLabel89 = new javax.swing.JLabel();
         jLabel90 = new javax.swing.JLabel();
@@ -173,6 +172,7 @@ public class MemberUI extends javax.swing.JFrame {
         ConfirmMemberDeleteButton = new javax.swing.JButton();
         tf_familyId3 = new javax.swing.JTextField();
         jLabel108 = new javax.swing.JLabel();
+        cb_bleed3 = new javax.swing.JComboBox();
         jPanel2 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         tf_lName4 = new javax.swing.JTextField();
@@ -194,10 +194,10 @@ public class MemberUI extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         ta_4 = new javax.swing.JTextArea();
         jLabel16 = new javax.swing.JLabel();
-        tf_bleed4 = new javax.swing.JTextField();
         cb_region4 = new javax.swing.JComboBox();
         jLabel17 = new javax.swing.JLabel();
         tf_famId4 = new javax.swing.JTextField();
+        cb_bleed4 = new javax.swing.JComboBox();
         jPanel6 = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
         jLabel97 = new javax.swing.JLabel();
@@ -228,7 +228,6 @@ public class MemberUI extends javax.swing.JFrame {
         jLabel104 = new javax.swing.JLabel();
         tf_comments5 = new javax.swing.JTextField();
         jLabel105 = new javax.swing.JLabel();
-        tf_bleed5 = new javax.swing.JTextField();
         chbx_hope5 = new javax.swing.JCheckBox();
         chbx_teens5 = new javax.swing.JCheckBox();
         chbx_soar5 = new javax.swing.JCheckBox();
@@ -246,6 +245,7 @@ public class MemberUI extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         ta_5 = new javax.swing.JTextArea();
         tf_region5 = new javax.swing.JTextField();
+        cb_bleed5 = new javax.swing.JComboBox();
         jPanel5 = new javax.swing.JPanel();
         jLabel96 = new javax.swing.JLabel();
         tf_memID6 = new javax.swing.JTextField();
@@ -275,7 +275,6 @@ public class MemberUI extends javax.swing.JFrame {
         jLabel67 = new javax.swing.JLabel();
         tf_comments6 = new javax.swing.JTextField();
         jLabel68 = new javax.swing.JLabel();
-        tf_bleed6 = new javax.swing.JTextField();
         chbx_hope6 = new javax.swing.JCheckBox();
         chbx_teens6 = new javax.swing.JCheckBox();
         chbx_soar6 = new javax.swing.JCheckBox();
@@ -288,6 +287,7 @@ public class MemberUI extends javax.swing.JFrame {
         jLabel107 = new javax.swing.JLabel();
         tf_famId6 = new javax.swing.JTextField();
         tf_region6 = new javax.swing.JTextField();
+        cb_bleed6 = new javax.swing.JComboBox();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -389,7 +389,7 @@ public class MemberUI extends javax.swing.JFrame {
         });
 
         cb_bleed1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        cb_bleed1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "All", "Von Willebrand Disease (VWD)", "Factor VIII (8) deficiency (hemophilia A)", "Factor IX (9) deficiency (hemophilia B)", "Factor XI (11) deficiency (hemophilia C)", "Factor I (1) deficiency", "Factor II (2) deficiency", "Factor V (5) deficiency", "Factor VII (7) deficiency", "Factor X (10) deficiency", "Factor XII (12) deficiency", "Factor XIII (13) defiency", "Symptomatic carrier", "Carrier (not symptomatic)", "Don't know", "Other listed in Comments" }));
+        cb_bleed1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "All", "None", "Von Willebrand Disease (VWD)", "Factor VIII (8) deficiency (hemophilia A)", "Factor IX (9) deficiency (hemophilia B)", "Factor XI (11) deficiency (hemophilia C)", "Factor I (1) deficiency", "Factor II (2) deficiency", "Factor V (5) deficiency", "Factor VII (7) deficiency", "Factor X (10) deficiency", "Factor XII (12) deficiency", "Factor XIII (13) defiency", "Symptomatic carrier", "Carrier (not symptomatic)", "Don't know", "Other listed in Comments" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -414,63 +414,61 @@ public class MemberUI extends javax.swing.JFrame {
                         .addComponent(chbx_advocacy1)
                         .addGap(150, 150, 150)
                         .addComponent(chbx_noIndustry1)
-                        .addGap(0, 329, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1)
+                        .addComponent(jScrollPane1)
+                        .addContainerGap())
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addGap(470, 470, 470)
+                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addGroup(jPanel1Layout.createSequentialGroup()
-                                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                            .addComponent(tf_lName1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(tf_fName1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(tf_city1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(tf_county1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(cb_region1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(cb_bleed1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(470, 470, 470)
-                                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(6, 6, 6)
+                                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(tf_lName1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(tf_fName1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(tf_city1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(tf_county1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(cb_region1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(cb_bleed1, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(tf_memID1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(36, 36, 36)
-                                .addComponent(MemberSearchButton)
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addContainerGap())))
+                                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(tf_memID1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(50, 50, 50)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(MemberSearchButton)
+                        .addGap(180, 180, 180))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(MemberSearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(42, 42, 42)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -483,12 +481,15 @@ public class MemberUI extends javax.swing.JFrame {
                                 .addComponent(tf_fName1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(tf_city1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(tf_county1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(tf_memID1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(cb_bleed1, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE))
-                            .addComponent(cb_region1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(tf_memID1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(cb_region1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cb_bleed1, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(MemberSearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(chbx_hope1)
                     .addComponent(chbx_latin1)
@@ -704,7 +705,7 @@ public class MemberUI extends javax.swing.JFrame {
         cb_region2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select Region From List", "Region 1", "Region 2", "Region 3", "Region 4", "Region 5", "Region 6", "Region 7", "Region 8", "Region 9", "Region 10", "Region 11", "Region 12", "Region 13", "Region 14" }));
 
         cb_bleed2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        cb_bleed2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select Bleeding Disorder", "Von Willebrand Disease (VWD)", "Factor VIII (8) deficiency (hemophilia A)", "Factor IX (9) deficiency (hemophilia B)", "Factor XI (11) deficiency (hemophilia C)", "Factor I (1) deficiency", "Factor II (2) deficiency", "Factor V (5) deficiency", "Factor VII (7) deficiency", "Factor X (10) deficiency", "Factor XII (12) deficiency", "Factor XIII (13) defiency", "Symptomatic carrier", "Carrier (not symptomatic)", "Don't know", "Other listed in Comments" }));
+        cb_bleed2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select Bleeding Disorder", "None", "Von Willebrand Disease (VWD)", "Factor VIII (8) deficiency (hemophilia A)", "Factor IX (9) deficiency (hemophilia B)", "Factor XI (11) deficiency (hemophilia C)", "Factor I (1) deficiency", "Factor II (2) deficiency", "Factor V (5) deficiency", "Factor VII (7) deficiency", "Factor X (10) deficiency", "Factor XII (12) deficiency", "Factor XIII (13) defiency", "Symptomatic carrier", "Carrier (not symptomatic)", "Don't know", "Other listed in Comments" }));
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -899,7 +900,7 @@ public class MemberUI extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1380, Short.MAX_VALUE)
+            .addGap(0, 1441, Short.MAX_VALUE)
             .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel4Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -1020,9 +1021,6 @@ public class MemberUI extends javax.swing.JFrame {
 
         tf_comments3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         tf_comments3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-
-        tf_bleed3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        tf_bleed3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         tf_joinDate3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         tf_joinDate3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1164,6 +1162,9 @@ public class MemberUI extends javax.swing.JFrame {
         jLabel108.setText("Family ID Number");
         jLabel108.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
+        cb_bleed3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cb_bleed3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select Bleeding Disorder", "None", "Von Willebrand Disease (VWD)", "Factor VIII (8) deficiency (hemophilia A)", "Factor IX (9) deficiency (hemophilia B)", "Factor XI (11) deficiency (hemophilia C)", "Factor I (1) deficiency", "Factor II (2) deficiency", "Factor V (5) deficiency", "Factor VII (7) deficiency", "Factor X (10) deficiency", "Factor XII (12) deficiency", "Factor XIII (13) defiency", "Symptomatic carrier", "Carrier (not symptomatic)", "Don't know", "Other listed in Comments" }));
+
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
@@ -1223,24 +1224,25 @@ public class MemberUI extends javax.swing.JFrame {
                                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(tf_homePhone3, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(tf_email13, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(tf_bleed3, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(jPanel9Layout.createSequentialGroup()
-                                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(chbx_hope3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jLabel90, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addGroup(jPanel9Layout.createSequentialGroup()
-                                                .addComponent(chbx_teens3, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(chbx_soar3, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(chbx_bloodBro3, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(jPanel9Layout.createSequentialGroup()
-                                                .addComponent(tf_joinDate3)
-                                                .addGap(143, 143, 143))))
-                                    .addComponent(chbx_rep3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(cb_bleed3, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel9Layout.createSequentialGroup()
+                                            .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                .addComponent(chbx_hope3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jLabel90, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE))
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addGroup(jPanel9Layout.createSequentialGroup()
+                                                    .addComponent(chbx_teens3, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addComponent(chbx_soar3, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addComponent(chbx_bloodBro3, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGroup(jPanel9Layout.createSequentialGroup()
+                                                    .addComponent(tf_joinDate3)
+                                                    .addGap(143, 143, 143))))
+                                        .addComponent(chbx_rep3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                         .addComponent(jLabel85, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1364,7 +1366,7 @@ public class MemberUI extends javax.swing.JFrame {
                     .addComponent(jLabel89, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel91, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tf_comments3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf_bleed3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cb_bleed3, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel90, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1407,7 +1409,7 @@ public class MemberUI extends javax.swing.JFrame {
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(168, Short.MAX_VALUE))
+                .addContainerGap(229, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1490,9 +1492,6 @@ public class MemberUI extends javax.swing.JFrame {
         jLabel16.setText("Bleeding Disorder");
         jLabel16.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
-        tf_bleed4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        tf_bleed4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-
         cb_region4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         cb_region4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "All", "Region 1", "Region 2", "Region 3", "Region 4", "Region 5", "Region 6", "Region 7", "Region 8", "Region 9", "Region 10", "Region 11", "Region 12", "Region 13", "Region 14" }));
 
@@ -1504,30 +1503,19 @@ public class MemberUI extends javax.swing.JFrame {
         tf_famId4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         tf_famId4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
+        cb_bleed4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cb_bleed4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "All", "None", "Von Willebrand Disease (VWD)", "Factor VIII (8) deficiency (hemophilia A)", "Factor IX (9) deficiency (hemophilia B)", "Factor XI (11) deficiency (hemophilia C)", "Factor I (1) deficiency", "Factor II (2) deficiency", "Factor V (5) deficiency", "Factor VII (7) deficiency", "Factor X (10) deficiency", "Factor XII (12) deficiency", "Factor XIII (13) defiency", "Symptomatic carrier", "Carrier (not symptomatic)", "Don't know", "Other listed in Comments" }));
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(53, 53, 53)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane2)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(chbx_hope4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(chbx_latinUnion4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(chbx_soar4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(chbx_bloodBro4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(chbx_teens4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(chbx_inhibs4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(chbx_advocacy4))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
@@ -1551,18 +1539,33 @@ public class MemberUI extends javax.swing.JFrame {
                                     .addGroup(jPanel2Layout.createSequentialGroup()
                                         .addComponent(tf_state4, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(tf_bleed4, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(cb_bleed4, 0, 274, Short.MAX_VALUE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(tf_famId4, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel2Layout.createSequentialGroup()
                                         .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(50, 50, 50))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(chbx_hope4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(chbx_latinUnion4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(chbx_soar4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(chbx_bloodBro4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(chbx_teens4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(chbx_inhibs4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(chbx_advocacy4)
+                                .addGap(38, 38, 38)))
                         .addComponent(FamilySearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(225, Short.MAX_VALUE))
+                .addGap(154, 154, 154))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1584,9 +1587,9 @@ public class MemberUI extends javax.swing.JFrame {
                             .addComponent(tf_city4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(tf_county4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(tf_state4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tf_bleed4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(cb_region4, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                            .addComponent(tf_famId4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(tf_famId4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cb_bleed4, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(chbx_hope4)
@@ -1595,13 +1598,12 @@ public class MemberUI extends javax.swing.JFrame {
                             .addComponent(chbx_bloodBro4)
                             .addComponent(chbx_teens4)
                             .addComponent(chbx_inhibs4)
-                            .addComponent(chbx_advocacy4))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(FamilySearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 630, Short.MAX_VALUE)
+                            .addComponent(chbx_advocacy4)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(FamilySearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 620, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1721,9 +1723,6 @@ public class MemberUI extends javax.swing.JFrame {
         jLabel105.setText("Bleeding Disorder");
         jLabel105.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
-        tf_bleed5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        tf_bleed5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-
         chbx_hope5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         chbx_hope5.setText("HOPE");
         chbx_hope5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -1804,6 +1803,9 @@ public class MemberUI extends javax.swing.JFrame {
         tf_region5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         tf_region5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
+        cb_bleed5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cb_bleed5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select Bleeding Disorder", "None", "Von Willebrand Disease (VWD)", "Factor VIII (8) deficiency (hemophilia A)", "Factor IX (9) deficiency (hemophilia B)", "Factor XI (11) deficiency (hemophilia C)", "Factor I (1) deficiency", "Factor II (2) deficiency", "Factor V (5) deficiency", "Factor VII (7) deficiency", "Factor X (10) deficiency", "Factor XII (12) deficiency", "Factor XIII (13) defiency", "Symptomatic carrier", "Carrier (not symptomatic)", "Don't know", "Other listed in Comments" }));
+
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
@@ -1842,7 +1844,7 @@ public class MemberUI extends javax.swing.JFrame {
                                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(tf_homePhone5, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(tf_email15, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(tf_bleed5, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(cb_bleed5, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel10Layout.createSequentialGroup()
                                 .addComponent(chbx_hope5, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1972,7 +1974,7 @@ public class MemberUI extends javax.swing.JFrame {
                     .addComponent(jLabel105, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel104, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tf_comments5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf_bleed5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cb_bleed5, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE))
                 .addGap(43, 43, 43)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(chbx_latinUnion5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1996,7 +1998,7 @@ public class MemberUI extends javax.swing.JFrame {
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1380, Short.MAX_VALUE)
+            .addGap(0, 1441, Short.MAX_VALUE)
             .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel6Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -2129,9 +2131,6 @@ public class MemberUI extends javax.swing.JFrame {
         jLabel68.setText("Bleeding Disorder");
         jLabel68.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
-        tf_bleed6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        tf_bleed6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-
         chbx_hope6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         chbx_hope6.setText("HOPE");
         chbx_hope6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -2196,6 +2195,9 @@ public class MemberUI extends javax.swing.JFrame {
         tf_region6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         tf_region6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
+        cb_bleed6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cb_bleed6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select Bleeding Disorder", "None", "Von Willebrand Disease (VWD)", "Factor VIII (8) deficiency (hemophilia A)", "Factor IX (9) deficiency (hemophilia B)", "Factor XI (11) deficiency (hemophilia C)", "Factor I (1) deficiency", "Factor II (2) deficiency", "Factor V (5) deficiency", "Factor VII (7) deficiency", "Factor X (10) deficiency", "Factor XII (12) deficiency", "Factor XIII (13) defiency", "Symptomatic carrier", "Carrier (not symptomatic)", "Don't know", "Other listed in Comments" }));
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -2214,7 +2216,7 @@ public class MemberUI extends javax.swing.JFrame {
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                                    .addComponent(chbx_hope6, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
+                                    .addComponent(chbx_hope6, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(CreateFamilyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2237,11 +2239,11 @@ public class MemberUI extends javax.swing.JFrame {
                                                 .addComponent(jLabel64, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                 .addComponent(jLabel68, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(tf_homePhone6, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(tf_email16, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(tf_bleed6, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                    .addGap(0, 0, Short.MAX_VALUE)))
+                                            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(tf_homePhone6, javax.swing.GroupLayout.DEFAULT_SIZE, 254, Short.MAX_VALUE)
+                                                .addComponent(tf_email16, javax.swing.GroupLayout.DEFAULT_SIZE, 254, Short.MAX_VALUE)
+                                                .addComponent(cb_bleed6, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(jPanel5Layout.createSequentialGroup()
                                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel5Layout.createSequentialGroup()
@@ -2291,7 +2293,7 @@ public class MemberUI extends javax.swing.JFrame {
                                         .addGap(100, 100, 100))
                                     .addGroup(jPanel5Layout.createSequentialGroup()
                                         .addComponent(tf_email26, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 368, Short.MAX_VALUE))
+                                        .addGap(0, 398, Short.MAX_VALUE))
                                     .addComponent(tf_comments6)))
                             .addGroup(jPanel5Layout.createSequentialGroup()
                                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2360,7 +2362,7 @@ public class MemberUI extends javax.swing.JFrame {
                     .addComponent(jLabel68, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tf_comments6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf_bleed6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cb_bleed6, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE))
                 .addGap(43, 43, 43)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(chbx_latinUnion6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -2665,7 +2667,7 @@ public class MemberUI extends javax.swing.JFrame {
         member.setCellPhone(tf_cellPhone3.getText());
         member.setEmail1(tf_email13.getText());
         member.setEmail2(tf_email23.getText());
-        member.setBleedDisorder(tf_bleed3.getText());
+        member.setBleedDisorder((String)cb_bleed3.getSelectedItem());
         member.setComments(tf_comments3.getText());
         member.setJoinDate(tf_joinDate3.getText());
         member.setBadAdd(tf_returnMail3.getText());
@@ -2715,7 +2717,7 @@ public class MemberUI extends javax.swing.JFrame {
         tf_cellPhone3.setText(member.getCellPhone());
         tf_email13.setText(member.getEmail1());
         tf_email23.setText(member.getEmail2());
-        tf_bleed3.setText(member.getBleedDisorder());
+        cb_bleed3.setSelectedItem(member.getBleedDisorder());
         tf_comments3.setText(member.getComments());
         tf_joinDate3.setText(member.getJoinDate());
         tf_returnMail3.setText(member.getBadAdd());
@@ -2815,7 +2817,7 @@ public class MemberUI extends javax.swing.JFrame {
         tf_cellPhone6.setText(member.getCellPhone());
         tf_email16.setText(member.getEmail1());
         tf_email26.setText(member.getEmail2());
-        tf_bleed6.setText(member.getBleedDisorder());
+        cb_bleed6.setSelectedItem(member.getBleedDisorder());
         tf_comments6.setText(member.getComments());
         if(member.getHope()== 1){
             chbx_hope6.setSelected(true);
@@ -2850,13 +2852,13 @@ public class MemberUI extends javax.swing.JFrame {
         if(member.getInhibitors()== 1){
             chbx_inhibs6.setSelected(true);
         }else{
-            chbx_inhibs6.setSelected(true);
+            chbx_inhibs6.setSelected(false);
         }
         
         if(member.getAdvocacy()== 1){
             chbx_advocacy6.setSelected(true);
         }else{
-            chbx_advocacy6.setSelected(true);
+            chbx_advocacy6.setSelected(false);
         }
           
     }
@@ -2875,7 +2877,7 @@ public class MemberUI extends javax.swing.JFrame {
         family.setCellPhone(tf_cellPhone6.getText());
         family.setEmail1(tf_email16.getText());
         family.setEmail2(tf_email26.getText());
-        family.setBleedDisorder(tf_bleed6.getText());
+        family.setBleedDisorder((String)cb_bleed6.getSelectedItem());
         family.setComments(tf_comments6.getText());
         
         if(chbx_hope6.isSelected()){
@@ -2916,7 +2918,7 @@ public class MemberUI extends javax.swing.JFrame {
         tf_cellPhone5.setText(family.getCellPhone());
         tf_email15.setText(family.getEmail1());
         tf_email25.setText(family.getEmail2());
-        tf_bleed5.setText(family.getBleedDisorder());
+        cb_bleed5.setSelectedItem(family.getBleedDisorder());
         tf_comments5.setText(family.getComments());
         
         if(family.getHope()== 1){
@@ -3027,7 +3029,7 @@ public class MemberUI extends javax.swing.JFrame {
         family.setCellPhone(tf_cellPhone5.getText());
         family.setEmail1(tf_email15.getText());
         family.setEmail2(tf_email25.getText());
-        family.setBleedDisorder(tf_bleed5.getText());
+        family.setBleedDisorder((String)cb_bleed5.getSelectedItem());
         family.setComments(tf_comments5.getText());
         
         if(chbx_hope5.isSelected()){
@@ -3063,7 +3065,7 @@ public class MemberUI extends javax.swing.JFrame {
         family.setState(tf_state4.getText());
         family.setCounty(tf_county4.getText());
         family.setRegion((String)cb_region4.getSelectedItem());
-        family.setBleedDisorder(tf_bleed4.getText());
+        family.setBleedDisorder((String)cb_bleed4.getSelectedItem());
         //constructor builds the following groups with default value of 0
         if(chbx_hope4.isSelected()){
             family.setHope(1);
@@ -3103,9 +3105,9 @@ public class MemberUI extends javax.swing.JFrame {
             family = (Family)it.next();
             System.out.print(family.getFamilyId());
             appendTA4(family.getFamilyId()+" | "+family.getLName()+
-                    " | "+family.getStreetAdd1()+" "+family.getStreetAdd2()+" "+
-                    family.getCity()+ ", " + family.getState()+ " " + family.getZip()+
-                    " " + family.getCounty()+ " County " + family.getRegion()+
+                    " Family | "+family.getStreetAdd1()+" "+family.getStreetAdd2()+" | "+
+                    family.getCity()+ ", " + family.getState()+ " | " + family.getZip()+
+                    " | " + family.getCounty()+ " County | " + family.getRegion()+
                      " | Home Phone "+
                     family.getHomePhone()+ " Cell Phone " + family.getCellPhone()+
                     " | "+ family.getEmail1()+ " " + family.getEmail2()+
@@ -3202,6 +3204,10 @@ public class MemberUI extends javax.swing.JFrame {
     private javax.swing.JButton UpdateMemberDataButton;
     private javax.swing.JComboBox cb_bleed1;
     private javax.swing.JComboBox cb_bleed2;
+    private javax.swing.JComboBox cb_bleed3;
+    private javax.swing.JComboBox cb_bleed4;
+    private javax.swing.JComboBox cb_bleed5;
+    private javax.swing.JComboBox cb_bleed6;
     private javax.swing.JComboBox cb_region1;
     private javax.swing.JComboBox cb_region2;
     private javax.swing.JComboBox cb_region4;
@@ -3355,10 +3361,6 @@ public class MemberUI extends javax.swing.JFrame {
     private javax.swing.JTextArea ta_4;
     private javax.swing.JTextArea ta_5;
     private javax.swing.JTextField tf_addFamId5;
-    private javax.swing.JTextField tf_bleed3;
-    private javax.swing.JTextField tf_bleed4;
-    private javax.swing.JTextField tf_bleed5;
-    private javax.swing.JTextField tf_bleed6;
     private javax.swing.JTextField tf_cellPhone2;
     private javax.swing.JTextField tf_cellPhone3;
     private javax.swing.JTextField tf_cellPhone5;

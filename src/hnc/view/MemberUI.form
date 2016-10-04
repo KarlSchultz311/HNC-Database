@@ -94,57 +94,58 @@
                               <Component id="chbx_advocacy1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="150" max="-2" attributes="0"/>
                               <Component id="chbx_noIndustry1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="329" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jScrollPane1" max="32767" attributes="0"/>
+                              <Component id="jScrollPane1" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                              <Group type="102" attributes="0">
-                                                  <Component id="jLabel2" min="-2" pref="111" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jLabel3" min="-2" pref="111" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jLabel4" min="-2" pref="111" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jLabel12" min="-2" pref="111" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jLabel9" min="-2" pref="111" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jLabel10" min="-2" pref="111" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="tf_lName1" min="-2" pref="111" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="tf_fName1" min="-2" pref="111" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="tf_city1" min="-2" pref="111" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="tf_county1" min="-2" pref="111" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="cb_region1" min="-2" pref="111" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="cb_bleed1" min="-2" pref="111" max="-2" attributes="0"/>
-                                              </Group>
+                                      <EmptySpace min="-2" pref="470" max="-2" attributes="0"/>
+                                      <Component id="jLabel5" min="-2" pref="102" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="jLabel2" min="-2" pref="111" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jLabel3" min="-2" pref="111" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jLabel4" min="-2" pref="111" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jLabel12" min="-2" pref="111" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel9" min="-2" pref="111" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jLabel10" max="32767" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="470" max="-2" attributes="0"/>
-                                              <Component id="jLabel5" min="-2" pref="102" max="-2" attributes="0"/>
+                                              <Component id="tf_lName1" min="-2" pref="111" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="tf_fName1" min="-2" pref="111" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="tf_city1" min="-2" pref="111" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="tf_county1" min="-2" pref="111" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="cb_region1" min="-2" pref="111" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="cb_bleed1" min="-2" pref="251" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="tf_memID1" min="-2" pref="111" max="-2" attributes="0"/>
                                           <Component id="jLabel11" min="-2" pref="111" max="-2" attributes="0"/>
+                                          <Component id="tf_memID1" min="-2" pref="111" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                                      <Component id="MemberSearchButton" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="MemberSearchButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="180" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -154,17 +155,13 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                              <Component id="MemberSearchButton" min="-2" pref="109" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
+                          <Group type="102" attributes="0">
                               <EmptySpace min="42" pref="42" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel10" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                      <Component id="jLabel11" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                       <Component id="jLabel9" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <Component id="jLabel11" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel4" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
@@ -181,15 +178,19 @@
                                       <Component id="tf_city1" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                       <Component id="tf_county1" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                       <Component id="tf_memID1" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                      <Component id="cb_bleed1" alignment="0" pref="31" max="32767" attributes="0"/>
                                   </Group>
                                   <Component id="cb_region1" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="cb_bleed1" alignment="1" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jLabel5" min="-2" pref="27" max="-2" attributes="0"/>
                           </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="MemberSearchButton" min="-2" pref="109" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="chbx_hope1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="chbx_latin1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -479,23 +480,24 @@
                   <Font name="Tahoma" size="12" style="0"/>
                 </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="16">
+                  <StringArray count="17">
                     <StringItem index="0" value="All"/>
-                    <StringItem index="1" value="Von Willebrand Disease (VWD)"/>
-                    <StringItem index="2" value="Factor VIII (8) deficiency (hemophilia A)"/>
-                    <StringItem index="3" value="Factor IX (9) deficiency (hemophilia B)"/>
-                    <StringItem index="4" value="Factor XI (11) deficiency (hemophilia C)"/>
-                    <StringItem index="5" value="Factor I (1) deficiency"/>
-                    <StringItem index="6" value="Factor II (2) deficiency"/>
-                    <StringItem index="7" value="Factor V (5) deficiency"/>
-                    <StringItem index="8" value="Factor VII (7) deficiency"/>
-                    <StringItem index="9" value="Factor X (10) deficiency"/>
-                    <StringItem index="10" value="Factor XII (12) deficiency"/>
-                    <StringItem index="11" value="Factor XIII (13) defiency"/>
-                    <StringItem index="12" value="Symptomatic carrier"/>
-                    <StringItem index="13" value="Carrier (not symptomatic)"/>
-                    <StringItem index="14" value="Don&apos;t know"/>
-                    <StringItem index="15" value="Other listed in Comments"/>
+                    <StringItem index="1" value="None"/>
+                    <StringItem index="2" value="Von Willebrand Disease (VWD)"/>
+                    <StringItem index="3" value="Factor VIII (8) deficiency (hemophilia A)"/>
+                    <StringItem index="4" value="Factor IX (9) deficiency (hemophilia B)"/>
+                    <StringItem index="5" value="Factor XI (11) deficiency (hemophilia C)"/>
+                    <StringItem index="6" value="Factor I (1) deficiency"/>
+                    <StringItem index="7" value="Factor II (2) deficiency"/>
+                    <StringItem index="8" value="Factor V (5) deficiency"/>
+                    <StringItem index="9" value="Factor VII (7) deficiency"/>
+                    <StringItem index="10" value="Factor X (10) deficiency"/>
+                    <StringItem index="11" value="Factor XII (12) deficiency"/>
+                    <StringItem index="12" value="Factor XIII (13) defiency"/>
+                    <StringItem index="13" value="Symptomatic carrier"/>
+                    <StringItem index="14" value="Carrier (not symptomatic)"/>
+                    <StringItem index="15" value="Don&apos;t know"/>
+                    <StringItem index="16" value="Other listed in Comments"/>
                   </StringArray>
                 </Property>
               </Properties>
@@ -514,7 +516,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="1380" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="1441" max="32767" attributes="0"/>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -1344,23 +1346,24 @@
                       <Font name="Tahoma" size="12" style="0"/>
                     </Property>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="16">
+                      <StringArray count="17">
                         <StringItem index="0" value="Select Bleeding Disorder"/>
-                        <StringItem index="1" value="Von Willebrand Disease (VWD)"/>
-                        <StringItem index="2" value="Factor VIII (8) deficiency (hemophilia A)"/>
-                        <StringItem index="3" value="Factor IX (9) deficiency (hemophilia B)"/>
-                        <StringItem index="4" value="Factor XI (11) deficiency (hemophilia C)"/>
-                        <StringItem index="5" value="Factor I (1) deficiency"/>
-                        <StringItem index="6" value="Factor II (2) deficiency"/>
-                        <StringItem index="7" value="Factor V (5) deficiency"/>
-                        <StringItem index="8" value="Factor VII (7) deficiency"/>
-                        <StringItem index="9" value="Factor X (10) deficiency"/>
-                        <StringItem index="10" value="Factor XII (12) deficiency"/>
-                        <StringItem index="11" value="Factor XIII (13) defiency"/>
-                        <StringItem index="12" value="Symptomatic carrier"/>
-                        <StringItem index="13" value="Carrier (not symptomatic)"/>
-                        <StringItem index="14" value="Don&apos;t know"/>
-                        <StringItem index="15" value="Other listed in Comments"/>
+                        <StringItem index="1" value="None"/>
+                        <StringItem index="2" value="Von Willebrand Disease (VWD)"/>
+                        <StringItem index="3" value="Factor VIII (8) deficiency (hemophilia A)"/>
+                        <StringItem index="4" value="Factor IX (9) deficiency (hemophilia B)"/>
+                        <StringItem index="5" value="Factor XI (11) deficiency (hemophilia C)"/>
+                        <StringItem index="6" value="Factor I (1) deficiency"/>
+                        <StringItem index="7" value="Factor II (2) deficiency"/>
+                        <StringItem index="8" value="Factor V (5) deficiency"/>
+                        <StringItem index="9" value="Factor VII (7) deficiency"/>
+                        <StringItem index="10" value="Factor X (10) deficiency"/>
+                        <StringItem index="11" value="Factor XII (12) deficiency"/>
+                        <StringItem index="12" value="Factor XIII (13) defiency"/>
+                        <StringItem index="13" value="Symptomatic carrier"/>
+                        <StringItem index="14" value="Carrier (not symptomatic)"/>
+                        <StringItem index="15" value="Don&apos;t know"/>
+                        <StringItem index="16" value="Other listed in Comments"/>
                       </StringArray>
                     </Property>
                   </Properties>
@@ -1389,7 +1392,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanel9" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="168" max="32767" attributes="0"/>
+                      <EmptySpace pref="229" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1476,32 +1479,34 @@
                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                       <Component id="tf_homePhone3" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
                                                       <Component id="tf_email13" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
-                                                      <Component id="tf_bleed3" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
+                                                      <Component id="cb_bleed3" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                      <Component id="chbx_hope3" alignment="1" max="32767" attributes="0"/>
-                                                      <Component id="jLabel90" alignment="1" pref="111" max="32767" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="chbx_teens3" min="-2" pref="111" max="-2" attributes="0"/>
-                                                          <EmptySpace max="-2" attributes="0"/>
-                                                          <Component id="chbx_soar3" min="-2" pref="115" max="-2" attributes="0"/>
-                                                          <EmptySpace max="-2" attributes="0"/>
-                                                          <Component id="chbx_bloodBro3" min="-2" pref="157" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                                          <Component id="chbx_hope3" alignment="1" max="32767" attributes="0"/>
+                                                          <Component id="jLabel90" alignment="1" pref="111" max="32767" attributes="0"/>
                                                       </Group>
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="tf_joinDate3" max="32767" attributes="0"/>
-                                                          <EmptySpace min="-2" pref="143" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                          <Group type="102" alignment="0" attributes="0">
+                                                              <Component id="chbx_teens3" min="-2" pref="111" max="-2" attributes="0"/>
+                                                              <EmptySpace max="-2" attributes="0"/>
+                                                              <Component id="chbx_soar3" min="-2" pref="115" max="-2" attributes="0"/>
+                                                              <EmptySpace max="-2" attributes="0"/>
+                                                              <Component id="chbx_bloodBro3" min="-2" pref="157" max="-2" attributes="0"/>
+                                                          </Group>
+                                                          <Group type="102" alignment="0" attributes="0">
+                                                              <Component id="tf_joinDate3" max="32767" attributes="0"/>
+                                                              <EmptySpace min="-2" pref="143" max="-2" attributes="0"/>
+                                                          </Group>
                                                       </Group>
                                                   </Group>
+                                                  <Component id="chbx_rep3" alignment="1" min="-2" pref="157" max="-2" attributes="0"/>
                                               </Group>
-                                              <Component id="chbx_rep3" alignment="1" min="-2" pref="157" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
                                           <Group type="103" groupAlignment="1" attributes="0">
                                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                                   <Component id="jLabel85" alignment="0" max="32767" attributes="0"/>
@@ -1664,7 +1669,7 @@
                               <Component id="jLabel89" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                               <Component id="jLabel91" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                               <Component id="tf_comments3" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                              <Component id="tf_bleed3" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="cb_bleed3" alignment="3" pref="31" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -1987,14 +1992,6 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tf_comments3">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Tahoma" size="12" style="0"/>
-                    </Property>
-                    <Property name="horizontalAlignment" type="int" value="0"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="tf_bleed3">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -2376,6 +2373,34 @@
                     </Property>
                   </Properties>
                 </Component>
+                <Component class="javax.swing.JComboBox" name="cb_bleed3">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="12" style="0"/>
+                    </Property>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="17">
+                        <StringItem index="0" value="Select Bleeding Disorder"/>
+                        <StringItem index="1" value="None"/>
+                        <StringItem index="2" value="Von Willebrand Disease (VWD)"/>
+                        <StringItem index="3" value="Factor VIII (8) deficiency (hemophilia A)"/>
+                        <StringItem index="4" value="Factor IX (9) deficiency (hemophilia B)"/>
+                        <StringItem index="5" value="Factor XI (11) deficiency (hemophilia C)"/>
+                        <StringItem index="6" value="Factor I (1) deficiency"/>
+                        <StringItem index="7" value="Factor II (2) deficiency"/>
+                        <StringItem index="8" value="Factor V (5) deficiency"/>
+                        <StringItem index="9" value="Factor VII (7) deficiency"/>
+                        <StringItem index="10" value="Factor X (10) deficiency"/>
+                        <StringItem index="11" value="Factor XII (12) deficiency"/>
+                        <StringItem index="12" value="Factor XIII (13) defiency"/>
+                        <StringItem index="13" value="Symptomatic carrier"/>
+                        <StringItem index="14" value="Carrier (not symptomatic)"/>
+                        <StringItem index="15" value="Don&apos;t know"/>
+                        <StringItem index="16" value="Other listed in Comments"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
               </SubComponents>
             </Container>
           </SubComponents>
@@ -2392,27 +2417,12 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jScrollPane2" min="-2" pref="1102" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="jScrollPane2" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="chbx_hope4" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="chbx_latinUnion4" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="chbx_soar4" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="chbx_bloodBro4" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="chbx_teens4" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="chbx_inhibs4" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="chbx_advocacy4" min="-2" max="-2" attributes="0"/>
-                                  </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
@@ -2439,25 +2449,41 @@
                                           <Group type="102" attributes="0">
                                               <Component id="tf_state4" min="-2" pref="111" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="tf_bleed4" min="-2" pref="111" max="-2" attributes="0"/>
+                                              <Component id="cb_bleed4" pref="274" max="32767" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="tf_famId4" min="-2" pref="111" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel15" min="-2" pref="111" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jLabel16" min="-2" pref="111" max="-2" attributes="0"/>
+                                              <Component id="jLabel16" max="32767" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="jLabel17" min="-2" pref="111" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
+                                      <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="chbx_hope4" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="chbx_latinUnion4" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="chbx_soar4" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="chbx_bloodBro4" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="chbx_teens4" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="chbx_inhibs4" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="chbx_advocacy4" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="FamilySearchButton" min="-2" pref="208" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="225" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="154" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2482,9 +2508,9 @@
                                   <Component id="tf_city4" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                   <Component id="tf_county4" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                   <Component id="tf_state4" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                  <Component id="tf_bleed4" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                   <Component id="cb_region4" pref="30" max="32767" attributes="0"/>
-                                  <Component id="tf_famId4" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Component id="tf_famId4" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Component id="cb_bleed4" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -2496,15 +2522,14 @@
                                   <Component id="chbx_inhibs4" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="chbx_advocacy4" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="FamilySearchButton" min="-2" pref="109" max="-2" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="32767" attributes="0"/>
+                              <Component id="FamilySearchButton" min="-2" pref="109" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Component id="jScrollPane2" pref="630" max="32767" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jScrollPane2" pref="620" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -2706,14 +2731,6 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="tf_bleed4">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="12" style="0"/>
-                </Property>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JComboBox" name="cb_region4">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -2762,6 +2779,34 @@
                 <Property name="horizontalAlignment" type="int" value="0"/>
               </Properties>
             </Component>
+            <Component class="javax.swing.JComboBox" name="cb_bleed4">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="12" style="0"/>
+                </Property>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="17">
+                    <StringItem index="0" value="All"/>
+                    <StringItem index="1" value="None"/>
+                    <StringItem index="2" value="Von Willebrand Disease (VWD)"/>
+                    <StringItem index="3" value="Factor VIII (8) deficiency (hemophilia A)"/>
+                    <StringItem index="4" value="Factor IX (9) deficiency (hemophilia B)"/>
+                    <StringItem index="5" value="Factor XI (11) deficiency (hemophilia C)"/>
+                    <StringItem index="6" value="Factor I (1) deficiency"/>
+                    <StringItem index="7" value="Factor II (2) deficiency"/>
+                    <StringItem index="8" value="Factor V (5) deficiency"/>
+                    <StringItem index="9" value="Factor VII (7) deficiency"/>
+                    <StringItem index="10" value="Factor X (10) deficiency"/>
+                    <StringItem index="11" value="Factor XII (12) deficiency"/>
+                    <StringItem index="12" value="Factor XIII (13) defiency"/>
+                    <StringItem index="13" value="Symptomatic carrier"/>
+                    <StringItem index="14" value="Carrier (not symptomatic)"/>
+                    <StringItem index="15" value="Don&apos;t know"/>
+                    <StringItem index="16" value="Other listed in Comments"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="jPanel6">
@@ -2776,7 +2821,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="1380" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="1441" max="32767" attributes="0"/>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -2845,7 +2890,7 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="tf_homePhone5" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
                                               <Component id="tf_email15" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
-                                              <Component id="tf_bleed5" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
+                                              <Component id="cb_bleed5" min="-2" pref="254" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
@@ -3012,7 +3057,7 @@
                               <Component id="jLabel105" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                               <Component id="jLabel104" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                               <Component id="tf_comments5" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                              <Component id="tf_bleed5" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="cb_bleed5" alignment="3" pref="31" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="43" pref="43" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -3353,14 +3398,6 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="tf_bleed5">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Tahoma" size="12" style="0"/>
-                    </Property>
-                    <Property name="horizontalAlignment" type="int" value="0"/>
-                  </Properties>
-                </Component>
                 <Component class="javax.swing.JCheckBox" name="chbx_hope5">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -3573,6 +3610,34 @@
                     <Property name="horizontalAlignment" type="int" value="0"/>
                   </Properties>
                 </Component>
+                <Component class="javax.swing.JComboBox" name="cb_bleed5">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="12" style="0"/>
+                    </Property>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="17">
+                        <StringItem index="0" value="Select Bleeding Disorder"/>
+                        <StringItem index="1" value="None"/>
+                        <StringItem index="2" value="Von Willebrand Disease (VWD)"/>
+                        <StringItem index="3" value="Factor VIII (8) deficiency (hemophilia A)"/>
+                        <StringItem index="4" value="Factor IX (9) deficiency (hemophilia B)"/>
+                        <StringItem index="5" value="Factor XI (11) deficiency (hemophilia C)"/>
+                        <StringItem index="6" value="Factor I (1) deficiency"/>
+                        <StringItem index="7" value="Factor II (2) deficiency"/>
+                        <StringItem index="8" value="Factor V (5) deficiency"/>
+                        <StringItem index="9" value="Factor VII (7) deficiency"/>
+                        <StringItem index="10" value="Factor X (10) deficiency"/>
+                        <StringItem index="11" value="Factor XII (12) deficiency"/>
+                        <StringItem index="12" value="Factor XIII (13) defiency"/>
+                        <StringItem index="13" value="Symptomatic carrier"/>
+                        <StringItem index="14" value="Carrier (not symptomatic)"/>
+                        <StringItem index="15" value="Don&apos;t know"/>
+                        <StringItem index="16" value="Other listed in Comments"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
               </SubComponents>
             </Container>
           </SubComponents>
@@ -3604,7 +3669,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="1" attributes="0">
-                                          <Component id="chbx_hope6" pref="143" max="32767" attributes="0"/>
+                                          <Component id="chbx_hope6" pref="174" max="32767" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="CreateFamilyButton" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
@@ -3632,14 +3697,14 @@
                                                       <Component id="jLabel68" alignment="0" min="-2" pref="111" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="tf_homePhone6" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
-                                                      <Component id="tf_email16" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
-                                                      <Component id="tf_bleed6" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="tf_homePhone6" alignment="0" pref="254" max="32767" attributes="0"/>
+                                                      <Component id="tf_email16" alignment="0" pref="254" max="32767" attributes="0"/>
+                                                      <Component id="cb_bleed6" alignment="0" max="32767" attributes="0"/>
                                                   </Group>
                                               </Group>
                                           </Group>
-                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
@@ -3705,7 +3770,7 @@
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="tf_email26" min="-2" pref="254" max="-2" attributes="0"/>
-                                              <EmptySpace min="0" pref="368" max="32767" attributes="0"/>
+                                              <EmptySpace min="0" pref="398" max="32767" attributes="0"/>
                                           </Group>
                                           <Component id="tf_comments6" alignment="0" max="32767" attributes="0"/>
                                       </Group>
@@ -3800,7 +3865,7 @@
                           <Component id="jLabel68" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                           <Component id="jLabel67" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                           <Component id="tf_comments6" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                          <Component id="tf_bleed6" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="cb_bleed6" alignment="3" pref="31" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="43" pref="43" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -4146,14 +4211,6 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="tf_bleed6">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="12" style="0"/>
-                </Property>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JCheckBox" name="chbx_hope6">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -4306,6 +4363,34 @@
                   <Font name="Tahoma" size="12" style="0"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cb_bleed6">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="12" style="0"/>
+                </Property>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="17">
+                    <StringItem index="0" value="Select Bleeding Disorder"/>
+                    <StringItem index="1" value="None"/>
+                    <StringItem index="2" value="Von Willebrand Disease (VWD)"/>
+                    <StringItem index="3" value="Factor VIII (8) deficiency (hemophilia A)"/>
+                    <StringItem index="4" value="Factor IX (9) deficiency (hemophilia B)"/>
+                    <StringItem index="5" value="Factor XI (11) deficiency (hemophilia C)"/>
+                    <StringItem index="6" value="Factor I (1) deficiency"/>
+                    <StringItem index="7" value="Factor II (2) deficiency"/>
+                    <StringItem index="8" value="Factor V (5) deficiency"/>
+                    <StringItem index="9" value="Factor VII (7) deficiency"/>
+                    <StringItem index="10" value="Factor X (10) deficiency"/>
+                    <StringItem index="11" value="Factor XII (12) deficiency"/>
+                    <StringItem index="12" value="Factor XIII (13) defiency"/>
+                    <StringItem index="13" value="Symptomatic carrier"/>
+                    <StringItem index="14" value="Carrier (not symptomatic)"/>
+                    <StringItem index="15" value="Don&apos;t know"/>
+                    <StringItem index="16" value="Other listed in Comments"/>
+                  </StringArray>
+                </Property>
               </Properties>
             </Component>
           </SubComponents>

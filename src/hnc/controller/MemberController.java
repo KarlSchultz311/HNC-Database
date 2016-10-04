@@ -121,6 +121,7 @@ public class MemberController implements ActionListener {
             //clears the form by loading a blank member
             memberUI.loadMember(member);
             memberUI.setMemberID3(null);
+            memberUI.showDump();
         }
         } catch (Exception e){
             System.out.println(e);
@@ -136,7 +137,8 @@ public class MemberController implements ActionListener {
         MemberManager memMan = new MemberManager();
         Member member = memberUI.getMember2();
         try{
-            memberUI.setMemberID2(memMan.saveMember(member));          
+            memberUI.setMemberID2(memMan.saveMember(member));
+            memberUI.showDump();
         }catch (Exception e){
             System.out.print(e);
         }
@@ -163,6 +165,7 @@ public class MemberController implements ActionListener {
         Member member = memberUI.getMember3();
         try{
             memMan.updateMember(member);
+            memberUI.showDump();
         } catch (Exception e){
             System.out.println(e);
         }
@@ -209,6 +212,7 @@ public class MemberController implements ActionListener {
             String famId = famMan.createFamily(family);
             memberUI.setFamilyID6(famId);
             famMan.updateFamilyId(famId, memId);
+            memberUI.showDump();
         }catch (Exception e){
             System.out.println(e +" @ memcontroller");
         }
@@ -254,6 +258,7 @@ public class MemberController implements ActionListener {
             member.setFamilyId(famId);
             memMan.updateMember(member);        
             memberUI.displayFamilyMembers(memMan.getFamilyMembers(famId));
+            memberUI.showDump();
         }catch (Exception e){
             System.out.println(e);
         }
@@ -267,6 +272,7 @@ public class MemberController implements ActionListener {
         FamilyManager famMan = new FamilyManager();
         try{
             famMan.updateFamily(family);
+            memberUI.showDump();
         }catch (Exception e){
             System.out.println(e);
         }
@@ -290,7 +296,7 @@ public class MemberController implements ActionListener {
             Family family = new Family();
             memberUI.loadFamily(family);
             memberUI.setTA5("Family "+familyId+" deleted");
-            
+            memberUI.showDump();
         }catch (Exception e){
             System.out.println(e);
         }

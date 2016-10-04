@@ -5,8 +5,9 @@
  */
 package hnc.view;
 
-import hnc.domain.Member;
-import java.io.*;
+
+
+
 
 /**
  *
@@ -20,6 +21,7 @@ public class main {
     public static void main(String[] args) {
         
         MemberUI view = new MemberUI();
+        
     }
  
     

@@ -26,6 +26,10 @@ public class MemberUI extends javax.swing.JFrame {
         initComponents();
         MemberController memCon = new MemberController(this);
         setVisible(true);
+        dump.setVisible(false);
+        JOptionPane.showMessageDialog(this, "REMEMBER TO IMPORT DATABASE BEFORE USE \n"
+                + "      AND DUMP THE DATABASE AFTER \n               CHANGES ARE MADE.",
+            "Database Warning", JOptionPane.WARNING_MESSAGE);
     }
 
     /**
@@ -289,6 +293,7 @@ public class MemberUI extends javax.swing.JFrame {
         tf_region6 = new javax.swing.JTextField();
         cb_bleed6 = new javax.swing.JComboBox();
         jLabel1 = new javax.swing.JLabel();
+        dump = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -2391,27 +2396,37 @@ public class MemberUI extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("HNC Database Tool");
 
+        dump.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        dump.setForeground(new java.awt.Color(222, 10, 13));
+        dump.setText("  Changes detected, remember to dump database");
+        dump.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(222, 10, 13), 3));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(407, 407, 407)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(TabbedPane1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(407, 407, 407)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(dump, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(TabbedPane1)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dump, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(TabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 810, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         TabbedPane1.getAccessibleContext().setAccessibleName("");
@@ -2561,6 +2576,10 @@ public class MemberUI extends javax.swing.JFrame {
     
     public void setTA4(String text){
         ta_4.setText(text);
+    }
+    
+    public void showDump(){
+        dump.setVisible(true);
     }
     
     public Member getMemberSearchParams(){
@@ -3256,6 +3275,7 @@ public class MemberUI extends javax.swing.JFrame {
     private javax.swing.JCheckBox chbx_teens4;
     private javax.swing.JCheckBox chbx_teens5;
     private javax.swing.JCheckBox chbx_teens6;
+    private javax.swing.JLabel dump;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;

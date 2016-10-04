@@ -399,7 +399,7 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                     +"', soar= '"+member.getSoar()+"', bloodBrotherhood= '"+member.getBloodBrotherhood()+"', inhibitors='"+
                     member.getInhibitors()+"', advocacy= '"+member.getAdvocacy()+"', updatedDate= '"
                     +member.getUpdatedDate()+"'WHERE memId='"+ Integer.parseInt(member.getMemId())+"'";
-            System.out.println(sql4);
+            
             stmt.executeUpdate(sql4);
         } catch (Exception e){
             System.out.println(e+ " @ updateMember");

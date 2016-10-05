@@ -1,23 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package hnc.domain;
 
-import java.io.*;
+
 
 /** Member.java
  * This class is designed to represent a single organization member. Within this 
  * class, you can find a constructor for a new empty Member object, a new Member
  * object with a provided memID number, as well as getters/setters for member 
- * data stored as strings for:
+ * data stored as strings for: MemberID, Family ID,
  * First Name, Last Name, Email1, Email2, Street Address, City, Zip Code, State,
  * County,Home Phone Number, Cell Phone Number, Bleeding Disorder, Date of Birth, 
  * Join Date, Date of Update, Organization, and date of returned mail(badAdd).
- * Int data for: MemID, Region
- * Boolean data for: Industry, hope, teens, blood brotherhood, latin union, soar,
- * inhibitors, and advocacy programs.
+ * Integer data for:  Industry, hope, teens, blood brotherhood, Latin Union, soar,
+ * inhibitors, and advocacy programs. These would normally be boolean values, but 
+ * MySQL doesn't support boolean, so these will be simple 0 or 1 values.
  * @author Karl Schultz
  * version 1.0 8/24/16
  * version 2.0 2/29/16

@@ -42,15 +42,7 @@ public class FamilyManager {
         }
     }
     
-    public void updateFamilyId (String famId, String memId) throws Exception{
-        Factory factory = new Factory();
-        try{
-            IFamilySvc familySvc = (IFamilySvc)factory.getService("IFamilySvc");
-            familySvc.updateFamilyId(famId, memId);
-        }catch (Exception e){
-            System.out.println(e);            
-        }
-    }
+    
     
     public Family getFamily (String famId) throws Exception{
         Factory factory = new Factory();

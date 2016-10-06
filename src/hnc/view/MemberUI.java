@@ -36,7 +36,7 @@ public class MemberUI extends javax.swing.JFrame {
      */
     public MemberUI() {
         initComponents();
-        MemberController memCon = new MemberController(this);
+        MemberController memCon = new MemberController(this);//creates a controller for this UI
         setVisible(true);
         dump.setVisible(false);
         JOptionPane.showMessageDialog(this, "REMEMBER TO IMPORT DATABASE BEFORE USE \n"
@@ -2938,7 +2938,7 @@ public class MemberUI extends javax.swing.JFrame {
           
     }
     
-    public Family memberToFamily(){
+    public Family getFamily6(){
         /*This method is used to take the data displayed in the Create Family tab,
         and create a Family object that is returned.
         */

@@ -449,4 +449,26 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                 conn.close();
         }
     }
+    
+    @Override
+    public void updateFamilyId (String famId, String memId) throws Exception{
+        Connection conn = getConnection();  //establishes connection to DB
+        try {
+            Statement stmt = null;            
+            
+            stmt = conn.createStatement();
+        
+            String sql = "UPDATE members SET familyID = '"+famId+"' WHERE memID = '"+
+                    memId+"'";
+                  
+            stmt.executeUpdate(sql);
+        } catch (Exception e){
+            System.out.println(e);
+        } finally {
+            if (conn != null)
+                conn.close();
+        }
+            
+        
+    }
 }

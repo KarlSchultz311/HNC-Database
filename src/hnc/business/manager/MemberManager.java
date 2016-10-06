@@ -91,4 +91,14 @@ public class MemberManager {
             return list;
         }
     }
+    
+    public void updateFamilyId (String famId, String memId) throws Exception{
+        Factory factory = new Factory();
+        try{
+            IMemberSvc memberSvc = (IMemberSvc)factory.getService("IMemberSvc");
+            memberSvc.updateFamilyId(famId, memId);
+        }catch (Exception e){
+            System.out.println(e);            
+        }
+    }
 }

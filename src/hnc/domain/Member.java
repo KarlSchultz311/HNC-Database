@@ -11,9 +11,12 @@ package hnc.domain;
  * First Name, Last Name, Email1, Email2, Street Address, City, Zip Code, State,
  * County,Home Phone Number, Cell Phone Number, Bleeding Disorder, Date of Birth, 
  * Join Date, Date of Update, Organization, and date of returned mail(badAdd).
+ * MemberID and FamilyID are stored as int values in the database, but are cast as
+ * Strings in this program to more easily work with text fields.
  * Integer data for:  Industry, hope, teens, blood brotherhood, Latin Union, soar,
  * inhibitors, and advocacy programs. These would normally be boolean values, but 
- * MySQL doesn't support boolean, so these will be simple 0 or 1 values.
+ * MySQL doesn't support boolean, so these will be simple 0 or 1 values for false and
+ * true.
  * @author Karl Schultz
  * version 1.0 8/24/16
  * version 2.0 2/29/16
@@ -67,8 +70,7 @@ public class Member {
         city = null;
         zip = null;
         state = null;
-        county = null;
-        familyId = null;
+        county = null;        
         region = null;
         homePhone = null;
         cellPhone = null;
@@ -101,8 +103,7 @@ public class Member {
         city = null;
         zip = null;
         state = null;
-        county = null;
-        familyId = null;
+        county = null;        
         region = null;
         homePhone = null;
         cellPhone = null;
@@ -124,7 +125,23 @@ public class Member {
     }
     
     //methods
-     
+    
+     public String getMemId(){
+        return memId;
+    }
+    
+    public void setMemId(String memId){
+        this.memId = memId;
+    }
+    
+    public String getFamilyId(){
+        return familyId;        
+    }
+    
+    public void setFamilyId(String familyId){
+        this.familyId = familyId;
+    }
+    
     public String getLName(){
         return lName;
     }
@@ -179,14 +196,6 @@ public class Member {
         this.city = city;
     }
     
-    public String getZip(){
-        return zip;
-    }
-    
-    public void setZip(String zip){
-        this.zip = zip;
-    }
-    
     public String getState(){
         return state;
     }
@@ -195,7 +204,15 @@ public class Member {
         this.state = state;
     }
     
-    public String getCounty(){
+    public String getZip(){
+        return zip;
+    }
+    
+    public void setZip(String zip){
+        this.zip = zip;
+    }
+      
+        public String getCounty(){
         return county;
     }
     
@@ -203,15 +220,7 @@ public class Member {
         this.county = county;
     }
     
-    public String getFamilyId(){
-        return familyId;        
-    }
-    
-    public void setFamilyId(String familyId){
-        this.familyId = familyId;
-    }
-    
-    public String getRegion(){
+        public String getRegion(){
         return region;
     }
     
@@ -267,15 +276,7 @@ public class Member {
         this.updatedDate = updatedDate;
     }
     
-    public String getMemId(){
-        return memId;
-    }
-    
-    public void setMemId(String memId){
-        this.memId = memId;
-    }
-     
-    public String getComments(){
+        public String getComments(){
         return comments;
     }
     
@@ -362,13 +363,15 @@ public class Member {
         this.advocacy = advocacy;
     }
     
-        public int getInteger(String num) {
-    if (num != null) {
-        return Integer.parseInt(num); //convert your string into integer 
-    } else {
-        return 0; // or what you want to return if string is Null
+    public int getInteger(String num) {
+        if (num != null) {
+            return Integer.parseInt(num); //convert your string into integer 
+        } else {
+            return 0; // or what you want to return if string is Null
+        }
     }
-}
+    
+    //for testing
     @Override
     public String toString(){
         return "Member ID " + memId + " " + fName + " " + lName + " " + region;

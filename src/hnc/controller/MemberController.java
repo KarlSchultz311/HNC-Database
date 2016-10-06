@@ -9,12 +9,12 @@ import java.awt.event.*;
 import hnc.business.manager.MemberManager;
 import hnc.business.manager.FamilyManager;
 import hnc.view.MemberUI;
-import java.io.*;
 import hnc.domain.Member;
 import java.util.Date;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import hnc.domain.Family;
+import javax.swing.JOptionPane;
 
 /**MemberController
  This class is a controller class for the MemberUI. It assigns ActionListeners to
@@ -115,6 +115,7 @@ public class MemberController implements ActionListener {
         Boolean deleted = memMan.deleteMember(memId);
         //if deleted successfully
         if (deleted){
+            JOptionPane.showMessageDialog(memberUI, "Member deleted");
             //resets the confirmation button
             memberUI.disableConfirmMemberDeleteButton();
             Member member = new Member();
@@ -139,6 +140,7 @@ public class MemberController implements ActionListener {
         try{
             memberUI.setMemberID2(memMan.saveMember(member));
             memberUI.showDump();
+            JOptionPane.showMessageDialog(memberUI, "Member "+ member.getLName()+ " created");
         }catch (Exception e){
             System.out.print(e);
         }
@@ -166,6 +168,7 @@ public class MemberController implements ActionListener {
         try{
             memMan.updateMember(member);
             memberUI.showDump();
+            JOptionPane.showMessageDialog(memberUI, "Member "+ member.getLName()+ " updated");
         } catch (Exception e){
             System.out.println(e);
         }
@@ -213,6 +216,7 @@ public class MemberController implements ActionListener {
             memberUI.setFamilyID6(famId);
             famMan.updateFamilyId(famId, memId);
             memberUI.showDump();
+            JOptionPane.showMessageDialog(memberUI, "Family "+ family.getLName()+ " created");
         }catch (Exception e){
             System.out.println(e +" @ memcontroller");
         }
@@ -273,6 +277,7 @@ public class MemberController implements ActionListener {
         try{
             famMan.updateFamily(family);
             memberUI.showDump();
+            JOptionPane.showMessageDialog(memberUI, "Family "+ family.getLName()+ " updated");
         }catch (Exception e){
             System.out.println(e);
         }
@@ -293,9 +298,9 @@ public class MemberController implements ActionListener {
         FamilyManager famMan = new FamilyManager();
         try{
             famMan.deleteFamily(familyId);
+            JOptionPane.showMessageDialog(memberUI, "Family "+ familyId+ " deleted");
             Family family = new Family();
-            memberUI.loadFamily(family);
-            memberUI.setTA5("Family "+familyId+" deleted");
+            memberUI.loadFamily(family);            
             memberUI.showDump();
         }catch (Exception e){
             System.out.println(e);

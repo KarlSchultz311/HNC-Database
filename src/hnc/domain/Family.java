@@ -1,25 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package hnc.domain;
 
 /**Family.java
  * This Class is designed to represent a Family within HNC. Each Family will be 
  * assigned a FamilyID number as they are created. Each family will contain string
  * members for:
- * Last name, Street Address 1, Street Address 2, City, State, Zip, County, 
+ * familyID, Last name, Street Address 1, Street Address 2, City, State, Zip, County, 
  * Email 1, Email 2, Home Phone, Cell Phone, Bleeding Disorder, Date Updated, and
- * comments.
- * Each Family will contain int members for:
- * Region, Family ID
- * Each Family will contain Boolean values for descriptive groups/interests:
- * Soar, Blood Brotherhood, Teens, Latin Union, Inhibitors, Advocacy, and Hope
- * Each Family will contain the MemberIDs of the members of the family
+ * comments. Note: familyId is stored as an int in the database but cast as a String
+ * in the program for ease of use with text fields.
+ * Each Family will contain int members for descriptive groups/interests:
+ * Soar, Blood Brotherhood, Teens, Latin Union, Inhibitors, Advocacy, and Hope.
+ * Note:these int values would normally be boolean values, but the version of MySQL
+ * that I am utilizing does not handle boolean values. Therefore I am using int values
+ * of 0 for false and 1 for true.
  *
  * @author Karl Schultz
- * Version 1.0 8/29/16
+ * Version 2.0 10/6/16
  */
 public class Family {
     
@@ -75,6 +72,7 @@ public class Family {
         advocacy = 0;
     }
     
+    //constructor with Last name parameter
     public Family(String name){
         familyId = null;
         region = null;
@@ -103,78 +101,6 @@ public class Family {
     
     
     //methods
-    public int getAdvocacy(){
-        return advocacy;
-    }
-    
-    public void setAdvocacy(int advocacy){
-        this.advocacy = advocacy;
-    }
-    
-    public String getBleedDisorder(){
-        return bleedDisorder;        
-    }
-    
-    public void setBleedDisorder(String bleedDisorder){
-        this.bleedDisorder = bleedDisorder;
-    }
-    
-    public int getBloodBrotherhood(){
-        return bloodBrotherhood;
-    }
-    
-    public void setBloodBrotherhood(int bloodBrotherhood){
-        this.bloodBrotherhood = bloodBrotherhood;
-    }
-    
-    public String getCellPhone(){
-        return cellPhone;
-    }
-    
-    public void setCellPhone(String cellPhone){
-        this.cellPhone = cellPhone;
-    }
-    
-    public String getCity(){
-        return city;
-    }
-    
-    public void setCity(String city){
-        this.city = city;
-    }
-    
-    public String getComments(){
-        return comments;
-    }
-    
-    public void setComments(String comments){
-        this.comments = comments;
-    }
-    
-    public String getCounty(){
-        return county;
-    }
-    
-    public void setCounty(String county){
-        this.county = county;
-    }
-    
-    public String getEmail1(){
-        return email1;
-    }
-    
-    public void setEmail1(String email1){
-        this.email1 = email1;
-    }
-    
-    public String getEmail2(){
-        return email2;
-    }
-    
-    public void setEmail2(String email2){
-        this.email2 = email2;
-    }
-    
     public String getFamilyId(){
         return familyId;
     }
@@ -183,68 +109,12 @@ public class Family {
         this.familyId = familyId;        
     }
     
-    public String getHomePhone(){
-        return homePhone;
-    }
-    
-    public void setHomePhone(String cellHome){
-        this.homePhone = cellHome;
-    }
-    
-    public int getHope(){
-        return hope;
-    }
-    
-    public void setHope(int hope){
-        this.hope = hope;
-    }
-    
-    public int getInhibitors(){
-        return inhibitors;
-    }
-    
-    public void setInhibitors(int inhibitors){
-        this.inhibitors = inhibitors;
-    }
-    
     public String getLName(){
         return lName;
     }
     
     public void setLName(String lName){
         this.lName = lName;
-    }
-    
-    public int getLatinUnion(){
-        return latinUnion;
-    }
-    
-    public void setLatinUnion(int latinUnion){
-        this.latinUnion = latinUnion;
-    }
-    
-    public String getRegion(){
-        return region;
-    }
-    
-    public void setRegion(String region){
-        this.region = region;
-    }
-    
-    public int getSoar(){
-        return soar;
-    }
-    
-    public void setSoar(int soar){
-        this.soar = soar;
-    }
-    
-    public String getState(){
-        return state;
-    }
-    
-    public void setState(String state){
-        this.state = state;
     }
     
     public String getStreetAdd1(){
@@ -263,20 +133,20 @@ public class Family {
         this.streetAdd2 = streetAdd2;
     }
     
-    public int getTeens(){
-        return teens;
+    public String getCity(){
+        return city;
     }
     
-    public void setTeens(int teens){
-        this.teens = teens;
+    public void setCity(String city){
+        this.city = city;
     }
     
-    public String getUpdatedDate(){
-        return updatedDate;
+    public String getState(){
+        return state;
     }
     
-    public void setUpdatedDate(String updatedDate){
-        this.updatedDate = updatedDate;
+    public void setState(String state){
+        this.state = state;
     }
     
     public String getZip(){
@@ -286,7 +156,153 @@ public class Family {
     public void setZip(String zip){
         this.zip = zip;
     }
-            
+       
+    public String getCounty(){
+        return county;
+    }
+    
+    public void setCounty(String county){
+        this.county = county;
+    }
+    
+    public String getRegion(){
+        return region;
+    }
+    
+    public void setRegion(String region){
+        this.region = region;
+    }
+    
+    public String getEmail1(){
+        return email1;
+    }
+    
+    public void setEmail1(String email1){
+        this.email1 = email1;
+    }
+    
+    public String getEmail2(){
+        return email2;
+    }
+    
+    public void setEmail2(String email2){
+        this.email2 = email2;
+    }
+    
+    public String getHomePhone(){
+        return homePhone;
+    }
+    
+    public void setHomePhone(String cellHome){
+        this.homePhone = cellHome;
+    }
+    
+    public String getCellPhone(){
+        return cellPhone;
+    }
+    
+    public void setCellPhone(String cellPhone){
+        this.cellPhone = cellPhone;
+    }
+    
+    public String getBleedDisorder(){
+        return bleedDisorder;        
+    }
+    
+    public void setBleedDisorder(String bleedDisorder){
+        this.bleedDisorder = bleedDisorder;
+    }
+    
+    public String getComments(){
+        return comments;
+    }
+    
+    public void setComments(String comments){
+        this.comments = comments;
+    }
+    
+    public int getHope(){
+        return hope;
+    }
+    
+    public void setHope(int hope){
+        this.hope = hope;
+    }
+    
+    public int getTeens(){
+        return teens;
+    }
+    
+    public void setTeens(int teens){
+        this.teens = teens;
+    }
+    
+    public int getSoar(){
+        return soar;
+    }
+    
+    public void setSoar(int soar){
+        this.soar = soar;
+    }
+    
+    public int getBloodBrotherhood(){
+        return bloodBrotherhood;
+    }
+    
+    public void setBloodBrotherhood(int bloodBrotherhood){
+        this.bloodBrotherhood = bloodBrotherhood;
+    }
+    
+    public int getLatinUnion(){
+        return latinUnion;
+    }
+    
+    public void setLatinUnion(int latinUnion){
+        this.latinUnion = latinUnion;
+    }
+    
+    public int getInhibitors(){
+        return inhibitors;
+    }
+    
+    public void setInhibitors(int inhibitors){
+        this.inhibitors = inhibitors;
+    }
+    
+    public int getAdvocacy(){
+        return advocacy;
+    }
+    
+    public void setAdvocacy(int advocacy){
+        this.advocacy = advocacy;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+         
             
     
     

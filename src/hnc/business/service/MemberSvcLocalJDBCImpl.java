@@ -401,6 +401,7 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                     +member.getUpdatedDate()+"'WHERE memId='"+ Integer.parseInt(member.getMemId())+"'";
             
             stmt.executeUpdate(sql4);
+            
         } catch (Exception e){
             System.out.println(e+ " @ updateMember");
         } finally {

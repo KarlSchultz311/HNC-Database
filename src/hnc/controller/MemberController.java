@@ -156,7 +156,7 @@ public class MemberController implements ActionListener {
         // updatedDate text field.
         DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
         Date date = new Date();
-        memberUI.tf_update3.setText(dateFormat.format(date));
+        memberUI.setUpdate(dateFormat.format(date));
     }
     
     private void updateMemberDataActionPerformed(ActionEvent event, MemberUI memberUI){

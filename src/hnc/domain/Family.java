@@ -17,6 +17,8 @@ package hnc.domain;
  *
  * @author Karl Schultz
  * Version 2.0 10/6/16
+ * Changes;re-arranged methods to match constructor order
+ * Removed Date Updated
  */
 public class Family {
     
@@ -34,8 +36,7 @@ public class Family {
     private String county;
     private String homePhone;
     private String cellPhone;
-    private String bleedDisorder;
-    private String updatedDate;;
+    private String bleedDisorder;    
     private String comments;
     private int hope;
     private int teens;
@@ -61,7 +62,6 @@ public class Family {
         homePhone = null;
         cellPhone = null;
         bleedDisorder = null;
-        updatedDate = null;
         comments = null;
         hope = 0;
         teens = 0;
@@ -88,7 +88,6 @@ public class Family {
         homePhone = null;
         cellPhone = null;
         bleedDisorder = null;
-        updatedDate = null;
         comments = null;
         hope = 0;
         teens = 0;
@@ -277,39 +276,6 @@ public class Family {
         this.advocacy = advocacy;
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-         
-            
-    
-    
-    
-    
-    
-    
-    
+     
     
 }

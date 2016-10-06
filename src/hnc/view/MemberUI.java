@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package hnc.view;
 
 import hnc.domain.*;
@@ -13,14 +9,30 @@ import java.util.Iterator;
 
 
 
-/**
+/**MemberUI.java
+ * This class provides the user interface by way of a JFrame with a tabbed JPannel
+ * with 6 panels. Each panel provides user access to separate use cases. Member creation,
+ * Member edit/delete, Member Search, Family creation, Family edit/delete, and Family
+ * Search.
+ * This class provides getters and setters for the buttons and text areas/fields 
+ * contained in the UI that are needed for external interaction.
+ * Also included in this class are form getters and setters for interaction with Member
+ * and Family objects, filling object members, or displaying object members in appropriate
+ * text fields.
  *
- * @author Karl
+ * @author Karl Schultz
+ * Version 1.0 8/26/2016
+ * Version 2.0 10/6/2016
+ * Changes: Changed all Region and BleedingDisorder text boxes into combo boxes to keep
+ * data entry regulated.
+ * Added dialog box pop-ups for update, creation and deletion actions.
  */
+
 public class MemberUI extends javax.swing.JFrame {
 
     /**
      * Creates new form GUI
+     * Created pop up to remind user to update before use, and dump database after use.
      */
     public MemberUI() {
         initComponents();
@@ -2448,7 +2460,7 @@ public class MemberUI extends javax.swing.JFrame {
     }//GEN-LAST:event_cb_region1ActionPerformed
 
     
-    
+    //getters for all JButtons
     public JButton getAddFamilyMemberButton() {
         return AddFamilyMemberButton;
     }
@@ -2464,7 +2476,6 @@ public class MemberUI extends javax.swing.JFrame {
     public void disableConfirmFamilyDeleteButton(){
         ConfirmDeleteFamilyButton.setEnabled(false);
     }
-    
     
     public JButton getConfirmMemberDeleteButton () {
         return ConfirmMemberDeleteButton;
@@ -2485,8 +2496,7 @@ public class MemberUI extends javax.swing.JFrame {
     public JButton getCreateMemberButton() {
         return CreateMemberButton;
     }
-    
-    
+        
     public JButton getDeleteFamilyRecordButton () {
         return DeleteFamilyRecordButton; 
     }
@@ -2499,7 +2509,6 @@ public class MemberUI extends javax.swing.JFrame {
         DeleteFamilyRecordButton.setEnabled(false);
     }
      
-   
     public JButton getDeleteMemberRecordButton() {
         return DeleteMemberRecordButton;
     }
@@ -2543,6 +2552,8 @@ public class MemberUI extends javax.swing.JFrame {
         return UpdateMemberDataButton;
     }
     
+    
+    //getters and setters for elements that are accessed from outside MemberUI
     public String getMemberID3(){
         return tf_memID3.getText();
     }
@@ -2587,7 +2598,17 @@ public class MemberUI extends javax.swing.JFrame {
         dump.setVisible(true);
     }
     
+    public void setUpdate(String text){
+        tf_update3.setText(text);
+    }
+    
+    
+    
     public Member getMemberSearchParams(){
+        /*This method will create a new Member object and collect data from the
+        MemberSearch tab text fields. These will serve as parameters for a database
+        search.
+        */
         Member member = new Member();
         member.setMemId((String)tf_memID1.getText());
         member.setLName(tf_lName1.getText());
@@ -2625,6 +2646,12 @@ public class MemberUI extends javax.swing.JFrame {
     }
     
     public Member getMember2(){
+        /* This method will create a new Member object and populate its members
+        with the data collected from the New Member Entry tab form.
+        The assembled Member is then returned.
+        note: Items were labeled with 2's because this was once the second tab in the form,
+        it has been since moved to the third position.        
+        */
         Member member = new Member();
         member.setLName(tf_lName2.getText());
         member.setFName(tf_fName2.getText());
@@ -2674,6 +2701,12 @@ public class MemberUI extends javax.swing.JFrame {
     }
     
     public Member getMember3(){
+        /*This method works just like getMember2 except that it collects data
+        from the Member edit/delete tab.
+        The completed Member is then returned.
+        note: UI items are labled with 3's on this tab because this tab was once
+        the third tab in the UI. It is now located in the second place.
+        */
         Member member = new Member();
         member.setMemId((String)tf_memID3.getText());
         member.setFamilyId(tf_familyId3.getText());
@@ -2727,6 +2760,9 @@ public class MemberUI extends javax.swing.JFrame {
     
     
     public void loadMember(Member member){
+        /*This method accepts a Member object as a parameter. This Member's members
+        are then displayed in the Member edit/delete text fields.
+        */
         tf_lName3.setText(member.getLName());
         tf_fName3.setText(member.getFName());
         tf_sA13.setText(member.getStreetAdd1());
@@ -2747,6 +2783,8 @@ public class MemberUI extends javax.swing.JFrame {
         tf_returnMail3.setText(member.getBadAdd());
         tf_familyId3.setText(member.getFamilyId());
         
+        //else statements are needed here to prevent old positive checks from prior
+        //  loads from remaining when new data is loaded.
         if(member.getHope()== 1){
             chbx_hope3.setSelected(true);
         }else{
@@ -2801,15 +2839,23 @@ public class MemberUI extends javax.swing.JFrame {
     }
     
     public void displayMemberSearch(ArrayList<Member> memberList){
+        /* This method will accept an ArrayList of Member objects as a parameter.
+        This method will then erase the text area of the Member Search tab to clear
+        out old information. Then the method will iterate through each Member object
+        in the ArrayList and append the data members of each Member to the text area.
+        Finally it will append a message with the number of Member objects displayed.
+        */
+        //create iterator for the ArrayList
         Iterator it = memberList.iterator();
         Member member = new Member();
         int n = memberList.size();
         
-        
+        //clear text area
         ta_1.setText(null);
         
+        //while there is a next Member object in the ArrayList
         while ( it.hasNext()) {
-            
+            //move to the next Member
             member = (Member)it.next();
             
             ta_1.append(member.getMemId()+" | "+member.getLName()+ ", "+member.getFName()+
@@ -2821,14 +2867,18 @@ public class MemberUI extends javax.swing.JFrame {
                     " | Bleed Disorder: "+ member.getBleedDisorder()+" | Comments: "+
                     member.getComments()+ " | Join Date: "+ member.getJoinDate()+
                     " | Returned Mail Date: "+ member.getBadAdd()+" | Organization: " +member.getOrganization()+
-                    "\n");
-            
-            //System.out.println(member.getLName());
+                    "\n");            
         }  
         ta_1.append("Found "+n+ " matching members");
     }
     
     public void loadPrimaryMember(Member member){
+        /*This method accepts a Member object as a parameter and diplays the Member
+        data members that are needed for a Family object in the text fields of
+        the New Family Creation tab. The personal information of a primary family 
+        member (parent) will be used to build a new Family object.        
+        */
+        
         tf_lName6.setText(member.getLName());
         tf_sA16.setText(member.getStreetAdd1());
         tf_sA26.setText(member.getStreetAdd2());
@@ -2843,6 +2893,7 @@ public class MemberUI extends javax.swing.JFrame {
         tf_email26.setText(member.getEmail2());
         cb_bleed6.setSelectedItem(member.getBleedDisorder());
         tf_comments6.setText(member.getComments());
+        
         if(member.getHope()== 1){
             chbx_hope6.setSelected(true);
         }else{
@@ -2888,6 +2939,9 @@ public class MemberUI extends javax.swing.JFrame {
     }
     
     public Family memberToFamily(){
+        /*This method is used to take the data displayed in the Create Family tab,
+        and create a Family object that is returned.
+        */
         Family family = new Family();
         family.setLName(tf_lName6.getText());
         family.setStreetAdd1(tf_sA16.getText());
@@ -2904,6 +2958,7 @@ public class MemberUI extends javax.swing.JFrame {
         family.setBleedDisorder((String)cb_bleed6.getSelectedItem());
         family.setComments(tf_comments6.getText());
         
+        //family interest group members are set to 0 by constructor
         if(chbx_hope6.isSelected()){
             family.setHope(1);
         }
@@ -2930,6 +2985,9 @@ public class MemberUI extends javax.swing.JFrame {
     }
     
     public void loadFamily(Family family){
+        /* This method will take a Family object as a parameter, and populate the
+        text fields of the Family edit/delete tab with the Family data members.
+        */
         tf_lName5.setText(family.getLName());
         tf_sA15.setText(family.getStreetAdd1());
         tf_sA25.setText(family.getStreetAdd2());
@@ -2989,6 +3047,11 @@ public class MemberUI extends javax.swing.JFrame {
     }
     
     public void displayFamilyMembers(ArrayList<Member> familyList){
+        /*This method will accept an ArrayList of Member objects as a parameter.
+        This method will then clear the text area of the Family Edit/Delete tab
+        then iterate through each Member object and append the text area with the 
+        first name and last name of each Member that is in the ArrayList.
+        */
         Iterator it = familyList.iterator();
         Member member = new Member();
         
@@ -3007,8 +3070,10 @@ public class MemberUI extends javax.swing.JFrame {
     }
     
     public void updateFamilyGroups(Member member){
-        //updates family checkbox only if new member group is true. Will not
-        // deselect box.
+        /*This method will accept a Member object. It will then update family interest
+        group checkboxes on the Family Edit/delete tab only if new
+        member object's group is true. Will not deselect boxes.
+        */
         if(member.getHope()== 1){
             chbx_hope5.setSelected(true);
         }
@@ -3039,6 +3104,10 @@ public class MemberUI extends javax.swing.JFrame {
     }
     
     public Family getFamily5(){
+        /* This method will create a new Family object and populate the data members
+        with data from the Family edit/delete form text fields. It will then return
+        the new Family object.
+        */
         Family family = new Family();
         family.setFamilyId(tf_famId5.getText());
         family.setLName(tf_lName5.getText());
@@ -3082,6 +3151,10 @@ public class MemberUI extends javax.swing.JFrame {
     }
     
     public Family getFamilySearchParams(){
+        /*This method will create a new Family object and then get data from the
+        Family Search tab text fields to populate the data members of the Family object.
+        This Family will be used as search parameters when it returned.
+        */
         Family family = new Family();
         family.setFamilyId(tf_famId4.getText());
         family.setLName(tf_lName4.getText());
@@ -3117,6 +3190,11 @@ public class MemberUI extends javax.swing.JFrame {
     }
     
     public void displayFamilySearch (ArrayList<Family> familyList){
+        /*This method will accept an ArrayList of Family objects. It will then
+        clear the text area of the Family Search tab. The method will then iterate
+        through the ArrayList and append the text area with the Family data members.
+        Finall it will append a line showing the number of families found in the list.
+        */
         Iterator it = familyList.iterator();
         Family family = new Family();
         int n = familyList.size();
@@ -3127,7 +3205,7 @@ public class MemberUI extends javax.swing.JFrame {
         while ( it.hasNext()) {
             
             family = (Family)it.next();
-            System.out.print(family.getFamilyId());
+            
             appendTA4(family.getFamilyId()+" | "+family.getLName()+
                     " Family | "+family.getStreetAdd1()+" "+family.getStreetAdd2()+" | "+
                     family.getCity()+ ", " + family.getState()+ " | " + family.getZip()+
@@ -3458,7 +3536,7 @@ public class MemberUI extends javax.swing.JFrame {
     private javax.swing.JTextField tf_state4;
     private javax.swing.JTextField tf_state5;
     private javax.swing.JTextField tf_state6;
-    public javax.swing.JTextField tf_update3;
+    private javax.swing.JTextField tf_update3;
     private javax.swing.JTextField tf_zip2;
     private javax.swing.JTextField tf_zip3;
     private javax.swing.JTextField tf_zip5;

@@ -18,7 +18,7 @@ package hnc.domain;
  * @author Karl Schultz
  * Version 2.0 10/6/16
  * Changes;re-arranged methods to match constructor order
- * Removed Date Updated
+ * Removed Date Updated member
  */
 public class Family {
     

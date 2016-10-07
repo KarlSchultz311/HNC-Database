@@ -312,9 +312,9 @@ public class MemberController implements ActionListener {
         */
         
         String memId = memberUI.getMemberID6();
-        FamilyManager famMan = new FamilyManager();
+        MemberManager memMan = new MemberManager();
         try{
-            memberUI.loadPrimaryMember(famMan.getPrimaryMember(memId));
+            memberUI.loadPrimaryMember(memMan.getPrimaryMember(memId));
         }catch (Exception e){
             System.out.println(e);
         }
@@ -346,27 +346,6 @@ public class MemberController implements ActionListener {
         
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
   
-   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
 }

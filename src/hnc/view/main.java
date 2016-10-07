@@ -2,12 +2,11 @@
 package hnc.view;
 
 
-
-
-
-/**
- *
- * @author Karl
+/**Main.java
+ *This is the main class for this project. It will simply construct the UI. All
+ * further functionality of the program will be handled by the UI class and Controller.
+ * @author Karl Schultz
+ * Version 1.0 8/24/2016
  */
 public class main {
 
@@ -19,6 +18,5 @@ public class main {
         MemberUI view = new MemberUI();
         
     }
- 
     
 }

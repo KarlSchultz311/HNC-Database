@@ -4,82 +4,39 @@ package hnc.business.service;
 import java.sql.*;
 import hnc.domain.*;
 import java.util.ArrayList;
-/**
- *
- * @author Karl
+import hnc.business.factory.Factory;
+/**FamilySvcLocalJDBCImpl.java
+ * This class provides the implementation for methods listed in the IFamilySvc
+ * interface.
+ * @author Karl Schultz
+ * Version 1.0 9/15/2016
+ * Version 2.0 10/6/2016
+ * Changes: modified the getConnection method to call to Factory to retrieve the
+ * connection string saved to the properties.txt file.
  */
 public class FamilySvcLocalJDBCImpl implements IFamilySvc {
     
-    private String connString = 
-        "jdbc:mysql://localhost:3306/hnc?user=root&password=73bLood?";
     
     private Connection getConnection() throws Exception {
-        return DriverManager.getConnection(connString);
+        /*This method calls to the Factory to return the connection String values
+        for the connection to the local database from the properties.txt file, then
+        returns the connection object.
+        */
+        String dbPass = "connString";
+        Factory factory = new Factory();        
+        return DriverManager.getConnection(factory.getConnString(dbPass));
     }
     
-    @Override
-    public Member findPrimaryMember(String memId) throws Exception{
-        Connection conn = getConnection();  //establishes connection to DB
-        try{
-            Statement stmt = null;
-            ResultSet rs = null;            
-            stmt = conn.createStatement();
-            Member member = new Member();
-            String sql2 = "SELECT * FROM members WHERE memId = '"+memId+"'";
-            rs = stmt.executeQuery(sql2);
-            
-            while(rs.next()){
-                member.setMemId(rs.getString(1));
-                member.setFamilyId(rs.getString(2));
-                member.setLName(rs.getString(3));
-                member.setFName(rs.getString(4));
-                member.setEmail1(rs.getString(5));
-                member.setEmail2(rs.getString(6));
-                member.setStreetAdd1(rs.getString(7));
-                member.setStreetAdd2(rs.getString(8));
-                member.setCity(rs.getString(9));
-                member.setZip(rs.getString(10));
-                member.setState(rs.getString(11));
-                member.setCounty(rs.getString(12));
-                member.setRegion(rs.getString(13));
-                member.setHomePhone(rs.getString(14));
-                member.setCellPhone(rs.getString(15));
-                member.setBleedDisorder(rs.getString(16));
-                member.setDob(rs.getString(17));
-                member.setJoinDate(rs.getString(18));
-                member.setUpdatedDate(rs.getString(19));
-                member.setComments(rs.getString(20));
-                member.setBadAdd(rs.getString(21));
-                member.setOrganization(rs.getString(22));
-                member.setIndustry(rs.getInt(23));
-                member.setHope(rs.getInt(24));
-                member.setTeens(rs.getInt(25));
-                member.setLatinUnion(rs.getInt(26));
-                member.setSoar(rs.getInt(27));
-                member.setBloodBrotherhood(rs.getInt(28));
-                member.setInhibitors(rs.getInt(29));
-                member.setAdvocacy(rs.getInt(30));                
-            }
-            if (member.getInteger(member.getFamilyId()) == 0){
-                return member;
-            }else{
-                Member hasFam = new Member();
-                hasFam.setLName(member.getFName()+", "+member.getLName()+" already has a Family");
-                return hasFam;
-            }
-            
-        }catch (Exception e){
-            System.out.println(e);
-            Member errMember = new Member();
-            return errMember;
-        }finally {
-            if (conn != null) 
-                conn.close();
-        }
-    }
     
     @Override
     public String createFamily(Family family) throws Exception{
+        /*This method first gets a connection to the database. It then creates a
+        string to use as a SQL statement to insert the data members of a Family 
+        object that was passed into the method. It then executes the insert into
+        the database. Then the method will query the database for the last inserted
+        Family ID value that was auto increment assigned by the database. The familyID
+        is then extracted from the resultset, and returned.
+        */
         Connection conn = getConnection();  //establishes connection to DB
         try {
             Statement stmt = null;
@@ -113,13 +70,12 @@ public class FamilySvcLocalJDBCImpl implements IFamilySvc {
             int famId = rs.getInt(1);
             //change data type to String for UI display in text field
             String ID = Integer.toString(famId);           
-            
                   
             return ID;
            
         } catch (Exception e) {
             System.out.println(e);
-            return "Error at JDBCImp";
+            return "Error @ JDBCImp";
                
         } finally {
             if (conn != null) 
@@ -131,6 +87,11 @@ public class FamilySvcLocalJDBCImpl implements IFamilySvc {
     
     @Override
     public Family getFamily (String famId) throws Exception{
+        /*This method establishes a connection to the database, then creates a
+        SQL statement to select a Family row that matches the provided familyID 
+        string. The SQL query is executed and the resultset is unpacked into a 
+        Family object. This Family object is returned.
+        */
         Connection conn = getConnection();  //establishes connection to DB
         try {
             Statement stmt = null;
@@ -140,6 +101,7 @@ public class FamilySvcLocalJDBCImpl implements IFamilySvc {
             Family family = new Family();
             
             rs = stmt.executeQuery(sql);
+            
             while(rs.next()){
                 family.setFamilyId(rs.getString(1));                
                 family.setLName(rs.getString(2));
@@ -165,6 +127,7 @@ public class FamilySvcLocalJDBCImpl implements IFamilySvc {
                 family.setAdvocacy(rs.getInt(22));                              
             }
             return family;
+            
         } catch (Exception e){
             System.out.println(e);
             Family errFam = new Family("Family not found");
@@ -177,6 +140,11 @@ public class FamilySvcLocalJDBCImpl implements IFamilySvc {
     
     @Override
     public void updateFamily(Family family) throws Exception{
+        /*This method will first establish a connection to the databbase. It will
+        then create a string to be used as an update SQL statement using the data
+        members from the provided Family object. The update is then executed using 
+        the string.
+        */
         Connection conn = getConnection();
         Statement stmt = null;
         try{
@@ -203,6 +171,14 @@ public class FamilySvcLocalJDBCImpl implements IFamilySvc {
     
     @Override
     public void deleteFamily(String familyId) throws Exception{
+        /*This method first creates a connection with the database. Then it creates
+        a string to be used as a SQL update message. It first creates a message to update
+        any member objects with a matching familyID to 0. The database needs to have 
+        a Family row with a 0 familyId to serve as a catch-all for members without an 
+        attatched family. These need to be updated first as the familyID is a foreign key
+        of the member rows. Next the database deletes the family row that matches the
+        familyID.
+        */
         Connection conn = getConnection();
         Statement stmt = null;
         try{

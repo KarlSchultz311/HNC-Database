@@ -2646,7 +2646,7 @@ public class MemberUI extends javax.swing.JFrame {
     }
     
     public Member getMember2(){
-        /* This method will create a new Member object and populate its members
+        /* This method will create a new Member object and populate its data members
         with the data collected from the New Member Entry tab form.
         The assembled Member is then returned.
         note: Items were labeled with 2's because this was once the second tab in the form,

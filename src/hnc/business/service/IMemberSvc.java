@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public interface IMemberSvc extends IService{
     
     //abstract methods
-    public String saveMember(Member member) throws Exception;
+    public String createMember(Member member) throws Exception;
     public Member findMember (String memId) throws Exception;
     public Boolean deleteMember(String memId) throws Exception;
     public void updateMember(Member member) throws Exception;

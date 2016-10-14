@@ -187,7 +187,7 @@ public class MemberController implements ActionListener {
         MemberManager memMan = new MemberManager();
         Member member = memberUI.getMember2();
         try{
-            memberUI.setMemberID2(memMan.saveMember(member));
+            memberUI.setMemberID2(memMan.createMember(member));
             memberUI.showDump();
             JOptionPane.showMessageDialog(memberUI, "Member "+ member.getLName()+ " created");
         }catch (Exception e){
@@ -229,7 +229,7 @@ public class MemberController implements ActionListener {
         FamilyManager famMan = new FamilyManager();
         MemberManager memMan = new MemberManager();
         try{
-            memberUI.loadFamily(famMan.getFamily(famId));
+            memberUI.loadFamily(famMan.findFamily(famId));
             memberUI.displayFamilyMembers(memMan.getFamilyMembers(famId));
             
         }catch (Exception e){

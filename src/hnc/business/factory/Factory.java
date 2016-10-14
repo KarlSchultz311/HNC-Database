@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package hnc.business.factory;
 
 import hnc.business.service.IService;
@@ -30,9 +26,10 @@ public class Factory {
         return (IService)c.newInstance();
     }
     
-    //this method loads the config text file and returns the implementation FQN
-    //  of the matching servicename
+    
     public String getImplName(String serviceName) throws Exception {
+        //this method loads the config text file and returns the implementation FQN
+    //  of the matching servicename
         FileInputStream fis = new FileInputStream("config/properties.txt");
         Properties props = new Properties();
         props.load(fis);
@@ -41,6 +38,11 @@ public class Factory {
     }
     
     public String getConnString(String connString) throws Exception {
+        /*This method reads the txt properties file and returns the value for
+        the connection String that holds the database server name and passwowrd 
+        for acccess. This allows for abstraction for individual users to have 
+        different server names and passwords for local machines.
+        */
         FileInputStream fis = new FileInputStream("config/properties.txt");
         Properties props = new Properties();
         props.load(fis);

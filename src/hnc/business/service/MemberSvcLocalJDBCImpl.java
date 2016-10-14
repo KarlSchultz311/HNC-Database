@@ -1,27 +1,46 @@
 
-
-
 package hnc.business.service;
 
+import hnc.business.factory.Factory;
 import hnc.domain.Member;
 import java.sql.*;
 import java.util.ArrayList;
 
-/**
- *
- * @author Karl
+/**MemberSvcLocalJDBCImpl.java
+ * This class provides the implementation for methods listed in the IMemberSvc
+ * interface.
+ * @author Karl Schultz
+ * Version 1.0 9/15/2016
+ * Version 2.0 10/6/2016
+ * Changes: modified the getConnection method to call to Factory to retrieve the
+ * connection string saved to the properties.txt file.
  */
 public class MemberSvcLocalJDBCImpl implements IMemberSvc {
     
-    final private String connString = 
-            "jdbc:mysql://localhost:3306/hnc?user=root&password=73bLood?";
     
     private Connection getConnection() throws Exception {
-        return DriverManager.getConnection(connString);
+        /*This method calls to the Factory to return the connection String values
+        for the connection to the local database from the properties.txt file, then
+        returns the connection object.
+        */
+        String dbPass = "connString";
+        Factory factory = new Factory();        
+        return DriverManager.getConnection(factory.getConnString(dbPass));
     }
     
     @Override
     public ArrayList<Member> displayMemberSearch(Member parameters) throws Exception {
+        /*This method first establishes a connection to the database. It then
+        creates a string to be used as a SQL query statement. The method uses
+        the input Member object data members as parameters for the search. This
+        method then checks each applicable data member for existance and if found,
+        appends the SQL string with WHERE parameters. If the boolean check fails,
+        the AND portion is inserted for SQL syntax reasons. If after all parameter
+        checks complete and first is still true, the SQL string is overwritten with
+        a general "Select all" statement. The string is then executed and the
+        result set is unpacked into an ArrayList of Member objects. Ths ArrayList 
+        is then returned.
+        */
         Connection conn = getConnection();  //establishes connection to DB
         try {
             Statement stmt = null;
@@ -245,7 +264,14 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
     
     
     @Override
-    public String saveMember(Member member) throws Exception{
+    public String createMember(Member member) throws Exception{
+        /*This method first gets a connection to the database. It then creates a
+        string to use as a SQL statement to insert the data members of a Member 
+        object that was passed into the method. It then executes the insert into
+        the database. Then the method will query the database for the last inserted
+        MemberID value that was auto increment assigned by the database. The memberID
+        is then extracted from the resultset, and returned.
+        */
         Connection conn = getConnection();  //establishes connection to DB
         try {
             Statement stmt = null;
@@ -297,6 +323,11 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
     
     @Override
     public Member findMember (String memId) throws Exception{
+        /*This method establishes a connection to the database, then creates a
+        SQL statement to select a Member row that matches the provided memberID 
+        string. The SQL query is executed and the resultset is unpacked into a 
+        Member object. This Member object is returned.
+        */
         Connection conn2 = getConnection();  //establishes connection to DB
         Member member = new Member();
         try{
@@ -354,6 +385,11 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
     
     @Override
     public Boolean deleteMember(String memId) throws Exception {
+        /*This method first creates a connection with the database. Then it creates
+        a string to be used as a SQL update message with the provided memID as the
+        deletion row target. The sql message is then executed and returns a boolean
+        true if successful.
+        */
         Connection conn3 = getConnection();
         Statement stmt = null;
         Boolean success = false;
@@ -373,11 +409,14 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                 
     }
     
-    
-    //"', familyID= '"+ (Integer.parseInt(member.getFamilyId())+0)+ "' 
-                    
+                        
     @Override
     public void updateMember(Member member) throws Exception {
+        /*This method will first establish a connection to the databbase. It will
+        then create a string to be used as an update SQL statement using the data
+        members from the provided Member object. The update is then executed using 
+        the string.
+        */
         Connection conn4 = getConnection();
         Statement stmt = null;
         
@@ -412,6 +451,11 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
     
     @Override
     public ArrayList<Member> getFamilyMembers(String famId) throws Exception{
+        /*This method first establishes a connection to the database. It then 
+        creates a string to be used as a SQL statement using the provided familyID
+        string as a query target. The result set is then unpacked into an ArrayList
+        of Member objects containing only first and last names, which is returned.
+        */
          Connection conn = getConnection();  //establishes connection to DB
         try {
             Statement stmt = null;
@@ -427,12 +471,10 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
             
             while(rs.next()){
                 Member row = new Member();                
-                row.setLName(rs.getString("lName"));
-                
+                row.setLName(rs.getString("lName"));                
                 row.setFName(rs.getString("fName"));
                 
                 memberList.add(row);
-                
             }
             
             return memberList;
@@ -452,6 +494,11 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
     
     @Override
     public void updateFamilyId (String famId, String memId) throws Exception{
+        /*This method first establishes a connection to the database. It then 
+        creates a string to be used as a SQL statement that will update the given
+        member row matching the given memberID. The familyID column will be updated 
+        to match the given familyID string. The sql update is then executed.
+        */
         Connection conn = getConnection();  //establishes connection to DB
         try {
             Statement stmt = null;            
@@ -474,6 +521,14 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
     
     @Override
     public Member findPrimaryMember(String memId) throws Exception{
+        /*This method begins by establishing a connection to the database. It then
+        creates a string to be used as a SQL query message that selects the member
+        row that matches the provided memberID. The method then executes the query,
+        and unpacks the resultset into a new Member object. It then checks to see if
+        the Member has a familyID that is not 0 (signifying that the member has already
+        been assigned to a family). If the familyID is not 0 it returns an error that
+        the Member already has a family, otherwise it returns the Member object.
+        */
         Connection conn = getConnection();  //establishes connection to DB
         try{
             Statement stmt = null;

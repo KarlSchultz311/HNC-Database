@@ -86,7 +86,7 @@ public class FamilySvcLocalJDBCImpl implements IFamilySvc {
     
     
     @Override
-    public Family getFamily (String famId) throws Exception{
+    public Family findFamily (String famId) throws Exception{
         /*This method establishes a connection to the database, then creates a
         SQL statement to select a Family row that matches the provided familyID 
         string. The SQL query is executed and the resultset is unpacked into a 
@@ -197,6 +197,17 @@ public class FamilySvcLocalJDBCImpl implements IFamilySvc {
     
     @Override
     public ArrayList<Family> searchFamily(Family parameters) throws Exception {
+        /*This method starts by getting a connecction to the database. It then
+        creates a string to be used as a generic SQL query statement. As the method
+        compares the Family parameter object to the if statements, portions of the 
+        string are appended to the SQL string. The use of LIKE allows for partial 
+        parameter entry and look up by the database. This method checks a boolean
+        value to see if this is the first selection parameter. If false it appends
+        the AND version of the addition. Near the end it appends a WHERE familyID is 
+        not 0 to omit the empty family from being collected. The method then executes
+        the SQL query and unpacks the result set into an ArrayList of Family objects
+        that it returns.
+        */
         Connection conn = getConnection();  //establishes connection to DB
         try {
             Statement stmt = null;
@@ -349,7 +360,7 @@ public class FamilySvcLocalJDBCImpl implements IFamilySvc {
             ArrayList<Family> familyList = new ArrayList<Family>();
             
             
-            
+            //unpack the result set into ArrayList
             while(rs.next()){
                 Family row = new Family();
                 row.setFamilyId(rs.getString("familyID"));
@@ -375,9 +386,7 @@ public class FamilySvcLocalJDBCImpl implements IFamilySvc {
                 row.setInhibitors(rs.getInt("inhibitors"));
                 row.setAdvocacy(rs.getInt("advocacy"));
                 
-                
-                familyList.add(row);
-                
+                familyList.add(row); 
             }
             
             return familyList;
@@ -385,9 +394,9 @@ public class FamilySvcLocalJDBCImpl implements IFamilySvc {
         }catch (Exception e) {
             System.out.println(e);
             ArrayList<Family> list = new ArrayList<Family>();
-            Family  errFam = new Family();
+            Family  errFam = new Family(); //create empty Family object
             errFam.setLName("Error @ JDBC Implement");
-            list.add(errFam);
+            list.add(errFam);//add empty Family to ArrayList
             return list;            
         }finally {
             if (conn != null) 

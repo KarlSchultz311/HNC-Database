@@ -24,7 +24,7 @@ public class MemberManager {
     public MemberManager(){}
     
     //methods
-    public String saveMember(Member member) throws Exception {
+    public String createMember(Member member) throws Exception {
         /*Retrieves a IMemberSvc from the factory and then requests a method from
         that IMemberSvc for the end implementation of the method to save a Member
         object to permenance. Returns the newly created memberID from the database.
@@ -32,7 +32,7 @@ public class MemberManager {
         Factory factory = new Factory();
         try{
             IMemberSvc memberSvc = (IMemberSvc)factory.getService("IMemberSvc");
-            return memberSvc.saveMember(member);
+            return memberSvc.createMember(member);
         } catch (Exception e) {
             System.out.println(e);
             return "Unable to find MemID";
@@ -100,7 +100,7 @@ public class MemberManager {
             return memberSvc.displayMemberSearch(member);
         } catch (Exception e){
             System.out.println(e);
-            ArrayList<Member> list = new ArrayList();
+            ArrayList<Member> list = new ArrayList<Member>();
             return list;
         }
     }
@@ -117,7 +117,7 @@ public class MemberManager {
             return memberSvc.getFamilyMembers(famId);
         } catch (Exception e){
             System.out.println(e);
-            ArrayList<Member> list = new ArrayList();
+            ArrayList<Member> list = new ArrayList<Member>();
             return list;
         }
     }

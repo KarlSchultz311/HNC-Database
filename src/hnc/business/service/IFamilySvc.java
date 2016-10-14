@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public interface IFamilySvc extends IService{
     //abstract methods    
     public String createFamily(Family family) throws Exception;
-    public Family getFamily (String famId) throws Exception;
+    public Family findFamily (String famId) throws Exception;
     public void updateFamily(Family family) throws Exception;
     public void deleteFamily(String famId) throws Exception;
     public ArrayList<Family> searchFamily (Family family) throws Exception;

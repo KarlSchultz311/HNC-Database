@@ -2,7 +2,6 @@
 package hnc.domain;
 
 
-
 /** Member.java
  * This class is designed to represent a single organization member. Within this 
  * class, you can find a constructor for a new empty Member object, a new Member

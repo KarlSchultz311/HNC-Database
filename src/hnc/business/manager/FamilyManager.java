@@ -41,7 +41,7 @@ public class FamilyManager {
     
     
     
-    public Family getFamily (String famId) throws Exception{
+    public Family findFamily (String famId) throws Exception{
         /*Retrieves a IFamilySvc from the factory and then requests a method from
         that IFamilySvc for the end implementation of the method to find a Family
         object from permenance matching a familyID String.
@@ -50,7 +50,7 @@ public class FamilyManager {
         Factory factory = new Factory();
         try{
             IFamilySvc familySvc = (IFamilySvc)factory.getService("IFamilySvc");
-            return familySvc.getFamily(famId);
+            return familySvc.findFamily(famId);
         }catch (Exception e){
             System.out.println(e);
             Family errFam = new Family("Family not found");
@@ -99,7 +99,7 @@ public class FamilyManager {
             return familySvc.searchFamily(family);
         }catch (Exception e) {
             System.out.println(e);
-            ArrayList<Family> list = new ArrayList();
+            ArrayList<Family> list = new ArrayList<Family>();
             Family  errFam = new Family();
             errFam.setLName("Error @ Fam Manager");
             list.add(errFam);

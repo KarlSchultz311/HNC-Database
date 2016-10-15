@@ -3830,13 +3830,15 @@
                                                       <Component id="chbx_advocacy6" min="-2" pref="179" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
-                                              <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
+                                              <EmptySpace min="100" pref="289" max="32767" attributes="0"/>
                                           </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="tf_email26" min="-2" pref="254" max="-2" attributes="0"/>
-                                              <EmptySpace min="0" pref="399" max="32767" attributes="0"/>
+                                          <Group type="102" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="tf_email26" min="-2" pref="254" max="-2" attributes="0"/>
+                                                  <Component id="tf_comments6" min="-2" pref="541" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                           </Group>
-                                          <Component id="tf_comments6" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
@@ -3886,19 +3888,15 @@
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="tf_sA26" min="-2" pref="30" max="-2" attributes="0"/>
-                                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jLabel57" min="-2" pref="30" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="tf_state6" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                          <Component id="jLabel58" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
+                                  <Component id="tf_sA26" alignment="1" min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Component id="jLabel57" alignment="1" min="-2" pref="30" max="-2" attributes="0"/>
                               </Group>
+                              <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="tf_state6" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Component id="jLabel58" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel61" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                   <Component id="tf_county6" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>

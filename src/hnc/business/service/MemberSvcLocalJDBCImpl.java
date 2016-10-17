@@ -14,6 +14,9 @@ import java.util.ArrayList;
  * Version 2.0 10/6/2016
  * Changes: modified the getConnection method to call to Factory to retrieve the
  * connection string saved to the properties.txt file.
+ * Version 2.1 10/16/2016
+ * Changed UpdateMember method to read in familyId as a string not an integer. Also
+ * added getBadAdd and updated SQL sequence to match addition.
  */
 public class MemberSvcLocalJDBCImpl implements IMemberSvc {
     
@@ -424,7 +427,7 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
         try{
             
             stmt = conn4.createStatement();
-            String sql4 = "UPDATE members SET familyID= '"+ member.getInteger(member.getFamilyId())+
+            String sql4 = "UPDATE members SET familyID= '"+ member.getFamilyId()+
                     "', lName= '"+ member.getLName()+"', fName= '"+
                     member.getFName()+"', email1= '"+member.getEmail1()+"', email2= '"+member.getEmail2()
                     +"', streetAdd1= '"+member.getStreetAdd1()+"', streetAdd2= '"+member.getStreetAdd2()
@@ -432,7 +435,8 @@ public class MemberSvcLocalJDBCImpl implements IMemberSvc {
                     member.getState()+"', county= '"+member.getCounty()+"', region= '"+member.getRegion()
                     +"', homePhone= '"+member.getHomePhone()+"', cellPhone= '"+member.getCellPhone()
                     +"', bleedDisorder= '"+member.getBleedDisorder()+"', dob= '"+member.getDob()+"', joinDate= '"+
-                    member.getJoinDate()+"', comments= '"+member.getComments()+"', organization= '"+
+                    member.getJoinDate()+"', comments= '"+member.getComments()+
+                    "', badAdd= '"+member.getBadAdd()+ "', organization= '"+
                     member.getOrganization()+"', industry= '"+member.getIndustry()+"', hope= '"+
                     member.getHope()+"', teens= '"+member.getTeens()+"', latinUnion= '"+member.getLatinUnion()
                     +"', soar= '"+member.getSoar()+"', bloodBrotherhood= '"+member.getBloodBrotherhood()+"', inhibitors='"+

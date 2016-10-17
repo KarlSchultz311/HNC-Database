@@ -21,6 +21,8 @@ package hnc.domain;
  * version 2.0 2/29/16
  * Modified streetAdd to streetAdd1,changed badAdd to String, changed Region to int.
  * Added: Address2,Email1, Email2, program booleans, 
+ * version 2.1 10/16/2016
+ * Modified constructors to set familyId to "0" instead of null.
  */
 public class Member {
     
@@ -59,7 +61,7 @@ public class Member {
     //constructor
     public Member(){
         memId = null;
-        familyId = null;
+        familyId = "0";
         lName = null;
         fName = null;
         email1 = null;
@@ -92,7 +94,7 @@ public class Member {
     
      public Member(String memId){
         this.memId = memId;
-        familyId = null;
+        familyId = "0";
         lName = null;
         fName = null;
         email1 = null;

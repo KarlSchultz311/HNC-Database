@@ -1,3 +1,0 @@
-IMemberSvc = hnc.business.service.MemberSvcLocalJDBCImpl
-IFamilySvc = hnc.business.service.FamilySvcLocalJDBCImpl
-connString = jdbc:mysql://localhost:3306/hnc?user=root&password=73bLood?
